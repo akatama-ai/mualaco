@@ -7,7 +7,7 @@
 	 * @license		GNU General Public License version 2
 	*******************************************************/
 
-	require_once(DIR_SYSTEM . 'pavoThemes/loader.php');
+	require_once(DIR_SYSTEM . 'pavothemes/loader.php');
 	$helper = ThemeControlHelper::getInstance( $this->registry, $this->config->get('config_template') );
 ?>
 </section>

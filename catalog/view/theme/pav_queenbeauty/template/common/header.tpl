@@ -8,7 +8,7 @@
 *******************************************************/
 $this->language->load('module/themecontrol');
 $themeName =  $this->config->get('config_template');
-require_once(DIR_SYSTEM . 'pavoThemes/loader.php');
+require_once(DIR_SYSTEM . 'pavothemes/loader.php');
 $helper = ThemeControlHelper::getInstance( $this->registry, $themeName );
 $helper->setDirection( $direction );
 $helper->triggerUserParams( array('headerlayout','productlayout') );
