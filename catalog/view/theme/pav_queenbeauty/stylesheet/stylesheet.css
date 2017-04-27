@@ -1,36 +1,4 @@
-/******************************************************
- * @package Pav Opencart Theme Framework for Opencart 1.5.x
- * @version 3.0
- * @author http://www.pavothemes.com
- * @copyright	Copyright (C) May 2014 PavoThemes.com <@emai:pavothemes@gmail.com>.All rights reserved.
- * @license		GNU General Public License version 2
-*******************************************************/
-/**
- * Web Application Prefix Apply For Making Owner Styles
- */
-/**
- *   Blocks Layout Selectors 
- */
-/**
- * Product Item Selectors
- */
-/***********************************************************************/
-/*
- * LAYOUT VARIABLES
- */
-/**
-* Transition-timing-function property@mixin 
-*/
-/*background RGBA
-============================================*/
-/*inline-block
-============================================*/
-/****/
-/* RIGHT TO LEFT */
-/**
- * BASE CSS STYLES
- */
-/* line 4, ../development/scss/app/_base.scss */
+
 html {
   overflow-y: scroll;
   margin: 0;
@@ -5373,4 +5341,7 @@ body[class*="-home"] .menu-bottom.navbar-fixed-top {
 
 .pull-right.btn.btn-danger.btn-default{
   display: none;
+}
+.product-compare {
+    display: none !important;
 }
