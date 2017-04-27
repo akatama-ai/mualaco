@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 25, 2017 lúc 03:55 CH
+-- Thời gian đã tạo: Th4 27, 2017 lúc 04:10 CH
 -- Phiên bản máy phục vụ: 10.1.21-MariaDB
 -- Phiên bản PHP: 5.6.30
 
@@ -292,9 +292,9 @@ INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `link`, `image`) 
 (163, 8, 'index.php?route=product/manufacturer/info&amp;manufacturer_id=10', 'data/banner/partner7.jpg'),
 (164, 8, 'index.php?route=product/manufacturer/info&amp;manufacturer_id=10', 'data/banner/partner2.jpg'),
 (165, 8, 'index.php?route=product/manufacturer/info&amp;manufacturer_id=10', 'data/banner/partner6.jpg'),
-(185, 21, '', 'data/layerslider/1.png'),
+(191, 21, '', 'data/slide_2.jpg'),
 (186, 20, '#', 'data/636077133278327697_G4.jpg'),
-(184, 21, '', 'data/beatyfu.jpg'),
+(190, 21, '', 'data/slide_1.jpg'),
 (189, 20, '#', 'data/banner/Spa.jpg');
 
 -- --------------------------------------------------------
@@ -359,16 +359,16 @@ INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `ba
 (162, 6, 8, 'Canon'),
 (165, 1, 8, 'BrainOs'),
 (163, 6, 8, 'Hitachi'),
-(185, 1, 21, 'slide1'),
+(191, 1, 21, 'silde2'),
 (79, 6, 7, 'Samsung Tab 10.1'),
-(185, 6, 21, 'slide1'),
+(191, 6, 21, 'silde2'),
 (188, 6, 20, 'Skin'),
 (187, 6, 20, 'Cross boy'),
 (186, 1, 20, 'Travel bags'),
 (164, 6, 8, 'Microsoft'),
 (165, 6, 8, 'BrainOs'),
-(184, 1, 21, 'silde2'),
-(184, 6, 21, 'silde2'),
+(190, 1, 21, 'slide1'),
+(190, 6, 21, 'slide1'),
 (186, 6, 20, 'Travel bags'),
 (189, 1, 20, 'Fashion bags');
 
@@ -395,39 +395,16 @@ CREATE TABLE `oc_category` (
 --
 
 INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`, `sort_order`, `status`, `date_added`, `date_modified`) VALUES
-(25, 'data/beatyfu.jpg', 0, 1, 1, 3, 1, '2009-01-31 01:04:25', '2017-04-25 17:33:47'),
-(27, 'data/demo/banner-category.png', 20, 0, 0, 2, 1, '2009-01-31 01:55:34', '2014-09-08 11:08:57'),
-(20, 'data/beatyfu.jpg', 0, 1, 1, 1, 1, '2009-01-05 21:49:43', '2014-09-08 10:26:51'),
-(28, 'data/beatyfu.jpg', 25, 0, 0, 1, 1, '2009-02-02 13:11:12', '2014-09-08 10:46:08'),
-(26, 'data/demo/banner-category.png', 20, 0, 0, 1, 1, '2009-01-31 01:55:14', '2014-09-08 11:08:21'),
-(29, 'data/demo/banner-category.png', 25, 0, 0, 1, 1, '2009-02-02 13:11:37', '2014-09-08 10:49:32'),
-(31, 'data/demo/banner-category.png', 25, 0, 0, 1, 1, '2009-02-03 14:17:24', '2014-09-08 10:50:26'),
-(32, 'data/demo/banner-category.png', 25, 0, 0, 1, 1, '2009-02-03 14:17:34', '2014-09-08 10:48:08'),
-(59, 'data/beatyfu.jpg', 0, 0, 1, 1, 1, '2014-01-07 00:34:32', '2014-09-08 10:23:05'),
-(34, 'data/beatyfu.jpg', 0, 1, 4, 7, 1, '2009-02-03 14:18:11', '2014-09-08 10:17:55'),
-(35, 'data/demo/banner-category.png', 28, 0, 0, 0, 1, '2010-09-17 10:06:48', '2014-09-08 10:46:38'),
-(36, 'data/demo/banner-category.png', 28, 0, 0, 0, 1, '2010-09-17 10:07:13', '2014-09-08 10:46:57'),
-(43, 'data/demo/banner-category.png', 34, 0, 0, 0, 1, '2010-09-18 14:06:49', '2014-09-08 10:58:25'),
-(44, 'data/beatyfu.jpg', 34, 0, 0, 0, 1, '2010-09-21 15:39:21', '2014-09-08 11:06:27'),
-(47, 'data/demo/banner-category.png', 34, 0, 0, 0, 1, '2010-11-07 11:13:16', '2014-09-08 11:04:24'),
-(48, 'data/demo/banner-category.png', 34, 0, 0, 0, 1, '2010-11-07 11:13:33', '2014-09-08 10:59:43'),
-(49, '', 34, 0, 0, 0, 1, '2010-11-07 11:14:04', '2014-09-08 11:05:11'),
-(50, '', 34, 0, 0, 0, 1, '2010-11-07 11:14:23', '2014-09-08 11:06:08'),
-(60, 'data/beatyfu.jpg', 0, 0, 1, 1, 1, '2014-04-19 09:03:27', '2014-09-08 10:25:38'),
-(63, 'data/layerslider/bg_slider4.jpg', 25, 0, 1, 0, 1, '2014-05-24 00:49:09', '2014-09-08 10:44:40'),
-(64, '', 60, 0, 1, 0, 1, '2014-05-24 00:52:27', '2014-09-08 14:07:37'),
-(65, '', 60, 0, 1, 0, 1, '2014-05-24 00:52:52', '2014-09-08 11:21:51'),
-(66, '', 60, 0, 1, 0, 1, '2014-05-24 00:53:12', '2014-05-24 00:53:12'),
-(67, '', 60, 0, 1, 0, 1, '2014-05-24 00:53:33', '2014-09-08 11:15:12'),
-(68, '', 60, 0, 1, 0, 1, '2014-05-24 00:53:51', '2014-05-24 00:53:51'),
-(69, '', 60, 0, 1, 0, 1, '2014-05-24 00:54:09', '2014-09-08 11:15:31'),
-(70, '', 60, 0, 1, 0, 1, '2014-05-24 00:54:28', '2014-09-08 14:04:34'),
-(71, '', 59, 0, 1, 0, 1, '2014-05-24 00:54:57', '2014-09-08 11:12:27'),
-(72, '', 59, 0, 1, 0, 1, '2014-05-24 00:55:18', '2014-09-08 11:10:43'),
-(73, '', 59, 0, 1, 0, 1, '2014-05-24 00:55:39', '2014-09-08 11:11:20'),
-(74, '', 59, 0, 1, 0, 1, '2014-05-24 00:55:57', '2014-09-08 11:11:54'),
-(75, '', 59, 0, 1, 0, 1, '2014-05-24 00:56:25', '2014-09-08 11:09:47'),
-(76, '', 0, 0, 1, 0, 1, '2017-04-25 19:52:43', '2017-04-25 19:53:48');
+(77, '', 76, 0, 1, 0, 1, '2017-04-27 19:48:24', '2017-04-27 19:48:24'),
+(78, '', 76, 0, 1, 0, 1, '2017-04-27 19:49:14', '2017-04-27 19:49:25'),
+(79, '', 0, 0, 1, 0, 1, '2017-04-27 19:50:08', '2017-04-27 19:50:08'),
+(80, '', 0, 0, 1, 0, 1, '2017-04-27 19:50:32', '2017-04-27 19:50:32'),
+(81, '', 0, 0, 1, 0, 1, '2017-04-27 19:50:44', '2017-04-27 19:50:44'),
+(82, '', 0, 0, 1, 0, 1, '2017-04-27 19:51:05', '2017-04-27 19:51:05'),
+(83, '', 0, 0, 1, 0, 1, '2017-04-27 19:51:17', '2017-04-27 19:51:17'),
+(84, '', 0, 0, 1, 0, 1, '2017-04-27 19:51:39', '2017-04-27 19:51:39'),
+(85, '', 0, 0, 1, 11, 1, '2017-04-27 20:21:52', '2017-04-27 20:24:28'),
+(76, '', 0, 0, 1, 0, 1, '2017-04-25 19:52:43', '2017-04-27 19:48:38');
 
 -- --------------------------------------------------------
 
@@ -449,72 +426,26 @@ CREATE TABLE `oc_category_description` (
 --
 
 INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `description`, `meta_description`, `meta_keyword`) VALUES
-(32, 6, 'Styling', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(44, 6, 'Nail Polish ', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(63, 6, 'Shampoo', '', '', ''),
-(43, 6, 'Nail Brushes', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(49, 1, 'Nail Care Products', '', '', ''),
-(26, 1, 'Fashion', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(36, 1, 'Hot', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(35, 1, 'new', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(31, 6, 'Hair Loss', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(35, 6, 'new', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(59, 6, 'Skin care', '', '', ''),
-(60, 6, 'Spa', '', '', ''),
-(25, 6, 'Hair Care', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(28, 6, 'Conditioner', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(59, 1, 'Skin care', '', '', ''),
-(60, 1, 'Spa', '', '', ''),
-(25, 1, 'Hair Care', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(28, 1, 'Conditioner', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(31, 1, 'Hair Loss', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(32, 1, 'Styling', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(44, 1, 'Nail Polish ', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(63, 1, 'Shampoo', '', '', ''),
-(43, 1, 'Nail Brushes', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(48, 1, 'Nail Repair', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(47, 1, 'Nail Decals', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(64, 1, 'Hot Spa ', '', '', ''),
-(65, 1, 'Cosmetics', '', '', ''),
-(66, 1, 'Safety', '', '', ''),
-(67, 1, 'Face', '', '', ''),
-(68, 1, 'Strollers ', '', '', ''),
-(69, 1, 'Body', '', '', ''),
-(36, 6, 'Hot', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(70, 1, 'Spa Sciences', '', '', ''),
-(71, 1, 'Tools', '', '', ''),
-(72, 1, 'Eyes', '', '', ''),
-(73, 1, 'Lips', '', '', ''),
-(74, 1, 'Body', '', '', ''),
-(75, 1, 'Face', '', '', ''),
-(27, 1, 'Men\'s', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(20, 1, 'Others', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', 'Example of category description', ''),
-(34, 1, 'Nail', '&lt;p&gt;Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\r\n', '', ''),
-(29, 1, 'Hair color', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(50, 1, 'Nail Decorations', '', '', ''),
-(26, 6, 'Fashion', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(49, 6, 'Nail Care Products', '', '', ''),
-(48, 6, 'Nail Repair', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(47, 6, 'Nail Decals', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(64, 6, 'Hot Spa ', '', '', ''),
-(65, 6, 'Cosmetics', '', '', ''),
-(66, 6, 'Safety', '', '', ''),
-(67, 6, 'Face', '', '', ''),
-(68, 6, 'Strollers ', '', '', ''),
-(69, 6, 'Body', '', '', ''),
-(70, 6, 'Spa Sciences', '', '', ''),
-(71, 6, 'Tools', '', '', ''),
-(72, 6, 'Eyes', '', '', ''),
-(73, 6, 'Lips', '', '', ''),
-(74, 6, 'Body', '', '', ''),
-(75, 6, 'Face', '', '', ''),
-(27, 6, 'Men\'s', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(20, 6, 'Others', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', 'Example of category description', ''),
-(34, 6, 'Nail', '&lt;p&gt;Shop Laptop feature only the best laptop deals on the market. By comparing laptop deals from the likes of PC World, Comet, Dixons, The Link and Carphone Warehouse, Shop Laptop has the most comprehensive selection of laptops on the internet. At Shop Laptop, we pride ourselves on offering customers the very best laptop deals. From refurbished laptops to netbooks, Shop Laptop ensures that every laptop - in every colour, style, size and technical spec - is featured on the site at the lowest possible price.&lt;/p&gt;\r\n', '', ''),
-(29, 6, 'Hair color', '&lt;p&gt;Modus consetetur id pri, at mundi vidisse forensibus est, ei est accusata deterruisset. Pri stet putent regione no. Nec honestatis liberavisse et. Id eum primis equidem intellegam, case scribentur nam in, id dolores invidunt sed.&lt;/p&gt;\r\n', '', ''),
-(50, 6, 'Nail Decorations', '', '', ''),
+(77, 6, 'Thời trang nam', '', '', ''),
+(77, 1, 'Thời trang nam', '', '', ''),
+(79, 1, 'Sức khỏe', '', '', ''),
+(80, 6, 'Phụ kiện', '', '', ''),
+(80, 1, 'Phụ kiện', '', '', ''),
+(81, 6, 'Trang sức', '', '', ''),
+(81, 1, 'Trang sức', '', '', ''),
+(82, 6, 'Hàng độc', '', '', ''),
+(82, 1, 'Hàng độc', '', '', ''),
+(83, 6, 'Gạo nhập', '', '', ''),
+(83, 1, 'Gạo nhập', '', '', ''),
+(84, 6, 'Sản phẩm đặc biệt', '', '', ''),
+(84, 1, 'Sản phẩm đặc biệt', '', '', ''),
+(85, 6, 'Sản phẩm', '', '', ''),
+(85, 1, 'Sản phẩm', '', '', ''),
 (76, 6, 'Thời trang', '', '', ''),
-(76, 1, 'Thời trang', '', '', '');
+(76, 1, 'Thời trang', '', '', ''),
+(78, 6, 'Thời trang nữ', '', '', ''),
+(78, 1, 'Thời trang nữ', '', '', ''),
+(79, 6, 'Sức khỏe', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -526,22 +457,6 @@ CREATE TABLE `oc_category_filter` (
   `category_id` int(11) NOT NULL,
   `filter_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `oc_category_filter`
---
-
-INSERT INTO `oc_category_filter` (`category_id`, `filter_id`) VALUES
-(20, 7),
-(20, 8),
-(20, 9),
-(20, 10),
-(20, 11),
-(20, 12),
-(59, 7),
-(59, 8),
-(59, 11),
-(59, 12);
 
 -- --------------------------------------------------------
 
@@ -560,67 +475,17 @@ CREATE TABLE `oc_category_path` (
 --
 
 INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
-(25, 25, 0),
-(28, 25, 0),
-(28, 28, 1),
-(35, 28, 1),
-(35, 25, 0),
-(35, 35, 2),
-(36, 28, 1),
-(36, 25, 0),
-(36, 36, 2),
-(29, 25, 0),
-(29, 29, 1),
-(31, 25, 0),
-(31, 31, 1),
-(32, 25, 0),
-(32, 32, 1),
-(20, 20, 0),
-(27, 20, 0),
-(27, 27, 1),
-(26, 20, 0),
-(26, 26, 1),
-(59, 59, 0),
-(34, 34, 0),
-(43, 34, 0),
-(43, 43, 1),
-(44, 34, 0),
-(44, 44, 1),
-(47, 34, 0),
-(47, 47, 1),
-(48, 34, 0),
-(48, 48, 1),
-(49, 34, 0),
-(49, 49, 1),
-(50, 34, 0),
-(50, 50, 1),
-(60, 60, 0),
-(63, 25, 0),
-(63, 63, 1),
-(64, 60, 0),
-(64, 64, 1),
-(65, 60, 0),
-(65, 65, 1),
-(66, 60, 0),
-(66, 66, 1),
-(67, 60, 0),
-(67, 67, 1),
-(68, 60, 0),
-(68, 68, 1),
-(69, 60, 0),
-(69, 69, 1),
-(70, 60, 0),
-(70, 70, 1),
-(71, 59, 0),
-(71, 71, 1),
-(72, 59, 0),
-(72, 72, 1),
-(73, 59, 0),
-(73, 73, 1),
-(74, 59, 0),
-(74, 74, 1),
-(75, 59, 0),
-(75, 75, 1),
+(79, 79, 0),
+(78, 78, 1),
+(78, 76, 0),
+(77, 76, 0),
+(77, 77, 1),
+(84, 84, 0),
+(85, 85, 0),
+(82, 82, 0),
+(83, 83, 0),
+(80, 80, 0),
+(81, 81, 0),
 (76, 76, 0);
 
 -- --------------------------------------------------------
@@ -651,39 +516,16 @@ CREATE TABLE `oc_category_to_store` (
 --
 
 INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
-(20, 0),
-(25, 0),
-(26, 0),
-(27, 0),
-(28, 0),
-(29, 0),
-(31, 0),
-(32, 0),
-(34, 0),
-(35, 0),
-(36, 0),
-(43, 0),
-(44, 0),
-(47, 0),
-(48, 0),
-(49, 0),
-(50, 0),
-(59, 0),
-(60, 0),
-(63, 0),
-(64, 0),
-(65, 0),
-(66, 0),
-(67, 0),
-(68, 0),
-(69, 0),
-(70, 0),
-(71, 0),
-(72, 0),
-(73, 0),
-(74, 0),
-(75, 0),
-(76, 0);
+(76, 0),
+(77, 0),
+(78, 0),
+(79, 0),
+(80, 0),
+(81, 0),
+(82, 0),
+(83, 0),
+(84, 0),
+(85, 0);
 
 -- --------------------------------------------------------
 
@@ -1052,7 +894,7 @@ INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbo
 (1, 'Pound Sterling', 'GBP', '£', '', '2', 0.78030002, 0, '2017-04-25 19:08:44'),
 (2, 'US Dollar', 'USD', '', 'USD', '2', 1.00000000, 0, '2017-04-25 20:05:36'),
 (3, 'Euro', 'EUR', '', '€', '2', 0.91880000, 0, '2017-04-25 19:08:38'),
-(4, 'VNĐ', 'VND', '', ' VNĐ', '', 1.00000000, 1, '2017-04-25 15:17:12');
+(4, 'VNĐ', 'VND', '', ' VNĐ', '', 1.00000000, 1, '2017-04-27 16:03:42');
 
 -- --------------------------------------------------------
 
@@ -1371,7 +1213,7 @@ INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
 (407, 'payment', 'free_checkout'),
 (505, 'module', 'pavcategorybanner'),
 (517, 'module', 'themecontrol'),
-(434, 'module', 'pavblog'),
+(527, 'module', 'pavblog'),
 (435, 'module', 'pavblogcategory'),
 (436, 'module', 'pavblogcomment'),
 (437, 'module', 'pavbloglatest'),
@@ -1854,7 +1696,7 @@ INSERT INTO `oc_megamenu` (`megamenu_id`, `image`, `parent_id`, `is_group`, `wid
 (35, '', 3, 0, NULL, NULL, NULL, '', '25', '1', 'category', 0, 1, 'menu', 0, 1, 0, 5, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1),
 (38, '', 1, 0, NULL, NULL, NULL, '', '57', '1', 'url', 0, 1, 'menu', 0, 1, 0, 4, 0, 'index.php?route=pavblog/blogs', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1),
 (40, '', 1, 0, NULL, NULL, NULL, '', '', '1', 'url', 0, 1, 'menu', 0, 1, 0, 1, 0, '?route=common/home', NULL, 0, 'top', 'home', NULL, '', '', 0, 0, 0, 1),
-(41, '', 1, 0, NULL, NULL, NULL, '', '20', '1', 'category', 0, 1, 'menu', 0, 1, 0, 2, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1),
+(41, '', 1, 0, NULL, NULL, NULL, '', '20', '1', 'url', 0, 1, 'menu', 0, 1, 0, 2, 0, 'san-pham', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1),
 (44, '', 1, 0, NULL, NULL, NULL, '', '', '1', 'url', 0, 1, 'menu', 0, 1, 0, 7, 0, 'index.php?route=information/contact', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1),
 (45, '', 1, 0, NULL, NULL, NULL, NULL, '25', '1', 'category', 2, 1, 'menu', 0, 1, 1, 99, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1),
 (46, '', 1, 0, NULL, NULL, NULL, NULL, '57', '1', 'category', 2, 1, 'menu', 0, 1, 1, 99, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, 0, 0, 0, 1),
@@ -1897,7 +1739,7 @@ INSERT INTO `oc_megamenu` (`megamenu_id`, `image`, `parent_id`, `is_group`, `wid
 (83, '', 25, 0, NULL, NULL, NULL, '', '20', '1', 'category', 0, 1, 'menu', 0, 1, 0, 1, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1),
 (84, '', 25, 0, NULL, NULL, NULL, '', '59', '1', 'category', 0, 1, 'menu', 0, 1, 0, 2, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1),
 (85, '', 25, 0, NULL, NULL, NULL, '', '25', '1', 'category', 0, 1, 'menu', 0, 1, 0, 3, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1),
-(86, '', 1, 0, NULL, NULL, NULL, '', '60', '1', 'category', 0, 1, 'menu', 0, 1, 0, 3, 0, '', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1);
+(86, '', 1, 0, NULL, NULL, NULL, '', '60', '1', 'url', 0, 1, 'menu', 0, 1, 0, 3, 0, 'san-pham', NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -2716,24 +2558,6 @@ CREATE TABLE `oc_pavblog_blog` (
   `keyword` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `oc_pavblog_blog`
---
-
-INSERT INTO `oc_pavblog_blog` (`blog_id`, `category_id`, `position`, `created`, `status`, `user_id`, `hits`, `image`, `meta_keyword`, `meta_description`, `meta_title`, `date_modified`, `video_code`, `params`, `tags`, `featured`, `keyword`) VALUES
-(7, 21, 5, '2013-03-09', 1, 1, 80, 'data/pavblog/blog1.jpg', '', '', '', '2014-03-01', '', '', 'joomla, prestashop, magento', 1, ''),
-(9, 21, 6, '2013-03-09', 1, 1, 90, 'data/pavblog/blog7.jpg', '', '', '', '2014-03-01', '', '', 'prestashop, magento', 0, ''),
-(10, 21, 7, '2013-03-09', 1, 1, 307, 'data/pavblog/blog3.jpg', 'test test', '', 'Custom SEO Titlte', '2014-03-01', '', '', 'prestashop', 0, ''),
-(11, 21, 1, '2013-03-11', 1, 1, 93, 'data/pavblog/blog4.jpg', '', '', '', '2014-03-01', '', '', 'opencart', 0, ''),
-(12, 1, 4, '2013-12-25', 1, 1, 102, 'data/pavblog/blog2.jpg', '', '', '', '2014-03-01', '', '', 'joomla, prestashop, magento', 0, ''),
-(13, 23, 2, '2014-08-23', 1, 1, 1, 'data/pavblog/blog8.jpg', '', '', '', '2014-08-23', '', '', 'beauty,blog', 1, ''),
-(14, 20, 19, '2014-08-23', 1, 1, 1, 'data/pavblog/blog7.jpg', '', '', '', '2014-08-23', '', '', 'beauty,blog', 0, ''),
-(15, 25, 12, '2014-08-23', 1, 1, 2, 'data/pavblog/blog1.jpg', '', '', '', '2014-08-23', '', '', 'beauty,blog', 0, ''),
-(16, 25, 11, '2014-08-23', 1, 1, 0, 'data/pavblog/blog4.jpg', '', '', '', '2014-08-23', '', '', 'beauty,blog', 0, ''),
-(17, 25, 16, '2014-08-23', 1, 1, 20, 'data/pavblog/blog4.jpg', '', '', '', '2014-08-23', '', '', 'beauty,blog', 0, ''),
-(18, 27, 3, '2014-08-23', 1, 1, 0, 'data/pavblog/blog6.jpg', '', '', '', '0000-00-00', '', '', 'beauty,blog', 0, ''),
-(19, 27, 15, '2014-08-23', 1, 1, 2, 'data/pavblog/blog2.jpg', '', '', '', '2014-08-23', '', '', 'beauty,blog', 0, '');
-
 -- --------------------------------------------------------
 
 --
@@ -2747,37 +2571,6 @@ CREATE TABLE `oc_pavblog_blog_description` (
   `description` text NOT NULL,
   `content` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `oc_pavblog_blog_description`
---
-
-INSERT INTO `oc_pavblog_blog_description` (`blog_id`, `language_id`, `title`, `description`, `content`) VALUES
-(7, 1, 'Weatherproof Vintage Sweater ', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n', '&lt;div class=&quot;itemFullText&quot;&gt;\r\n&lt;p&gt;Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus Aenean Lorem vitae id. Odio ut pretium ligula quam Vestibulum consequat convallis fringilla Vestibulum nulla. Accumsan morbi tristique auctor Aenean nulla lacinia Nullam elit vel vel. At risus pretium urna tortor metus fringilla interdum mauris tempor congue.&lt;/p&gt;\r\n\r\n&lt;p&gt;Donec tellus Nulla lorem Nullam elit id ut elit feugiat lacus. Congue eget dapibus congue tincidunt senectus nibh risus Phasellus tristique justo. Justo Pellentesque Donec lobortis faucibus Vestibulum Praesent mauris volutpat vitae metus. Ipsum cursus vestibulum at interdum Vivamus nunc fringilla Curabitur ac quis. Nam lacinia wisi tortor orci quis vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sed mauris Pellentesque elit Aliquam at lacus interdum nascetur elit ipsum. Enim ipsum hendrerit Suspendisse turpis laoreet fames tempus ligula pede ac. Et Lorem penatibus orci eu ultrices egestas Nam quam Vivamus nibh. Morbi condimentum molestie Nam enim odio sodales pretium eros sem pellentesque. Sit tellus Integer elit egestas lacus turpis id auctor nascetur ut. Ac elit vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum faucibus. At Nulla id tincidunt ut sed semper vel Lorem condimentum ornare. Laoreet Vestibulum lacinia massa a commodo habitasse velit Vestibulum tincidunt In. Turpis at eleifend leo mi elit Aenean porta ac sed faucibus. Nunc urna Morbi fringilla vitae orci convallis condimentum auctor sit dui. Urna pretium elit mauris cursus Curabitur at elit Vestibulum.&lt;/p&gt;\r\n&lt;/div&gt;\r\n'),
-(7, 2, 'عدم بل عرفها للسيطرة وأكثرها, ثم أطراف الباهضة', '&lt;p&gt;في الأثناء، ويكيبيديا البريطاني حدة. ما بحق الأثنان المقاومة الإمبراطورية. من أما المتّبعة استطاعوا, حول مكّن كردة السوفييتي تم. حتى وزارة المعاهدات ويكيبيديا من, كلا أي دأبوا السيء, كلا دخول ديسمبر الأوضاع أي.&lt;/p&gt;\r\n', '&lt;p&gt;أم كما وتردي الساحل, وحتّى اليها حين في, ثم يذكر تكتيكاً بوزيرها حول. وجزر تنفّس أفريقيا بلا لم, عل هامش الحربية كان. رئيس غرّة، والألمانية، أخذ كل. هو ضرب طوكيو للجزر الصعداء. في ماذا مناوشات والروسية حدى. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،.&lt;/p&gt;\r\n'),
-(9, 1, 'Enjoy the Tyrion gift card', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n', '&lt;div class=&quot;itemFullText&quot;&gt;\r\n&lt;p&gt;Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus Aenean Lorem vitae id. Odio ut pretium ligula quam Vestibulum consequat convallis fringilla Vestibulum nulla. Accumsan morbi tristique auctor Aenean nulla lacinia Nullam elit vel vel. At risus pretium urna tortor metus fringilla interdum mauris tempor congue.&lt;/p&gt;\r\n\r\n&lt;p&gt;Donec tellus Nulla lorem Nullam elit id ut elit feugiat lacus. Congue eget dapibus congue tincidunt senectus nibh risus Phasellus tristique justo. Justo Pellentesque Donec lobortis faucibus Vestibulum Praesent mauris volutpat vitae metus. Ipsum cursus vestibulum at interdum Vivamus nunc fringilla Curabitur ac quis. Nam lacinia wisi tortor orci quis vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sed mauris Pellentesque elit Aliquam at lacus interdum nascetur elit ipsum. Enim ipsum hendrerit Suspendisse turpis laoreet fames tempus ligula pede ac. Et Lorem penatibus orci eu ultrices egestas Nam quam Vivamus nibh. Morbi condimentum molestie Nam enim odio sodales pretium eros sem pellentesque. Sit tellus Integer elit egestas lacus turpis id auctor nascetur ut. Ac elit vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum faucibus. At Nulla id tincidunt ut sed semper vel Lorem condimentum ornare. Laoreet Vestibulum lacinia massa a commodo habitasse velit Vestibulum tincidunt In. Turpis at eleifend leo mi elit Aenean porta ac sed faucibus. Nunc urna Morbi fringilla vitae orci convallis condimentum auctor sit dui. Urna pretium elit mauris cursus Curabitur at elit Vestibulum.&lt;/p&gt;\r\n&lt;/div&gt;\r\n'),
-(9, 2, 'عدم بل عرفها للسيطرة وأكثرها, ثم أطراف الباهضة', '&lt;p&gt;في الأثناء، ويكيبيديا البريطاني حدة. ما بحق الأثنان المقاومة الإمبراطورية. من أما المتّبعة استطاعوا, حول مكّن كردة السوفييتي تم. حتى وزارة المعاهدات ويكيبيديا من, كلا أي دأبوا السيء, كلا دخول ديسمبر الأوضاع أي.&lt;/p&gt;\r\n', '&lt;p&gt;أم كما وتردي الساحل, وحتّى اليها حين في, ثم يذكر تكتيكاً بوزيرها حول. وجزر تنفّس أفريقيا بلا لم, عل هامش الحربية كان. رئيس غرّة، والألمانية، أخذ كل. هو ضرب طوكيو للجزر الصعداء. في ماذا مناوشات والروسية حدى. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،.&lt;/p&gt;\r\n'),
-(10, 1, 'The Buff – Men’s Contemporary Shoes ', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n', '&lt;p&gt;Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&lt;/p&gt;\r\n'),
-(10, 2, 'عدم بل عرفها للسيطرة وأكثرها, ثم أطراف الباهضة', '&lt;p&gt;في الأثناء، ويكيبيديا البريطاني حدة. ما بحق الأثنان المقاومة الإمبراطورية. من أما المتّبعة استطاعوا, حول مكّن كردة السوفييتي تم. حتى وزارة المعاهدات ويكيبيديا من, كلا أي دأبوا السيء, كلا دخول ديسمبر الأوضاع أي.&lt;/p&gt;\r\n', '&lt;p&gt;أم كما وتردي الساحل, وحتّى اليها حين في, ثم يذكر تكتيكاً بوزيرها حول. وجزر تنفّس أفريقيا بلا لم, عل هامش الحربية كان. رئيس غرّة، والألمانية، أخذ كل. هو ضرب طوكيو للجزر الصعداء. في ماذا مناوشات والروسية حدى. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. في الأثناء، ويكيبيديا البريطاني حدة. ما بحق الأثنان المقاومة الإمبراطورية. من أما المتّبعة استطاعوا, حول مكّن كردة السوفييتي تم. حتى وزارة المعاهدات ويكيبيديا من, كلا أي دأبوا السيء, كلا دخول ديسمبر الأوضاع أي. مما و بأيدي القادة والكساد, الا ثم تصرّف الغالي سنغافورة. عدد ثم تجهيز الجنرال بالدبابات. عليها اقتصادية أم بال, بل جورج أثره، جوي, جيما ستالين الإمتعاض إذ جوي. عل فقد تُصب منتصف وفنلندا, و الى عليها وإعلان الإتحاد. أرغم الفاشي النازية لم بعد, أي خلاف لدحر استسلام بها. قصف أدنى ومدني، و, جوي تشرشل المحور، الياباني، إذ.&lt;/p&gt;\r\n\r\n&lt;p&gt;أم كما وتردي الساحل, وحتّى اليها حين في, ثم يذكر تكتيكاً بوزيرها حول. وجزر تنفّس أفريقيا بلا لم, عل هامش الحربية كان. رئيس غرّة، والألمانية، أخذ كل. هو ضرب طوكيو للجزر الصعداء. في ماذا مناوشات والروسية حدى. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. في الأثناء، ويكيبيديا البريطاني حدة. ما بحق الأثنان المقاومة الإمبراطورية. من أما المتّبعة استطاعوا, حول مكّن كردة السوفييتي تم. حتى وزارة المعاهدات ويكيبيديا من, كلا أي دأبوا السيء, كلا دخول ديسمبر الأوضاع أي. مما و بأيدي القادة والكساد, الا ثم تصرّف الغالي سنغافورة. عدد ثم تجهيز الجنرال بالدبابات. عليها اقتصادية أم بال, بل جورج أثره، جوي, جيما ستالين الإمتعاض إذ جوي. عل فقد تُصب منتصف وفنلندا, و الى عليها وإعلان الإتحاد. أرغم الفاشي النازية لم بعد, أي خلاف لدحر استسلام بها. قصف أدنى ومدني، و, جوي تشرشل المحور، الياباني، إذ.&lt;/p&gt;\r\n'),
-(11, 1, 'Popular Jeans New Collection ', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n', '&lt;div class=&quot;itemFullText&quot;&gt;\r\n&lt;p&gt;Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus Aenean Lorem vitae id. Odio ut pretium ligula quam Vestibulum consequat convallis fringilla Vestibulum nulla. Accumsan morbi tristique auctor Aenean nulla lacinia Nullam elit vel vel. At risus pretium urna tortor metus fringilla interdum mauris tempor congue.&lt;/p&gt;\r\n\r\n&lt;p&gt;Donec tellus Nulla lorem Nullam elit id ut elit feugiat lacus. Congue eget dapibus congue tincidunt senectus nibh risus Phasellus tristique justo. Justo Pellentesque Donec lobortis faucibus Vestibulum Praesent mauris volutpat vitae metus. Ipsum cursus vestibulum at interdum Vivamus nunc fringilla Curabitur ac quis. Nam lacinia wisi tortor orci quis vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sed mauris Pellentesque elit Aliquam at lacus interdum nascetur elit ipsum. Enim ipsum hendrerit Suspendisse turpis laoreet fames tempus ligula pede ac. Et Lorem penatibus orci eu ultrices egestas Nam quam Vivamus nibh. Morbi condimentum molestie Nam enim odio sodales pretium eros sem pellentesque. Sit tellus Integer elit egestas lacus turpis id auctor nascetur ut. Ac elit vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum faucibus. At Nulla id tincidunt ut sed semper vel Lorem condimentum ornare. Laoreet Vestibulum lacinia massa a commodo habitasse velit Vestibulum tincidunt In. Turpis at eleifend leo mi elit Aenean porta ac sed faucibus. Nunc urna Morbi fringilla vitae orci convallis condimentum auctor sit dui. Urna pretium elit mauris cursus Curabitur at elit Vestibulum.&lt;/p&gt;\r\n&lt;/div&gt;\r\n'),
-(11, 2, 'عدم بل عرفها للسيطرة وأكثرها, ثم أطراف الباهضة', '&lt;p&gt;في الأثناء، ويكيبيديا البريطاني حدة. ما بحق الأثنان المقاومة الإمبراطورية. من أما المتّبعة استطاعوا, حول مكّن كردة السوفييتي تم. حتى وزارة المعاهدات ويكيبيديا من, كلا أي دأبوا السيء, كلا دخول ديسمبر الأوضاع أي.&lt;/p&gt;\r\n', '&lt;p&gt;أم كما وتردي الساحل, وحتّى اليها حين في, ثم يذكر تكتيكاً بوزيرها حول. وجزر تنفّس أفريقيا بلا لم, عل هامش الحربية كان. رئيس غرّة، والألمانية، أخذ كل. هو ضرب طوكيو للجزر الصعداء. في ماذا مناوشات والروسية حدى. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. في الأثناء، ويكيبيديا البريطاني حدة. ما بحق الأثنان المقاومة الإمبراطورية. من أما المتّبعة استطاعوا, حول مكّن كردة السوفييتي تم. حتى وزارة المعاهدات ويكيبيديا من, كلا أي دأبوا السيء, كلا دخول ديسمبر الأوضاع أي. مما و بأيدي القادة والكساد, الا ثم تصرّف الغالي سنغافورة. عدد ثم تجهيز الجنرال بالدبابات. عليها اقتصادية أم بال, بل جورج أثره، جوي, جيما ستالين الإمتعاض إذ جوي. عل فقد تُصب منتصف وفنلندا, و الى عليها وإعلان الإتحاد. أرغم الفاشي النازية لم بعد, أي خلاف لدحر استسلام بها. قصف أدنى ومدني، و, جوي تشرشل المحور، الياباني، إذ.&lt;/p&gt;\r\n\r\n&lt;p&gt;أم كما وتردي الساحل, وحتّى اليها حين في, ثم يذكر تكتيكاً بوزيرها حول. وجزر تنفّس أفريقيا بلا لم, عل هامش الحربية كان. رئيس غرّة، والألمانية، أخذ كل. هو ضرب طوكيو للجزر الصعداء. في ماذا مناوشات والروسية حدى. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. في الأثناء، ويكيبيديا البريطاني حدة. ما بحق الأثنان المقاومة الإمبراطورية. من أما المتّبعة استطاعوا, حول مكّن كردة السوفييتي تم. حتى وزارة المعاهدات ويكيبيديا من, كلا أي دأبوا السيء, كلا دخول ديسمبر الأوضاع أي. مما و بأيدي القادة والكساد, الا ثم تصرّف الغالي سنغافورة. عدد ثم تجهيز الجنرال بالدبابات. عليها اقتصادية أم بال, بل جورج أثره، جوي, جيما ستالين الإمتعاض إذ جوي. عل فقد تُصب منتصف وفنلندا, و الى عليها وإعلان الإتحاد. أرغم الفاشي النازية لم بعد, أي خلاف لدحر استسلام بها. قصف أدنى ومدني، و, جوي تشرشل المحور، الياباني، إذ.&lt;/p&gt;\r\n'),
-(12, 1, 'Fashion Brunette Girl', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n', '&lt;div class=&quot;itemFullText&quot;&gt;\r\n&lt;p&gt;Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus Aenean Lorem vitae id. Odio ut pretium ligula quam Vestibulum consequat convallis fringilla Vestibulum nulla. Accumsan morbi tristique auctor Aenean nulla lacinia Nullam elit vel vel. At risus pretium urna tortor metus fringilla interdum mauris tempor congue.&lt;/p&gt;\r\n\r\n&lt;p&gt;Donec tellus Nulla lorem Nullam elit id ut elit feugiat lacus. Congue eget dapibus congue tincidunt senectus nibh risus Phasellus tristique justo. Justo Pellentesque Donec lobortis faucibus Vestibulum Praesent mauris volutpat vitae metus. Ipsum cursus vestibulum at interdum Vivamus nunc fringilla Curabitur ac quis. Nam lacinia wisi tortor orci quis vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sed mauris Pellentesque elit Aliquam at lacus interdum nascetur elit ipsum. Enim ipsum hendrerit Suspendisse turpis laoreet fames tempus ligula pede ac. Et Lorem penatibus orci eu ultrices egestas Nam quam Vivamus nibh. Morbi condimentum molestie Nam enim odio sodales pretium eros sem pellentesque. Sit tellus Integer elit egestas lacus turpis id auctor nascetur ut. Ac elit vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum faucibus. At Nulla id tincidunt ut sed semper vel Lorem condimentum ornare. Laoreet Vestibulum lacinia massa a commodo habitasse velit Vestibulum tincidunt In. Turpis at eleifend leo mi elit Aenean porta ac sed faucibus. Nunc urna Morbi fringilla vitae orci convallis condimentum auctor sit dui. Urna pretium elit mauris cursus Curabitur at elit Vestibulum.&lt;/p&gt;\r\n&lt;/div&gt;\r\n'),
-(12, 2, 'عدم بل عرفها للسيطرة وأكثرها, ثم أطراف الباهضة', '&lt;p&gt;في الأثناء، ويكيبيديا البريطاني حدة. ما بحق الأثنان المقاومة الإمبراطورية. من أما المتّبعة استطاعوا, حول مكّن كردة السوفييتي تم. حتى وزارة المعاهدات ويكيبيديا من, كلا أي دأبوا السيء, كلا دخول ديسمبر الأوضاع أي.&lt;/p&gt;\r\n', '&lt;p&gt;أم كما وتردي الساحل, وحتّى اليها حين في, ثم يذكر تكتيكاً بوزيرها حول. وجزر تنفّس أفريقيا بلا لم, عل هامش الحربية كان. رئيس غرّة، والألمانية، أخذ كل. هو ضرب طوكيو للجزر الصعداء. في ماذا مناوشات والروسية حدى. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. في الأثناء، ويكيبيديا البريطاني حدة. ما بحق الأثنان المقاومة الإمبراطورية. من أما المتّبعة استطاعوا, حول مكّن كردة السوفييتي تم. حتى وزارة المعاهدات ويكيبيديا من, كلا أي دأبوا السيء, كلا دخول ديسمبر الأوضاع أي. مما و بأيدي القادة والكساد, الا ثم تصرّف الغالي سنغافورة. عدد ثم تجهيز الجنرال بالدبابات. عليها اقتصادية أم بال, بل جورج أثره، جوي, جيما ستالين الإمتعاض إذ جوي. عل فقد تُصب منتصف وفنلندا, و الى عليها وإعلان الإتحاد. أرغم الفاشي النازية لم بعد, أي خلاف لدحر استسلام بها. قصف أدنى ومدني، و, جوي تشرشل المحور، الياباني، إذ.&lt;/p&gt;\r\n\r\n&lt;p&gt;أم كما وتردي الساحل, وحتّى اليها حين في, ثم يذكر تكتيكاً بوزيرها حول. وجزر تنفّس أفريقيا بلا لم, عل هامش الحربية كان. رئيس غرّة، والألمانية، أخذ كل. هو ضرب طوكيو للجزر الصعداء. في ماذا مناوشات والروسية حدى. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. في الأثناء، ويكيبيديا البريطاني حدة. ما بحق الأثنان المقاومة الإمبراطورية. من أما المتّبعة استطاعوا, حول مكّن كردة السوفييتي تم. حتى وزارة المعاهدات ويكيبيديا من, كلا أي دأبوا السيء, كلا دخول ديسمبر الأوضاع أي. مما و بأيدي القادة والكساد, الا ثم تصرّف الغالي سنغافورة. عدد ثم تجهيز الجنرال بالدبابات. عليها اقتصادية أم بال, بل جورج أثره، جوي, جيما ستالين الإمتعاض إذ جوي. عل فقد تُصب منتصف وفنلندا, و الى عليها وإعلان الإتحاد. أرغم الفاشي النازية لم بعد, أي خلاف لدحر استسلام بها. قصف أدنى ومدني، و, جوي تشرشل المحور، الياباني، إذ.&lt;/p&gt;\r\n'),
-(18, 1, ' Phasellus faucibus orci', '&lt;p&gt;Nulla lobortis iaculis neque, eget ornare felis finibus vel. Phasellus faucibus orci pharetra erat laoreet, ut fermentum risus dapibus. Nunc dapibus ornare nibh, vitae vehicula nisi gravida vel. Phasellus quis turpis nibh. Nulla aliquet ipsum sed diam feugiat, posuere lobortis augue hendrerit&lt;/p&gt;\r\n', '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim at felis nec faucibus. Vestibulum a cursus metus, eleifend tempor turpis. Nunc gravida nibh nisl. Nunc eleifend augue at tempus finibus. Cras porta ut ex nec tempor. Mauris bibendum ut mauris vel sollicitudin. Integer et tincidunt lectus. Maecenas volutpat eget mi vel tempus. Suspendisse ultricies nunc metus, dignissim egestas dui semper vitae. Pellentesque purus nibh, aliquet sed efficitur a, volutpat quis quam. Pellentesque quis libero nibh. Maecenas suscipit posuere consectetur. Nullam congue nulla at luctus facilisis.&lt;/p&gt;\r\n\r\n&lt;p&gt;Nulla lobortis iaculis neque, eget ornare felis finibus vel. Phasellus faucibus orci pharetra erat laoreet, ut fermentum risus dapibus. Nunc dapibus ornare nibh, vitae vehicula nisi gravida vel. Phasellus quis turpis nibh. Nulla aliquet ipsum sed diam feugiat, posuere lobortis augue hendrerit. Suspendisse pellentesque enim non magna mattis, et sodales erat dapibus. Vivamus cursus et tellus eget imperdiet. Donec pretium vestibulum justo, a elementum diam tempor id. Cras tincidunt blandit nisl, sed suscipit sem dapibus eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.&lt;/p&gt;\r\n\r\n&lt;p&gt;Praesent quis porttitor ligula. Nunc imperdiet, augue eget porttitor dapibus, massa ex feugiat ante, at auctor massa dolor vel nisi. Cras ultricies commodo risus, sed tempus eros finibus nec. Curabitur consequat tincidunt semper. Fusce a suscipit felis. Vivamus tincidunt feugiat pellentesque. Nulla arcu enim, tempor at tincidunt vitae, hendrerit elementum libero. Nullam congue tellus non nisl porta rutrum. Duis congue nulla ut enim auctor, at lacinia eros cursus.&lt;/p&gt;\r\n\r\n&lt;p&gt;Integer dignissim sem et felis ultrices molestie. Phasellus luctus diam at ex convallis, quis placerat ante lacinia. Praesent iaculis feugiat dolor, a consectetur nisi. Curabitur a orci enim. Maecenas eget nisl gravida nulla sodales ultricies. Nunc ut mollis felis. Aliquam in sollicitudin eros. Nam aliquet a augue et elementum. Phasellus non urna aliquam, mollis nisi at, laoreet tortor. Mauris posuere, lorem in fringilla faucibus, tortor felis viverra ex, et bibendum est magna quis sem. Mauris fermentum porta lorem, vitae fermentum odio convallis eget.&lt;/p&gt;\r\n'),
-(18, 2, ' Phasellus faucibus orci', '&lt;p&gt;Nulla lobortis iaculis neque, eget ornare felis finibus vel. Phasellus faucibus orci pharetra erat laoreet, ut fermentum risus dapibus. Nunc dapibus ornare nibh, vitae vehicula nisi gravida vel. Phasellus quis turpis nibh. Nulla aliquet ipsum sed diam feugiat, posuere lobortis augue hendrerit&lt;/p&gt;\r\n', '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim at felis nec faucibus. Vestibulum a cursus metus, eleifend tempor turpis. Nunc gravida nibh nisl. Nunc eleifend augue at tempus finibus. Cras porta ut ex nec tempor. Mauris bibendum ut mauris vel sollicitudin. Integer et tincidunt lectus. Maecenas volutpat eget mi vel tempus. Suspendisse ultricies nunc metus, dignissim egestas dui semper vitae. Pellentesque purus nibh, aliquet sed efficitur a, volutpat quis quam. Pellentesque quis libero nibh. Maecenas suscipit posuere consectetur. Nullam congue nulla at luctus facilisis.&lt;/p&gt;\r\n\r\n&lt;p&gt;Nulla lobortis iaculis neque, eget ornare felis finibus vel. Phasellus faucibus orci pharetra erat laoreet, ut fermentum risus dapibus. Nunc dapibus ornare nibh, vitae vehicula nisi gravida vel. Phasellus quis turpis nibh. Nulla aliquet ipsum sed diam feugiat, posuere lobortis augue hendrerit. Suspendisse pellentesque enim non magna mattis, et sodales erat dapibus. Vivamus cursus et tellus eget imperdiet. Donec pretium vestibulum justo, a elementum diam tempor id. Cras tincidunt blandit nisl, sed suscipit sem dapibus eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.&lt;/p&gt;\r\n\r\n&lt;p&gt;Praesent quis porttitor ligula. Nunc imperdiet, augue eget porttitor dapibus, massa ex feugiat ante, at auctor massa dolor vel nisi. Cras ultricies commodo risus, sed tempus eros finibus nec. Curabitur consequat tincidunt semper. Fusce a suscipit felis. Vivamus tincidunt feugiat pellentesque. Nulla arcu enim, tempor at tincidunt vitae, hendrerit elementum libero. Nullam congue tellus non nisl porta rutrum. Duis congue nulla ut enim auctor, at lacinia eros cursus.&lt;/p&gt;\r\n\r\n&lt;p&gt;Integer dignissim sem et felis ultrices molestie. Phasellus luctus diam at ex convallis, quis placerat ante lacinia. Praesent iaculis feugiat dolor, a consectetur nisi. Curabitur a orci enim. Maecenas eget nisl gravida nulla sodales ultricies. Nunc ut mollis felis. Aliquam in sollicitudin eros. Nam aliquet a augue et elementum. Phasellus non urna aliquam, mollis nisi at, laoreet tortor. Mauris posuere, lorem in fringilla faucibus, tortor felis viverra ex, et bibendum est magna quis sem. Mauris fermentum porta lorem, vitae fermentum odio convallis eget.&lt;/p&gt;\r\n'),
-(16, 1, 'Aenean nulla lacinias', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum.&lt;/p&gt;\r\n\r\n&lt;p&gt;Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum.&lt;/p&gt;\r\n\r\n&lt;p&gt;Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n'),
-(16, 2, 'Aenean nulla lacinias', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum.&lt;/p&gt;\r\n\r\n&lt;p&gt;Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum.&lt;/p&gt;\r\n\r\n&lt;p&gt;Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n'),
-(15, 1, 'Commodo laoreet', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n', '&lt;section class=&quot;description main-column&quot;&gt;\r\n&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n&lt;/section&gt;\r\n\r\n&lt;section class=&quot;blog-content main-column&quot;&gt;\r\n&lt;div class=&quot;content-wrap clearfix&quot;&gt;\r\n&lt;div class=&quot;itemFullText&quot;&gt;\r\n&lt;p&gt;Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus Aenean Lorem vitae id. Odio ut pretium ligula quam Vestibulum consequat convallis fringilla Vestibulum nulla. Accumsan morbi tristique auctor Aenean nulla lacinia Nullam elit vel vel. At risus pretium urna tortor metus fringilla interdum mauris tempor congue.&lt;/p&gt;\r\n\r\n&lt;p&gt;Donec tellus Nulla lorem Nullam elit id ut elit feugiat lacus. Congue eget dapibus congue tincidunt senectus nibh risus Phasellus tristique justo. Justo Pellentesque Donec lobortis faucibus Vestibulum Praesent mauris volutpat vitae metus. Ipsum cursus vestibulum at interdum Vivamus nunc fringilla Curabitur ac quis. Nam lacinia wisi tortor orci quis vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sed mauris Pellentesque elit Aliquam at lacus interdum nascetur elit ipsum. Enim ipsum hendrerit Suspendisse turpis laoreet fames tempus ligula pede ac. Et Lorem penatibus orci eu ultrices egestas Nam quam Vivamus nibh. Morbi condimentum molestie Nam enim odio sodales pretium eros sem pellentesque. Sit tellus Integer elit egestas lacus turpis id auctor nascetur ut. Ac elit vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum faucibus. At Nulla id tincidunt ut sed semper vel Lorem condimentum ornare. Laoreet Vestibulum lacinia massa a commodo habitasse velit Vestibulum tincidunt In. Turpis at eleifend leo mi elit Aenean porta ac sed faucibus. Nunc urna Morbi fringilla vitae orci convallis condimentum auctor sit dui. Urna pretium elit mauris cursus Curabitur at elit Vestibulum.&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/section&gt;\r\n'),
-(15, 2, 'Commodo laoreet', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n', '&lt;section class=&quot;description main-column&quot;&gt;\r\n&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n&lt;/section&gt;\r\n\r\n&lt;section class=&quot;blog-content main-column&quot;&gt;\r\n&lt;div class=&quot;content-wrap clearfix&quot;&gt;\r\n&lt;div class=&quot;itemFullText&quot;&gt;\r\n&lt;p&gt;Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus Aenean Lorem vitae id. Odio ut pretium ligula quam Vestibulum consequat convallis fringilla Vestibulum nulla. Accumsan morbi tristique auctor Aenean nulla lacinia Nullam elit vel vel. At risus pretium urna tortor metus fringilla interdum mauris tempor congue.&lt;/p&gt;\r\n\r\n&lt;p&gt;Donec tellus Nulla lorem Nullam elit id ut elit feugiat lacus. Congue eget dapibus congue tincidunt senectus nibh risus Phasellus tristique justo. Justo Pellentesque Donec lobortis faucibus Vestibulum Praesent mauris volutpat vitae metus. Ipsum cursus vestibulum at interdum Vivamus nunc fringilla Curabitur ac quis. Nam lacinia wisi tortor orci quis vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sed mauris Pellentesque elit Aliquam at lacus interdum nascetur elit ipsum. Enim ipsum hendrerit Suspendisse turpis laoreet fames tempus ligula pede ac. Et Lorem penatibus orci eu ultrices egestas Nam quam Vivamus nibh. Morbi condimentum molestie Nam enim odio sodales pretium eros sem pellentesque. Sit tellus Integer elit egestas lacus turpis id auctor nascetur ut. Ac elit vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum faucibus. At Nulla id tincidunt ut sed semper vel Lorem condimentum ornare. Laoreet Vestibulum lacinia massa a commodo habitasse velit Vestibulum tincidunt In. Turpis at eleifend leo mi elit Aenean porta ac sed faucibus. Nunc urna Morbi fringilla vitae orci convallis condimentum auctor sit dui. Urna pretium elit mauris cursus Curabitur at elit Vestibulum.&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/section&gt;\r\n'),
-(14, 1, 'Aenean nulla lacinia ', '&lt;p&gt;Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus Aenean Lorem vitae id. Odio ut pretium ligula quam Vestibulum consequat convallis fringilla Vestibulum nulla. Accumsan morbi tristique auctor Aenean nulla lacinia Nullam elit vel vel. At risus pretium urna tortor metus fringilla interdum mauris tempor congue.&lt;/p&gt;\r\n', '&lt;section class=&quot;description main-column&quot;&gt;\r\n&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n&lt;/section&gt;\r\n\r\n&lt;section class=&quot;blog-content main-column&quot;&gt;\r\n&lt;div class=&quot;content-wrap clearfix&quot;&gt;\r\n&lt;div class=&quot;itemFullText&quot;&gt;\r\n&lt;p&gt;Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus Aenean Lorem vitae id. Odio ut pretium ligula quam Vestibulum consequat convallis fringilla Vestibulum nulla. Accumsan morbi tristique auctor Aenean nulla lacinia Nullam elit vel vel. At risus pretium urna tortor metus fringilla interdum mauris tempor congue.&lt;/p&gt;\r\n\r\n&lt;p&gt;Donec tellus Nulla lorem Nullam elit id ut elit feugiat lacus. Congue eget dapibus congue tincidunt senectus nibh risus Phasellus tristique justo. Justo Pellentesque Donec lobortis faucibus Vestibulum Praesent mauris volutpat vitae metus. Ipsum cursus vestibulum at interdum Vivamus nunc fringilla Curabitur ac quis. Nam lacinia wisi tortor orci quis vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sed mauris Pellentesque elit Aliquam at lacus interdum nascetur elit ipsum. Enim ipsum hendrerit Suspendisse turpis laoreet fames tempus ligula pede ac. Et Lorem penatibus orci eu ultrices egestas Nam quam Vivamus nibh. Morbi condimentum molestie Nam enim odio sodales pretium eros sem pellentesque. Sit tellus Integer elit egestas lacus turpis id auctor nascetur ut. Ac elit vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum faucibus. At Nulla id tincidunt ut sed semper vel Lorem condimentum ornare. Laoreet Vestibulum lacinia massa a commodo habitasse velit Vestibulum tincidunt In. Turpis at eleifend leo mi elit Aenean porta ac sed faucibus. Nunc urna Morbi fringilla vitae orci convallis condimentum auctor sit dui. Urna pretium elit mauris cursus Curabitur at elit Vestibulum.&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/section&gt;\r\n'),
-(14, 2, 'Aenean nulla lacinia ', '&lt;p&gt;Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus Aenean Lorem vitae id. Odio ut pretium ligula quam Vestibulum consequat convallis fringilla Vestibulum nulla. Accumsan morbi tristique auctor Aenean nulla lacinia Nullam elit vel vel. At risus pretium urna tortor metus fringilla interdum mauris tempor congue.&lt;/p&gt;\r\n', '&lt;section class=&quot;description main-column&quot;&gt;\r\n&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n&lt;/section&gt;\r\n\r\n&lt;section class=&quot;blog-content main-column&quot;&gt;\r\n&lt;div class=&quot;content-wrap clearfix&quot;&gt;\r\n&lt;div class=&quot;itemFullText&quot;&gt;\r\n&lt;p&gt;Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus Aenean Lorem vitae id. Odio ut pretium ligula quam Vestibulum consequat convallis fringilla Vestibulum nulla. Accumsan morbi tristique auctor Aenean nulla lacinia Nullam elit vel vel. At risus pretium urna tortor metus fringilla interdum mauris tempor congue.&lt;/p&gt;\r\n\r\n&lt;p&gt;Donec tellus Nulla lorem Nullam elit id ut elit feugiat lacus. Congue eget dapibus congue tincidunt senectus nibh risus Phasellus tristique justo. Justo Pellentesque Donec lobortis faucibus Vestibulum Praesent mauris volutpat vitae metus. Ipsum cursus vestibulum at interdum Vivamus nunc fringilla Curabitur ac quis. Nam lacinia wisi tortor orci quis vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sed mauris Pellentesque elit Aliquam at lacus interdum nascetur elit ipsum. Enim ipsum hendrerit Suspendisse turpis laoreet fames tempus ligula pede ac. Et Lorem penatibus orci eu ultrices egestas Nam quam Vivamus nibh. Morbi condimentum molestie Nam enim odio sodales pretium eros sem pellentesque. Sit tellus Integer elit egestas lacus turpis id auctor nascetur ut. Ac elit vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum faucibus. At Nulla id tincidunt ut sed semper vel Lorem condimentum ornare. Laoreet Vestibulum lacinia massa a commodo habitasse velit Vestibulum tincidunt In. Turpis at eleifend leo mi elit Aenean porta ac sed faucibus. Nunc urna Morbi fringilla vitae orci convallis condimentum auctor sit dui. Urna pretium elit mauris cursus Curabitur at elit Vestibulum.&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/section&gt;\r\n'),
-(13, 1, 'Commodo laoreet', '&lt;p&gt;Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus Aenean Lorem vitae id. Odio ut pretium ligula quam Vestibulum consequat convallis fringilla Vestibulum nulla. Accumsan morbi tristique auctor Aenean nulla lacinia Nullam elit vel vel. At risus pretium urna tortor metus fringilla interdum mauris tempor congue.&lt;/p&gt;\r\n', '&lt;div class=&quot;itemFullText&quot;&gt;\r\n&lt;p&gt;Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus Aenean Lorem vitae id. Odio ut pretium ligula quam Vestibulum consequat convallis fringilla Vestibulum nulla. Accumsan morbi tristique auctor Aenean nulla lacinia Nullam elit vel vel. At risus pretium urna tortor metus fringilla interdum mauris tempor congue.&lt;/p&gt;\r\n\r\n&lt;p&gt;Donec tellus Nulla lorem Nullam elit id ut elit feugiat lacus. Congue eget dapibus congue tincidunt senectus nibh risus Phasellus tristique justo. Justo Pellentesque Donec lobortis faucibus Vestibulum Praesent mauris volutpat vitae metus. Ipsum cursus vestibulum at interdum Vivamus nunc fringilla Curabitur ac quis. Nam lacinia wisi tortor orci quis vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sed mauris Pellentesque elit Aliquam at lacus interdum nascetur elit ipsum. Enim ipsum hendrerit Suspendisse turpis laoreet fames tempus ligula pede ac. Et Lorem penatibus orci eu ultrices egestas Nam quam Vivamus nibh. Morbi condimentum molestie Nam enim odio sodales pretium eros sem pellentesque. Sit tellus Integer elit egestas lacus turpis id auctor nascetur ut. Ac elit vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum faucibus. At Nulla id tincidunt ut sed semper vel Lorem condimentum ornare. Laoreet Vestibulum lacinia massa a commodo habitasse velit Vestibulum tincidunt In. Turpis at eleifend leo mi elit Aenean porta ac sed faucibus. Nunc urna Morbi fringilla vitae orci convallis condimentum auctor sit dui. Urna pretium elit mauris cursus Curabitur at elit Vestibulum.&lt;/p&gt;\r\n&lt;/div&gt;\r\n'),
-(13, 2, 'Commodo laoreet', '&lt;p&gt;Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus Aenean Lorem vitae id. Odio ut pretium ligula quam Vestibulum consequat convallis fringilla Vestibulum nulla. Accumsan morbi tristique auctor Aenean nulla lacinia Nullam elit vel vel. At risus pretium urna tortor metus fringilla interdum mauris tempor congue.&lt;/p&gt;\r\n', '&lt;div class=&quot;itemFullText&quot;&gt;\r\n&lt;p&gt;Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur magna. Euismod euismod Suspendisse tortor ante adipiscing risus Aenean Lorem vitae id. Odio ut pretium ligula quam Vestibulum consequat convallis fringilla Vestibulum nulla. Accumsan morbi tristique auctor Aenean nulla lacinia Nullam elit vel vel. At risus pretium urna tortor metus fringilla interdum mauris tempor congue.&lt;/p&gt;\r\n\r\n&lt;p&gt;Donec tellus Nulla lorem Nullam elit id ut elit feugiat lacus. Congue eget dapibus congue tincidunt senectus nibh risus Phasellus tristique justo. Justo Pellentesque Donec lobortis faucibus Vestibulum Praesent mauris volutpat vitae metus. Ipsum cursus vestibulum at interdum Vivamus nunc fringilla Curabitur ac quis. Nam lacinia wisi tortor orci quis vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Sed mauris Pellentesque elit Aliquam at lacus interdum nascetur elit ipsum. Enim ipsum hendrerit Suspendisse turpis laoreet fames tempus ligula pede ac. Et Lorem penatibus orci eu ultrices egestas Nam quam Vivamus nibh. Morbi condimentum molestie Nam enim odio sodales pretium eros sem pellentesque. Sit tellus Integer elit egestas lacus turpis id auctor nascetur ut. Ac elit vitae.&lt;/p&gt;\r\n\r\n&lt;p&gt;Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum faucibus. At Nulla id tincidunt ut sed semper vel Lorem condimentum ornare. Laoreet Vestibulum lacinia massa a commodo habitasse velit Vestibulum tincidunt In. Turpis at eleifend leo mi elit Aenean porta ac sed faucibus. Nunc urna Morbi fringilla vitae orci convallis condimentum auctor sit dui. Urna pretium elit mauris cursus Curabitur at elit Vestibulum.&lt;/p&gt;\r\n&lt;/div&gt;\r\n'),
-(19, 1, 'Phasellus faucibus orcice', '&lt;p&gt;Nulla lobortis iaculis neque, eget ornare felis finibus vel. Phasellus faucibus orci pharetra erat laoreet, ut fermentum risus dapibus. Nunc dapibus ornare nibh, vitae vehicula nisi gravida vel. Phasellus quis turpis nibh. Nulla aliquet ipsum sed diam feugiat, posuere lobortis augue hendrerit&lt;/p&gt;\r\n', '&lt;p&gt;Nulla lobortis iaculis neque, eget ornare felis finibus vel. Phasellus faucibus orci pharetra erat laoreet, ut fermentum risus dapibus. Nunc dapibus ornare nibh, vitae vehicula nisi gravida vel. Phasellus quis turpis nibh. Nulla aliquet ipsum sed diam feugiat, posuere lobortis augue hendrerit&lt;/p&gt;\r\n\r\n&lt;p&gt;Nulla lobortis iaculis neque, eget ornare felis finibus vel. Phasellus faucibus orci pharetra erat laoreet, ut fermentum risus dapibus. Nunc dapibus ornare nibh, vitae vehicula nisi gravida vel. Phasellus quis turpis nibh. Nulla aliquet ipsum sed diam feugiat, posuere lobortis augue hendrerit&lt;/p&gt;\r\n'),
-(19, 2, '', '', ''),
-(17, 1, 'Commodo laoreetss', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint&lt;/p&gt;\r\n\r\n&lt;p&gt;.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum.&lt;/p&gt;\r\n\r\n&lt;p&gt;Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n');
-INSERT INTO `oc_pavblog_blog_description` (`blog_id`, `language_id`, `title`, `description`, `content`) VALUES
-(17, 2, 'Commodo laoreetss', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint&lt;/p&gt;\r\n\r\n&lt;p&gt;.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n\r\n&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum.&lt;/p&gt;\r\n\r\n&lt;p&gt;Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam Ipsum, facere aliquam excepturi qui modi nihil ipsam aut quasi pariatur sint.&lt;/p&gt;\r\n');
 
 -- --------------------------------------------------------
 
@@ -2819,19 +2612,6 @@ CREATE TABLE `oc_pavblog_category` (
   `keyword` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `oc_pavblog_category`
---
-
-INSERT INTO `oc_pavblog_category` (`category_id`, `image`, `parent_id`, `is_group`, `width`, `submenu_width`, `colum_width`, `submenu_colum_width`, `item`, `colums`, `type`, `is_content`, `show_title`, `meta_keyword`, `level_depth`, `published`, `store_id`, `position`, `show_sub`, `url`, `target`, `privacy`, `position_type`, `menu_class`, `description`, `meta_description`, `meta_title`, `level`, `left`, `right`, `keyword`) VALUES
-(1, 'data/pavblog/blog1.jpg', 0, 2, NULL, NULL, NULL, NULL, NULL, '1', '', 2, 1, '1', 0, 1, 0, 0, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, -5, 34, 47, ''),
-(20, 'data/pavblog/blog3.jpg', 22, 2, NULL, NULL, NULL, NULL, NULL, '1', '', 2, 1, '1', 0, 1, 0, 3, 0, NULL, NULL, 0, 'top', 'test test', NULL, '', '', 0, 0, 0, ''),
-(21, 'data/pavblog/blog2.jpg', 22, 2, NULL, NULL, NULL, NULL, NULL, '1', '', 2, 1, '1', 0, 1, 0, 1, 0, NULL, NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, ''),
-(22, 'data/pavblog/blog4.jpg', 1, 2, NULL, NULL, NULL, NULL, NULL, '1', '', 2, 1, '1', 0, 1, 0, 1, 0, NULL, NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, ''),
-(23, 'data/pavblog/blog6.jpg', 22, 2, NULL, NULL, NULL, NULL, NULL, '1', '', 2, 1, '1', 0, 1, 0, 2, 0, NULL, NULL, 0, 'top', '', NULL, '', '', 0, 0, 0, ''),
-(25, 'data/pavblog/blog8.jpg', 1, 2, NULL, NULL, NULL, NULL, NULL, '1', '', 2, 1, 'Second Item', 0, 1, 0, 99, 0, NULL, NULL, 0, 'top', '', NULL, 'Second Item', 'Second Item', 0, 0, 0, 'Second Item'),
-(27, 'data/pavblog/blog3.jpg', 1, 2, NULL, NULL, NULL, NULL, NULL, '1', '', 2, 1, 'Technology', 0, 1, 0, 99, 0, NULL, NULL, 0, 'top', '', NULL, 'Technology', 'Technology', 0, 0, 0, 'Technology');
-
 -- --------------------------------------------------------
 
 --
@@ -2844,25 +2624,6 @@ CREATE TABLE `oc_pavblog_category_description` (
   `title` varchar(255) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `oc_pavblog_category_description`
---
-
-INSERT INTO `oc_pavblog_category_description` (`category_id`, `language_id`, `title`, `description`) VALUES
-(1, 1, 'ROOT', 'Menu Root'),
-(21, 1, 'Skin Care', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper scelerisque convallis&lt;/p&gt;\r\n'),
-(23, 1, 'Nail', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper scelerisque convallis&lt;/p&gt;\r\n'),
-(20, 1, 'Hair care', '&lt;p&gt;Ac tincidunt Suspendisse malesuada velit in Nullam elit magnis netus Vestibulum. Praesent Nam adipiscing Aliquam elit accumsan wisi sit semper scelerisque convallis&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\r\n'),
-(25, 1, 'Fashion', '&lt;p&gt;Nostrum, magni, qui aliquam impedit porro provident ipsum facilis molestias reiciendis quod! Optio&lt;/p&gt;\r\n'),
-(22, 1, 'Beauty', '&lt;p&gt;Enter your Category 1 Description Here&lt;/p&gt;\r\n'),
-(27, 1, 'Technology', '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, magni, qui aliquam impedit porro provident ipsum facilis&lt;/p&gt;\r\n'),
-(22, 2, 'ثم يذكر تكتيكاً  أفريقيا', '&lt;p&gt;\r\n	أم كما وتردي الساحل, وحتّى اليها حين في, ثم يذكر تكتيكاً  أفريقيا بلا لم, عل هامش الحربية كان. رئيس غرّة، والألمانية، أخذ كل. هو ضرب طوكيو للجزر الصعداء. في ماذا مناوشات والروسية حدى.\r\n	حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،.\r\n	حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،.\r\n&lt;/p&gt;\r\n'),
-(21, 2, 'ثم يذكر تكتيكاً  أفريقيا', '&lt;p&gt;أم كما وتردي الساحل, وحتّى اليها حين في, ثم يذكر تكتيكاً أفريقيا بلا لم, عل هامش الحربية كان. رئيس غرّة، والألمانية، أخذ كل. هو ضرب طوكيو للجزر الصعداء. في ماذا مناوشات والروسية حدى. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،.&lt;/p&gt;\r\n'),
-(23, 2, 'ثم يذكر تكتيكاً  أفريقيا', '&lt;p&gt;أم كما وتردي الساحل, وحتّى اليها حين في, ثم يذكر تكتيكاً أفريقيا بلا لم, عل هامش الحربية كان. رئيس غرّة، والألمانية، أخذ كل. هو ضرب طوكيو للجزر الصعداء. في ماذا مناوشات والروسية حدى. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،.&lt;/p&gt;\r\n'),
-(20, 2, 'ثم يذكر تكتيكاً  أفريقيا', '&lt;p&gt;أم كما وتردي الساحل, وحتّى اليها حين في, ثم يذكر تكتيكاً أفريقيا بلا لم, عل هامش الحربية كان. رئيس غرّة، والألمانية، أخذ كل. هو ضرب طوكيو للجزر الصعداء. في ماذا مناوشات والروسية حدى. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،.&lt;/p&gt;\r\n'),
-(25, 2, 'ثم يذكر تكتيكاً  أفريقيا', '&lt;p&gt;أم كما وتردي الساحل, وحتّى اليها حين في, ثم يذكر تكتيكاً أفريقيا بلا لم, عل هامش الحربية كان. رئيس غرّة، والألمانية، أخذ كل. هو ضرب طوكيو للجزر الصعداء. في ماذا مناوشات والروسية حدى. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،. حول الشمل بالفشل أي. بهجوم المعاهدات تم وفي. قد بحق لعدم ويكيبيديا, في أواخر كُلفة لإعلان الا. ان تلك الشمل واستمر الجديدة،. ذلك أم عملية المعاهدات. جُل ثم بينما والتي, إيو بل اتفاقية لبولندا،.&lt;/p&gt;\r\n'),
-(27, 2, 'ثم يذكر تكتيكاً  أفريقيا', '&lt;p&gt;أم كما وتردي الساحل, وحتّى اليها حين في, ثم يذكر تكتيكاً بوزيرها حول. وجزر تنفّس أفريقيا بلا لم, عل هامش الحربية كان. رئيس غرّة،&lt;/p&gt;\r\n');
 
 -- --------------------------------------------------------
 
@@ -2879,15 +2640,6 @@ CREATE TABLE `oc_pavblog_comment` (
   `user` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `oc_pavblog_comment`
---
-
-INSERT INTO `oc_pavblog_comment` (`comment_id`, `blog_id`, `comment`, `status`, `created`, `user`, `email`) VALUES
-(10, 10, 'Pellentesque non faucibus tellus. Suspendisse convallis urna in orci porttitor lobortis pharetra eget nisi. Nullam luctus, sapien sit amet euismod pretium, augue risus commodo risus, ac maximus lorem nunc eget urna. Donec a venenatis massa, non pharetra augue. Curabitur eu felis eu mauris condimentum sollicitudin. Phasellus finibus aliquam neque. Duis laoreet dignissim lobortis. Mauris aliquet dolor eget auctor molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec at erat elit. Integer id accumsan magna. Donec nec finibus magna. Quisque ultrices maximus posuere. Nullam a orci molestie, bibendum lectus ut, pellentesque dui. ', 1, '2014-08-23 08:52:49', 'nmc2010', 'nmc2010@gmail.com'),
-(11, 10, 'Vestibulum nunc at In Curabitur mag Commodo laoreet semper tincidunt lorem Vestibulum nunc at In Curabitur mag ', 1, '2014-08-23 08:57:49', 'nmc2010', 'nmc2010@gmail.com'),
-(12, 12, ' Maecenas dictum molestie lacus, et posuere mi vehicula et. Vivamus scelerisque fermentum dolor eget maximus. Vivamus efficitur ut arcu porta dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac facilisis odio. Nulla ac urna sit amet libero euismod molestie in in mi. Quisque at lorem consequat, tincidunt sem sed, maximus nisl. Nunc a tempor urna. Ut varius, nibh eget feugiat malesuada, tellus quam auctor est, vel ullamcorper ante est ac orci. Cras at tincidunt justo, pulvinar elementum sapien.\r\n\r\nNam dignissim purus eu ligula tincidunt, vitae iaculis sapien mattis. Etiam imperdiet leo eros, id lacinia lectus auctor vitae. Mauris quis arcu quis dolor commodo rutrum eget nec eros. Nullam placerat, metus eget pellentesque efficitur, nisl tellus consequat ligula, sit amet laoreet enim nunc placerat tortor. Vivamus magna enim, imperdiet sed metus et, egestas porta magna. Donec a velit luctus felis aliquet consequat. Nam malesuada id felis at fringilla. Aenean sapien justo, aliquam ac dolor sed, volutpat pretium metus. ', 1, '2014-08-26 10:17:27', 'nmc2010', 'nmc2010@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -3302,27 +3054,20 @@ CREATE TABLE `oc_product` (
 --
 
 INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `date_added`, `date_modified`, `viewed`) VALUES
-(28, 'Product14', '', '', '', '', '', '', '', 939, 7, 'data/demo/18.jpg', 5, 1, '100.0000', 200, 9, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 16:06:50', '2014-09-08 11:28:30', 0),
-(29, 'Product15', '', '', '', '', '', '', '', 999, 6, 'data/demo/17.jpg', 6, 1, '279.9900', 0, 9, '2013-12-23', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, '2009-02-03 16:42:17', '2014-09-08 11:28:46', 2),
-(30, 'Product02', '', '', '', '', '', '', '', 7000, 6, 'data/demo/9.jpg', 8, 1, '45.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1000, 0, 1, '2009-02-03 16:59:00', '2014-09-08 11:23:52', 1),
-(31, 'Product03', '', '', '', '', '', '', '', 1000, 6, 'data/demo/16.jpg', 8, 1, '80.0000', 0, 9, '2013-12-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, '2009-02-03 17:00:10', '2014-09-08 11:24:07', 1),
-(33, 'Product04', '', '', '', '', '', '', '', 1000, 6, 'data/demo/18.jpg', 8, 1, '200.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 17:08:31', '2014-09-08 11:24:24', 0),
-(34, 'Product05', '', '', '', '', '', '', '', 1000, 6, 'data/demo/3.jpg', 9, 1, '500.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 18:07:54', '2014-09-08 11:25:55', 2),
-(35, 'Product16', '', '', '', '', '', '', '', 1000, 5, 'data/demo/14.jpg', 10, 0, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 18:08:31', '2014-09-08 11:29:15', 2),
-(36, 'Product06', '', '', '', '', '', '', '', 994, 6, 'data/demo/13a.jpg', 8, 0, '100.0000', 100, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 18:09:19', '2014-09-08 11:26:19', 2),
-(40, 'product07', '', '', '', '', '', '', '', 970, 5, 'data/636077133278327697_G4.jpg', 8, 1, '999.0000', 0, 9, '2013-12-23', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:12', '2017-04-25 17:36:24', 4),
-(41, 'Product08', '', '', '', '', '', '', '', 977, 5, 'data/demo/11.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, '2009-02-03 21:07:26', '2014-09-08 11:26:55', 0),
-(42, 'Product01', '', '', '', '', '', '', '', 990, 7, 'data/demo/2a.jpg', 8, 1, '300000.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, '2009-02-03 21:07:37', '2017-04-25 19:55:16', 4),
-(43, 'Product09', '', '', '', '', '', '', '', 929, 5, 'data/demo/8.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:07:49', '2014-09-08 11:27:09', 0),
-(44, 'Product17', '', '', '', '', '', '', '', 1000, 5, 'data/demo/15a.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:00', '2014-09-08 11:29:31', 0),
-(45, 'Product18', '', '', '', '', '', '', '', 998, 5, 'data/demo/12a.jpg', 10, 1, '2000.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:17', '2014-09-08 11:29:46', 1),
-(46, 'Product10', '', '', '', '', '', '', '', 1000, 5, 'data/demo/10a.jpg', 7, 1, '1000.0000', 0, 9, '2013-12-23', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-03 21:08:29', '2014-09-08 11:27:23', 1),
-(47, 'Product19', '', '', '', '', '', '', '', 1000, 5, 'data/demo/4.jpg', 5, 1, '100.0000', 400, 9, '2013-12-23', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, '2009-02-03 21:08:40', '2014-09-08 11:30:13', 1),
-(48, 'product11', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'data/demo/8c.jpg', 7, 1, '500.0000', 0, 9, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, '2009-02-08 17:21:51', '2014-09-08 11:27:38', 0),
-(49, 'Product20', '', '', '', '', '', '', '', 999, 8, 'data/demo/17a.jpg', 10, 1, '199.9900', 0, 9, '2011-04-25', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2011-04-26 08:57:34', '2014-09-08 11:30:51', 1),
-(51, 'Product12', '', '', '', '', '', '', '', 100, 5, 'data/demo/11.jpg', 7, 1, '67.0000', 0, 0, '2014-02-16', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2014-02-17 16:46:06', '2014-09-08 11:27:55', 0),
-(52, 'Product13', '', '', '', '', '', '', '', 100, 5, 'data/demo/6.jpg', 5, 1, '99.0000', 0, 0, '2014-02-16', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2014-02-17 19:40:01', '2014-09-08 11:28:14', 1),
-(55, 'SP001', '', '', '', '', '', '', '', 1, 5, 'data/636077133278327697_G4.jpg', 0, 1, '300000.0000', 0, 0, '2017-04-24', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 1, 1, '2017-04-25 19:56:29', '2017-04-25 20:00:15', 16);
+(64, 'VH001', '', '', '', '', '', '', '', 10, 5, 'data/thoitrang/z643828726552_8773785f6aa80cd9b896fd660c92c3b8.jpg', 0, 1, '350000.0000', 0, 0, '2017-04-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2017-04-27 20:31:42', '2017-04-27 20:40:11', 1),
+(65, 'VH001', '', '', '', '', '', '', '', 10, 5, 'data/thoitrang/z643828732901_89a7d9506155a5eb55340d60b0bf974d.jpg', 0, 1, '350000.0000', 0, 0, '2017-04-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2017-04-27 20:32:56', '2017-04-27 20:34:00', 0),
+(67, 'VH001', '', '', '', '', '', '', '', 10, 5, 'data/thoitrang/z643828957192_8dec4124c85e2c6d983e3f9d3bc939b5.jpg', 0, 1, '350000.0000', 0, 0, '2017-04-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2017-04-27 20:35:26', '2017-04-27 20:37:30', 0),
+(68, 'VH001', '', '', '', '', '', '', '', 10, 5, 'data/thoitrang/z643828952652_187a49fbfa3462641eb484c31ed84671.jpg', 0, 1, '350000.0000', 0, 0, '2017-04-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2017-04-27 20:38:07', '2017-04-27 20:38:39', 0),
+(69, 'VH001', '', '', '', '', '', '', '', 10, 5, 'data/thoitrang/z643829081552_7c708655e12aee58e7db0e82ab3f464b.jpg', 0, 1, '350000.0000', 0, 0, '2017-04-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2017-04-27 20:38:43', '2017-04-27 20:39:30', 4),
+(57, 'VH001', '', '', '', '', '', '', '', 10, 5, 'data/IMG_3176.JPG', 0, 1, '400000.0000', 0, 0, '2017-04-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2017-04-27 20:09:40', '2017-04-27 20:22:39', 3),
+(58, 'VH001', '', '', '', '', '', '', '', 10, 5, 'data/IMG_3156.JPG', 0, 1, '350000.0000', 0, 0, '2017-04-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2017-04-27 20:13:07', '2017-04-27 20:22:28', 3),
+(59, 'VH001', '', '', '', '', '', '', '', 10, 5, 'data/IMG_2559.JPG', 0, 1, '550000.0000', 0, 0, '2017-04-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2017-04-27 20:15:00', '2017-04-27 20:22:50', 2),
+(60, 'VH001', '', '', '', '', '', '', '', 10, 5, 'data/IMG_2702.JPG', 0, 1, '550000.0000', 0, 0, '2017-04-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2017-04-27 20:19:01', '2017-04-27 20:22:21', 1),
+(61, 'VH001', '', '', '', '', '', '', '', 10, 5, 'data/IMG_3220.JPG', 0, 1, '850000.0000', 0, 0, '2017-04-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2017-04-27 20:25:06', '2017-04-27 20:26:41', 1),
+(62, 'VH001', '', '', '', '', '', '', '', 10, 5, 'data/dangoc/IMG_4536.JPG', 0, 1, '550000.0000', 0, 0, '2017-04-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2017-04-27 20:27:18', '2017-04-27 20:28:45', 0),
+(63, 'VH001', '', '', '', '', '', '', '', 10, 5, 'data/thoitrang/z643828137783_47e393b9b8d4e2196a7c2f01df0ef34b.jpg', 0, 1, '350000.0000', 0, 0, '2017-04-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2017-04-27 20:29:22', '2017-04-27 20:31:13', 3),
+(56, 'VH001', '', '', '', '', '', '', '', 10, 5, 'data/IMG_4233.JPG', 0, 1, '550000.0000', 0, 0, '2017-04-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2017-04-27 20:08:46', '2017-04-27 20:22:44', 4),
+(66, 'VH001', '', '', '', '', '', '', '', 10, 5, 'data/thoitrang/z643828953273_07f7cc745b496452a5490c10f1d9d8d0.jpg', 0, 1, '350000.0000', 0, 0, '2017-04-26', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, '2017-04-27 20:34:37', '2017-04-27 20:35:23', 0);
 
 -- --------------------------------------------------------
 
@@ -3336,22 +3081,6 @@ CREATE TABLE `oc_product_attribute` (
   `language_id` int(11) NOT NULL,
   `text` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `oc_product_attribute`
---
-
-INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`, `text`) VALUES
-(47, 4, 1, '16GB'),
-(43, 2, 1, '1'),
-(43, 4, 6, '8gb'),
-(42, 3, 6, '100mhz'),
-(43, 4, 1, '8gb'),
-(47, 2, 1, '4'),
-(43, 2, 6, '1'),
-(47, 4, 6, '16GB'),
-(47, 2, 6, '4'),
-(42, 3, 1, '100mhz');
 
 -- --------------------------------------------------------
 
@@ -3374,48 +3103,34 @@ CREATE TABLE `oc_product_description` (
 --
 
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `meta_description`, `meta_keyword`, `tag`) VALUES
-(48, 1, 'Nullam nisl', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n&lt;div&gt;\r\n&lt;p&gt;&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', ''),
-(51, 1, 'Curabitur sed', '&lt;p&gt;Canon EOS 40D 10.1MP SLR Camera&lt;/p&gt;\r\n', 'Canon EOS 40D 10.1MP SLR Camera', 'Canon EOS 40D 10.1MP SLR Camera', ''),
-(40, 1, ' Quismod', '&lt;p class=&quot;intro&quot;&gt;iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name or number in your address book, a favorites list, or a call log. It also automatically syncs all your contacts from a PC, Mac, or Internet service. And it lets you select and listen to voicemail messages in whatever order you want just like email.&lt;/p&gt;\r\n', '', '', ''),
-(48, 6, 'Nullam nisl', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n&lt;div&gt;\r\n&lt;p&gt;&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', ''),
-(51, 6, 'Curabitur sed', '&lt;p&gt;Canon EOS 40D 10.1MP SLR Camera&lt;/p&gt;\r\n', 'Canon EOS 40D 10.1MP SLR Camera', 'Canon EOS 40D 10.1MP SLR Camera', ''),
-(40, 6, ' Quismod', '&lt;p class=&quot;intro&quot;&gt;iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name or number in your address book, a favorites list, or a call log. It also automatically syncs all your contacts from a PC, Mac, or Internet service. And it lets you select and listen to voicemail messages in whatever order you want just like email.&lt;/p&gt;\r\n', '', '', ''),
-(44, 6, 'Nunc euismod', '&lt;div&gt;MacBook Air is ultrathin, ultraportable, and ultra unlike anything else. But you don’t lose inches and pounds overnight. It’s the result of rethinking conventions. Of multiple wireless innovations. And of breakthrough design. With MacBook Air, mobile computing suddenly has a new standard.&lt;/div&gt;\r\n', '', '', ''),
-(44, 1, 'Nunc euismod', '&lt;div&gt;MacBook Air is ultrathin, ultraportable, and ultra unlike anything else. But you don’t lose inches and pounds overnight. It’s the result of rethinking conventions. Of multiple wireless innovations. And of breakthrough design. With MacBook Air, mobile computing suddenly has a new standard.&lt;/div&gt;\r\n', '', '', ''),
-(46, 1, ' Aliquam eget', '&lt;div&gt;Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel\'s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', '', ''),
-(47, 1, 'Praesent suscipit', '&lt;p&gt;Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge wide-aspect screen while letting you work as comfortably as possible - you might even forget you\'re at the office&lt;/p&gt;\r\n', '', '', ''),
-(33, 1, 'Donec sit amet', '&lt;div&gt;Imagine the advantages of going big without slowing down. The big 19&quot; 941BW monitor combines wide aspect ratio with fast pixel response time, for bigger images, more room to work and crisp motion. In addition, the exclusive MagicBright 2, MagicColor and MagicTune technologies help deliver the ideal image in every situation, while sleek, narrow bezels and adjustable stands deliver style just the way you want it. With the Samsung 941BW widescreen analog/digital LCD monitor, it\'s not hard to imagine.&lt;/div&gt;\r\n', '', '', ''),
-(28, 1, 'Aliquam pellentesque', '&lt;p&gt;HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Processor Qualcomm® MSM 7201A™ 528 MHz&lt;/li&gt;\r\n	&lt;li&gt;Windows Mobile® 6.1 Professional Operating System&lt;/li&gt;\r\n	&lt;li&gt;Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\r\n	&lt;li&gt;Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\r\n	&lt;li&gt;3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\r\n	&lt;li&gt;HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\r\n	&lt;li&gt;Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\r\n	&lt;li&gt;Device Control via HTC TouchFLO™ 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\r\n	&lt;li&gt;GPS and A-GPS ready&lt;/li&gt;\r\n	&lt;li&gt;Bluetooth® 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\r\n	&lt;li&gt;Wi-Fi®: IEEE 802.11 b/g&lt;/li&gt;\r\n	&lt;li&gt;HTC ExtUSB™ (11-pin mini-USB 2.0)&lt;/li&gt;\r\n	&lt;li&gt;5 megapixel color camera with auto focus&lt;/li&gt;\r\n	&lt;li&gt;VGA CMOS color camera&lt;/li&gt;\r\n	&lt;li&gt;Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\r\n	&lt;li&gt;Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\r\n	&lt;li&gt;40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\r\n	&lt;li&gt;Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\r\n	&lt;li&gt;Expansion Slot: microSD™ memory card (SD 2.0 compatible)&lt;/li&gt;\r\n	&lt;li&gt;AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\r\n	&lt;li&gt;Special Features: FM Radio, G-Sensor&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', ''),
-(45, 1, 'Quisque aliquet', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n&lt;div&gt;\r\n&lt;p&gt;&lt;b&gt;Latest Intel mobile architecture&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Powered by the most advanced mobile processors from Intel, the new Core 2 Duo MacBook Pro is over 50% faster than the original Core Duo MacBook Pro and now supports up to 4GB of RAM.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Leading-edge graphics&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;The NVIDIA GeForce 8600M GT delivers exceptional graphics processing power. For the ultimate creative canvas, you can even configure the 17-inch model with a 1920-by-1200 resolution display.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Designed for life on the road&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Innovations such as a magnetic power connection and an illuminated keyboard with ambient light sensor put the MacBook Pro in a class by itself.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Connect. Create. Communicate.&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Quickly set up a video conference with the built-in iSight camera. Control presentations and media from up to 30 feet away with the included Apple Remote. Connect to high-bandwidth peripherals with FireWire 800 and DVI.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Next-generation wireless&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Featuring 802.11n wireless technology, the MacBook Pro delivers up to five times the performance and up to twice the range of previous-generation technologies.&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', ''),
-(29, 1, 'Donec ut odio', '&lt;p&gt;Redefine your workday with the Palm Treo Pro smartphone. Perfectly balanced, you can respond to business and personal email, stay on top of appointments and contacts, and use Wi-Fi or GPS when you’re out and about. Then watch a video on YouTube, catch up with news and sports on the web, or listen to a few songs. Balance your work and play the way you like it, with the Palm Treo Pro.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Windows Mobile® 6.1 Professional Edition&lt;/li&gt;\r\n	&lt;li&gt;Qualcomm® MSM7201 400MHz Processor&lt;/li&gt;\r\n	&lt;li&gt;320x320 transflective colour TFT touchscreen&lt;/li&gt;\r\n	&lt;li&gt;HSDPA/UMTS/EDGE/GPRS/GSM radio&lt;/li&gt;\r\n	&lt;li&gt;Tri-band UMTS — 850MHz, 1900MHz, 2100MHz&lt;/li&gt;\r\n	&lt;li&gt;Quad-band GSM — 850/900/1800/1900&lt;/li&gt;\r\n	&lt;li&gt;802.11b/g with WPA, WPA2, and 801.1x authentication&lt;/li&gt;\r\n	&lt;li&gt;Built-in GPS&lt;/li&gt;\r\n	&lt;li&gt;Bluetooth Version: 2.0 + Enhanced Data Rate&lt;/li&gt;\r\n	&lt;li&gt;256MB storage (100MB user available), 128MB RAM&lt;/li&gt;\r\n	&lt;li&gt;2.0 megapixel camera, up to 8x digital zoom and video capture&lt;/li&gt;\r\n	&lt;li&gt;Removable, rechargeable 1500mAh lithium-ion battery&lt;/li&gt;\r\n	&lt;li&gt;Up to 5.0 hours talk time and up to 250 hours standby&lt;/li&gt;\r\n	&lt;li&gt;MicroSDHC card expansion (up to 32GB supported)&lt;/li&gt;\r\n	&lt;li&gt;MicroUSB 2.0 for synchronization and charging&lt;/li&gt;\r\n	&lt;li&gt;3.5mm stereo headset jack&lt;/li&gt;\r\n	&lt;li&gt;60mm (W) x 114mm (L) x 13.5mm (D) / 133g&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', ''),
-(36, 1, ' Quisque smod', '&lt;div&gt;\r\n&lt;p&gt;&lt;strong&gt;Video in your pocket.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Its the small iPod with one very big idea: video. The worlds most popular music player now lets you enjoy movies, TV shows, and more on a two-inch display thats 65% brighter than before.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Sleek and colorful.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;With an anodized aluminum and polished stainless steel enclosure and a choice of five colors, iPod nano is dressed to impress.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;iTunes.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Available as a free download, iTunes makes it easy to browse and buy millions of songs, movies, TV shows, audiobooks, and games and download free podcasts all at the iTunes Store. And you can import your own music, manage your whole media library, and sync your iPod or iPhone with ease.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', ''),
-(41, 1, 'Maximus lectus', '&lt;div&gt;Just when you thought iMac had everything, now there´s even more. More powerful Intel Core 2 Duo processors. And more memory standard. Combine this with Mac OS X Leopard and iLife ´08, and it´s more all-in-one than ever. iMac packs amazing performance into a stunningly slim space.&lt;/div&gt;\r\n', '', '', ''),
-(43, 1, 'Morbi malesuada ', '&lt;div&gt;\r\n&lt;p&gt;&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', ''),
-(55, 6, 'Vòng Hạt Ngà Voi', '&lt;h5 class=&quot;product-name&quot; style=&quot;box-sizing: border-box; font-family: &amp;quot;Archivo Narrow&amp;quot;, sans-serif; line-height: 1.1; color: rgb(85, 85, 85); margin: 0px 0px 10px; font-size: 1.6rem; text-align: center; background-color: rgb(242, 242, 242);&quot;&gt;&lt;a href=&quot;https://mualacongay.com/#&quot; style=&quot;box-sizing: border-box; background-color: transparent; color: rgb(78, 78, 78); text-decoration-line: none; transition: all 0.4s;&quot;&gt;Vòng Hạt Ngà Voi&lt;/a&gt;&lt;/h5&gt;\r\n', 'Vòng Hạt Ngà Voi', 'Vòng Hạt Ngà Voi', 'Vòng Hạt Ngà Voi, ngavoi'),
-(55, 1, 'Vòng Hạt Ngà Voi', '&lt;p&gt;Vòng Hạt Ngà Voi&lt;/p&gt;\r\n', 'Vòng Hạt Ngà Voi', 'Vòng Hạt Ngà Voi', 'Vòng Hạt Ngà Voi'),
-(30, 1, 'Imperdiet urna', '&lt;p&gt;Canon\'s press material for the EOS 5D states that it \'defines (a) new D-SLR category\', while we\'re not typically too concerned with marketing talk this particular statement is clearly pretty accurate. The EOS 5D is unlike any previous digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor (12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D, although in your hand it feels noticeably \'chunkier\'). The EOS 5D is aimed to slot in between the EOS 20D and the EOS-1D professional digital SLR\'s, an important difference when compared to the latter is that the EOS 5D doesn\'t have any environmental seals. While Canon don\'t specifically refer to the EOS 5D as a \'professional\' digital SLR it will have obvious appeal to professionals who want a high quality digital SLR in a body lighter than the EOS-1D. It will also no doubt appeal to current EOS 20D owners (although lets hope they\'ve not bought too many EF-S lenses...) äë&lt;/p&gt;\r\n', '', '', ''),
-(49, 6, 'Curabitur sed sagittis', '&lt;p&gt;Samsung Galaxy Tab 10.1, is the world’s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\r\n\r\n&lt;p&gt;Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 – includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick – a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\r\n\r\n&lt;p&gt;Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader’s Hub, Music Hub and Samsung Mini Apps Tray – which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;äö&lt;/p&gt;\r\n', '', '', ''),
-(35, 6, 'Nunc euismod', '&lt;p&gt;Product 8&lt;/p&gt;\r\n', '', '', ''),
-(52, 6, 'Quis blandit', '&lt;p&gt;Canon EOS 40D 10.1MP SLR Camera&lt;/p&gt;\r\n', 'Canon EOS 40D 10.1MP SLR Camera', 'Canon EOS 40D 10.1MP SLR Camera', ''),
-(34, 6, 'Curabitur eleifend', '&lt;div&gt;&lt;strong&gt;Born to be worn.&lt;/strong&gt;\r\n&lt;p&gt;Clip on the worlds most wearable music player and take up to 240 songs with you anywhere. Choose from five colors including four new hues to make your musical fashion statement.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Random meets rhythm.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;With iTunes autofill, iPod shuffle can deliver a new musical experience every time you sync. For more randomness, you can shuffle songs during playback with the slide of a switch.&lt;/p&gt;\r\n&lt;strong&gt;Everything is easy.&lt;/strong&gt;\r\n\r\n&lt;p&gt;Charge and sync with the included USB dock. Operate the iPod shuffle controls with one hand. Enjoy up to 12 hours straight of skip-free music playback.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', 'Canon EOS 40D 10.1MP SLR Camera', 'Canon EOS 40D 10.1MP SLR Camera', ''),
-(31, 1, 'Proin ac nulla', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n&lt;div&gt;Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon\'s newly announced D3 professional digital SLR camera to offer serious photographers remarkable performance combined with agility.&lt;br /&gt;\r\n&lt;br /&gt;\r\nSimilar to the D3, the D300 features Nikon\'s exclusive EXPEED Image Processing System that is central to driving the speed and processing power needed for many of the camera\'s new features. The D300 features a new 51-point autofocus system with Nikon\'s 3D Focus Tracking feature and two new LiveView shooting modes that allow users to frame a photograph using the camera\'s high-resolution LCD monitor. The D300 shares a similar Scene Recognition System as is found in the D3; it promises to greatly enhance the accuracy of autofocus, autoexposure, and auto white balance by recognizing the subject or scene being photographed and applying this information to the calculations for the three functions.&lt;br /&gt;\r\n&lt;br /&gt;\r\nThe D300 reacts with lightning speed, powering up in a mere 0.13 seconds and shooting with an imperceptible 45-millisecond shutter release lag time. The D300 is capable of shooting at a rapid six frames per second and can go as fast as eight frames per second when using the optional MB-D10 multi-power battery pack. In continuous bursts, the D300 can shoot up to 100 shots at full 12.3-megapixel resolution. (NORMAL-LARGE image setting, using a SanDisk Extreme IV 1GB CompactFlash card.)&lt;br /&gt;\r\n&lt;br /&gt;\r\nThe D300 incorporates a range of innovative technologies and features that will significantly improve the accuracy, control, and performance photographers can get from their equipment. Its new Scene Recognition System advances the use of Nikon\'s acclaimed 1,005-segment sensor to recognize colors and light patterns that help the camera determine the subject and the type of scene being photographed before a picture is taken. This information is used to improve the accuracy of autofocus, autoexposure, and auto white balance functions in the D300. For example, the camera can track moving subjects better and by identifying them, it can also automatically select focus points faster and with greater accuracy. It can also analyze highlights and more accurately determine exposure, as well as infer light sources to deliver more accurate white balance detection.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', ''),
-(42, 6, ' Morbi ac neque', '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac neque at mi elementum gravida et vitae elit. Etiam ullamcorper auctor orci, id luctus felis laoreet a. Nam nec nulla sit amet tellus pretium rhoncus. Integer interdum, nibh sed posuere aliquet, enim ante lacinia augue, ut ultricies augue erat vel lorem. Vestibulum bibendum dolor sit amet tincidunt lacinia. Nunc sapien libero, condimentum et turpis eget, eleifend hendrerit augue. Duis molestie volutpat feugiat.&lt;/p&gt;\r\n\r\n&lt;blockquote&gt;\r\n&lt;p&gt;Nullam elementum semper sollicitudin. Integer nisi eros, vulputate ut venenatis porta, feugiat id ligula. Curabitur ut elit in lacus sodales vestibulum. Ut congue pulvinar tellus, vel auctor tortor gravida et. Curabitur blandit orci eget egestas imperdiet. Morbi quis quam at diam iaculis euismod. Fusce vestibulum elit sed enim lacinia, ut lacinia eros tristique. Nullam id sapien est. Cras consectetur tincidunt neque quis suscipit. In lectus lectus, blandit eget mauris non, scelerisque venenatis tellus.&lt;/p&gt;\r\n&lt;/blockquote&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Proin id lacus non dolor viverra hendrerit vel vel magna.&lt;/li&gt;\r\n	&lt;li&gt;Duis iaculis varius urna, nec feugiat enim suscipit vitae.&lt;/li&gt;\r\n	&lt;li&gt;Nulla nec enim eget dui posuere tincidunt sit amet venenatis lorem.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n\r\n&lt;p&gt;Donec vel libero ullamcorper, faucibus augue auctor, imperdiet diam. Duis quis nibh eget urna convallis blandit. Fusce iaculis purus vitae convallis aliquet. Ut auctor nunc sed odio bibendum fringilla. Quisque egestas non magna ac tincidunt. Aenean laoreet commodo nulla, sed ultrices odio vehicula sit amet. Suspendisse erat tellus, porta et facilisis sit amet, adipiscing sed diam. Nulla condimentum arcu a pellentesque pretium. Pellentesque pharetra odio eu auctor suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\r\n', ' Morbi ac neque', ' Morbi ac neque', 'Cinema '),
-(42, 1, ' Morbi ac neque', '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac neque at mi elementum gravida et vitae elit. Etiam ullamcorper auctor orci, id luctus felis laoreet a. Nam nec nulla sit amet tellus pretium rhoncus. Integer interdum, nibh sed posuere aliquet, enim ante lacinia augue, ut ultricies augue erat vel lorem. Vestibulum bibendum dolor sit amet tincidunt lacinia. Nunc sapien libero, condimentum et turpis eget, eleifend hendrerit augue. Duis molestie volutpat feugiat.&lt;/p&gt;\r\n\r\n&lt;blockquote&gt;\r\n&lt;p&gt;Nullam elementum semper sollicitudin. Integer nisi eros, vulputate ut venenatis porta, feugiat id ligula. Curabitur ut elit in lacus sodales vestibulum. Ut congue pulvinar tellus, vel auctor tortor gravida et. Curabitur blandit orci eget egestas imperdiet. Morbi quis quam at diam iaculis euismod. Fusce vestibulum elit sed enim lacinia, ut lacinia eros tristique. Nullam id sapien est. Cras consectetur tincidunt neque quis suscipit. In lectus lectus, blandit eget mauris non, scelerisque venenatis tellus.&lt;/p&gt;\r\n&lt;/blockquote&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Proin id lacus non dolor viverra hendrerit vel vel magna.&lt;/li&gt;\r\n	&lt;li&gt;Duis iaculis varius urna, nec feugiat enim suscipit vitae.&lt;/li&gt;\r\n	&lt;li&gt;Nulla nec enim eget dui posuere tincidunt sit amet venenatis lorem.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n\r\n&lt;p&gt;Donec vel libero ullamcorper, faucibus augue auctor, imperdiet diam. Duis quis nibh eget urna convallis blandit. Fusce iaculis purus vitae convallis aliquet. Ut auctor nunc sed odio bibendum fringilla. Quisque egestas non magna ac tincidunt. Aenean laoreet commodo nulla, sed ultrices odio vehicula sit amet. Suspendisse erat tellus, porta et facilisis sit amet, adipiscing sed diam. Nulla condimentum arcu a pellentesque pretium. Pellentesque pharetra odio eu auctor suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;\r\n', ' Morbi ac neque', ' Morbi ac neque', 'Cinema '),
-(31, 6, 'Proin ac nulla', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n&lt;div&gt;Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon\'s newly announced D3 professional digital SLR camera to offer serious photographers remarkable performance combined with agility.&lt;br /&gt;\r\n&lt;br /&gt;\r\nSimilar to the D3, the D300 features Nikon\'s exclusive EXPEED Image Processing System that is central to driving the speed and processing power needed for many of the camera\'s new features. The D300 features a new 51-point autofocus system with Nikon\'s 3D Focus Tracking feature and two new LiveView shooting modes that allow users to frame a photograph using the camera\'s high-resolution LCD monitor. The D300 shares a similar Scene Recognition System as is found in the D3; it promises to greatly enhance the accuracy of autofocus, autoexposure, and auto white balance by recognizing the subject or scene being photographed and applying this information to the calculations for the three functions.&lt;br /&gt;\r\n&lt;br /&gt;\r\nThe D300 reacts with lightning speed, powering up in a mere 0.13 seconds and shooting with an imperceptible 45-millisecond shutter release lag time. The D300 is capable of shooting at a rapid six frames per second and can go as fast as eight frames per second when using the optional MB-D10 multi-power battery pack. In continuous bursts, the D300 can shoot up to 100 shots at full 12.3-megapixel resolution. (NORMAL-LARGE image setting, using a SanDisk Extreme IV 1GB CompactFlash card.)&lt;br /&gt;\r\n&lt;br /&gt;\r\nThe D300 incorporates a range of innovative technologies and features that will significantly improve the accuracy, control, and performance photographers can get from their equipment. Its new Scene Recognition System advances the use of Nikon\'s acclaimed 1,005-segment sensor to recognize colors and light patterns that help the camera determine the subject and the type of scene being photographed before a picture is taken. This information is used to improve the accuracy of autofocus, autoexposure, and auto white balance functions in the D300. For example, the camera can track moving subjects better and by identifying them, it can also automatically select focus points faster and with greater accuracy. It can also analyze highlights and more accurately determine exposure, as well as infer light sources to deliver more accurate white balance detection.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', ''),
-(36, 6, ' Quisque smod', '&lt;div&gt;\r\n&lt;p&gt;&lt;strong&gt;Video in your pocket.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Its the small iPod with one very big idea: video. The worlds most popular music player now lets you enjoy movies, TV shows, and more on a two-inch display thats 65% brighter than before.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Sleek and colorful.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;With an anodized aluminum and polished stainless steel enclosure and a choice of five colors, iPod nano is dressed to impress.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;iTunes.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Available as a free download, iTunes makes it easy to browse and buy millions of songs, movies, TV shows, audiobooks, and games and download free podcasts all at the iTunes Store. And you can import your own music, manage your whole media library, and sync your iPod or iPhone with ease.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', ''),
-(41, 6, 'Maximus lectus', '&lt;div&gt;Just when you thought iMac had everything, now there´s even more. More powerful Intel Core 2 Duo processors. And more memory standard. Combine this with Mac OS X Leopard and iLife ´08, and it´s more all-in-one than ever. iMac packs amazing performance into a stunningly slim space.&lt;/div&gt;\r\n', '', '', ''),
-(43, 6, 'Morbi malesuada ', '&lt;div&gt;\r\n&lt;p&gt;&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', ''),
-(30, 6, 'Imperdiet urna', '&lt;p&gt;Canon\'s press material for the EOS 5D states that it \'defines (a) new D-SLR category\', while we\'re not typically too concerned with marketing talk this particular statement is clearly pretty accurate. The EOS 5D is unlike any previous digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor (12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D, although in your hand it feels noticeably \'chunkier\'). The EOS 5D is aimed to slot in between the EOS 20D and the EOS-1D professional digital SLR\'s, an important difference when compared to the latter is that the EOS 5D doesn\'t have any environmental seals. While Canon don\'t specifically refer to the EOS 5D as a \'professional\' digital SLR it will have obvious appeal to professionals who want a high quality digital SLR in a body lighter than the EOS-1D. It will also no doubt appeal to current EOS 20D owners (although lets hope they\'ve not bought too many EF-S lenses...) äë&lt;/p&gt;\r\n', '', '', ''),
-(45, 6, 'Quisque aliquet', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n&lt;div&gt;\r\n&lt;p&gt;&lt;b&gt;Latest Intel mobile architecture&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Powered by the most advanced mobile processors from Intel, the new Core 2 Duo MacBook Pro is over 50% faster than the original Core Duo MacBook Pro and now supports up to 4GB of RAM.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Leading-edge graphics&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;The NVIDIA GeForce 8600M GT delivers exceptional graphics processing power. For the ultimate creative canvas, you can even configure the 17-inch model with a 1920-by-1200 resolution display.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Designed for life on the road&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Innovations such as a magnetic power connection and an illuminated keyboard with ambient light sensor put the MacBook Pro in a class by itself.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Connect. Create. Communicate.&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Quickly set up a video conference with the built-in iSight camera. Control presentations and media from up to 30 feet away with the included Apple Remote. Connect to high-bandwidth peripherals with FireWire 800 and DVI.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;Next-generation wireless&lt;/b&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;Featuring 802.11n wireless technology, the MacBook Pro delivers up to five times the performance and up to twice the range of previous-generation technologies.&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', ''),
-(29, 6, 'Donec ut odio', '&lt;p&gt;Redefine your workday with the Palm Treo Pro smartphone. Perfectly balanced, you can respond to business and personal email, stay on top of appointments and contacts, and use Wi-Fi or GPS when you’re out and about. Then watch a video on YouTube, catch up with news and sports on the web, or listen to a few songs. Balance your work and play the way you like it, with the Palm Treo Pro.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Windows Mobile® 6.1 Professional Edition&lt;/li&gt;\r\n	&lt;li&gt;Qualcomm® MSM7201 400MHz Processor&lt;/li&gt;\r\n	&lt;li&gt;320x320 transflective colour TFT touchscreen&lt;/li&gt;\r\n	&lt;li&gt;HSDPA/UMTS/EDGE/GPRS/GSM radio&lt;/li&gt;\r\n	&lt;li&gt;Tri-band UMTS — 850MHz, 1900MHz, 2100MHz&lt;/li&gt;\r\n	&lt;li&gt;Quad-band GSM — 850/900/1800/1900&lt;/li&gt;\r\n	&lt;li&gt;802.11b/g with WPA, WPA2, and 801.1x authentication&lt;/li&gt;\r\n	&lt;li&gt;Built-in GPS&lt;/li&gt;\r\n	&lt;li&gt;Bluetooth Version: 2.0 + Enhanced Data Rate&lt;/li&gt;\r\n	&lt;li&gt;256MB storage (100MB user available), 128MB RAM&lt;/li&gt;\r\n	&lt;li&gt;2.0 megapixel camera, up to 8x digital zoom and video capture&lt;/li&gt;\r\n	&lt;li&gt;Removable, rechargeable 1500mAh lithium-ion battery&lt;/li&gt;\r\n	&lt;li&gt;Up to 5.0 hours talk time and up to 250 hours standby&lt;/li&gt;\r\n	&lt;li&gt;MicroSDHC card expansion (up to 32GB supported)&lt;/li&gt;\r\n	&lt;li&gt;MicroUSB 2.0 for synchronization and charging&lt;/li&gt;\r\n	&lt;li&gt;3.5mm stereo headset jack&lt;/li&gt;\r\n	&lt;li&gt;60mm (W) x 114mm (L) x 13.5mm (D) / 133g&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', ''),
-(46, 6, ' Aliquam eget', '&lt;div&gt;Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel\'s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', '', ''),
-(47, 6, 'Praesent suscipit', '&lt;p&gt;Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge wide-aspect screen while letting you work as comfortably as possible - you might even forget you\'re at the office&lt;/p&gt;\r\n', '', '', ''),
-(33, 6, 'Donec sit amet', '&lt;div&gt;Imagine the advantages of going big without slowing down. The big 19&quot; 941BW monitor combines wide aspect ratio with fast pixel response time, for bigger images, more room to work and crisp motion. In addition, the exclusive MagicBright 2, MagicColor and MagicTune technologies help deliver the ideal image in every situation, while sleek, narrow bezels and adjustable stands deliver style just the way you want it. With the Samsung 941BW widescreen analog/digital LCD monitor, it\'s not hard to imagine.&lt;/div&gt;\r\n', '', '', ''),
-(28, 6, 'Aliquam pellentesque', '&lt;p&gt;HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;ul&gt;\r\n	&lt;li&gt;Processor Qualcomm® MSM 7201A™ 528 MHz&lt;/li&gt;\r\n	&lt;li&gt;Windows Mobile® 6.1 Professional Operating System&lt;/li&gt;\r\n	&lt;li&gt;Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\r\n	&lt;li&gt;Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\r\n	&lt;li&gt;3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\r\n	&lt;li&gt;HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\r\n	&lt;li&gt;Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\r\n	&lt;li&gt;Device Control via HTC TouchFLO™ 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\r\n	&lt;li&gt;GPS and A-GPS ready&lt;/li&gt;\r\n	&lt;li&gt;Bluetooth® 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\r\n	&lt;li&gt;Wi-Fi®: IEEE 802.11 b/g&lt;/li&gt;\r\n	&lt;li&gt;HTC ExtUSB™ (11-pin mini-USB 2.0)&lt;/li&gt;\r\n	&lt;li&gt;5 megapixel color camera with auto focus&lt;/li&gt;\r\n	&lt;li&gt;VGA CMOS color camera&lt;/li&gt;\r\n	&lt;li&gt;Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\r\n	&lt;li&gt;Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\r\n	&lt;li&gt;40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\r\n	&lt;li&gt;Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\r\n	&lt;li&gt;Expansion Slot: microSD™ memory card (SD 2.0 compatible)&lt;/li&gt;\r\n	&lt;li&gt;AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\r\n	&lt;li&gt;Special Features: FM Radio, G-Sensor&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', ''),
-(49, 1, 'Curabitur sed sagittis', '&lt;p&gt;Samsung Galaxy Tab 10.1, is the world’s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\r\n\r\n&lt;p&gt;Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 – includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick – a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\r\n\r\n&lt;p&gt;Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader’s Hub, Music Hub and Samsung Mini Apps Tray – which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;äö&lt;/p&gt;\r\n', '', '', ''),
-(35, 1, 'Nunc euismod', '&lt;p&gt;Product 8&lt;/p&gt;\r\n', '', '', ''),
-(52, 1, 'Quis blandit', '&lt;p&gt;Canon EOS 40D 10.1MP SLR Camera&lt;/p&gt;\r\n', 'Canon EOS 40D 10.1MP SLR Camera', 'Canon EOS 40D 10.1MP SLR Camera', ''),
-(34, 1, 'Curabitur eleifend', '&lt;div&gt;&lt;strong&gt;Born to be worn.&lt;/strong&gt;\r\n&lt;p&gt;Clip on the worlds most wearable music player and take up to 240 songs with you anywhere. Choose from five colors including four new hues to make your musical fashion statement.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Random meets rhythm.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;With iTunes autofill, iPod shuffle can deliver a new musical experience every time you sync. For more randomness, you can shuffle songs during playback with the slide of a switch.&lt;/p&gt;\r\n&lt;strong&gt;Everything is easy.&lt;/strong&gt;\r\n\r\n&lt;p&gt;Charge and sync with the included USB dock. Operate the iPod shuffle controls with one hand. Enjoy up to 12 hours straight of skip-free music playback.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', 'Canon EOS 40D 10.1MP SLR Camera', 'Canon EOS 40D 10.1MP SLR Camera', '');
+(66, 6, 'Bikini 2017', '', '', '', ''),
+(66, 1, 'Bikini 2017', '', '', '', ''),
+(67, 6, 'Bikini 2017', '', '', '', ''),
+(67, 1, 'Bikini 2017', '', '', '', ''),
+(68, 6, 'Bikini 2017', '', '', '', ''),
+(68, 1, 'Bikini 2017', '', '', '', ''),
+(69, 6, 'Bikini 2017', '', '', '', ''),
+(69, 1, 'Bikini 2017', '', '', '', ''),
+(62, 6, 'Nhẫn Đá Ngọc Myanmar', '', '', '', ''),
+(62, 1, 'Nhẫn Đá Ngọc Myanmar', '', '', '', ''),
+(63, 6, 'Bikini 2017', '', '', '', ''),
+(63, 1, 'Bikini 2017', '', '', '', ''),
+(64, 6, 'Bikini 2017', '', '', '', ''),
+(64, 1, 'Bikini 2017', '', '', '', ''),
+(65, 6, 'Bikini 2017', '', '', '', ''),
+(65, 1, 'Bikini 2017', '', '', '', ''),
+(56, 6, 'Vòng Ngọc Myanmar - Sumi', '', '', '', ''),
+(56, 1, 'Vòng Ngọc Myanmar - Sumi', '', '', '', ''),
+(61, 1, 'Vòng Bộ Phong Thủy Theo Mệnh', '', '', '', ''),
+(57, 6, 'Vòng Ngọc Hạt Myanmar - Sumi', '', '', '', ''),
+(57, 1, 'Vòng Ngọc Hạt Myanmar - Sumi', '', '', '', ''),
+(61, 6, 'Vòng Bộ Phong Thủy Theo Mệnh', '', '', '', ''),
+(58, 6, 'Tỳ Hưu Ngọc', '', '', '', ''),
+(58, 1, 'Tỳ Hưu Ngọc', '', '', '', ''),
+(59, 6, 'Đá Hồ Ly Thạch Anh Khói', '', '', '', ''),
+(59, 1, 'Đá Hồ Ly Thạch Anh Khói', '', '', '', ''),
+(60, 6, 'Dây Chuyền Đá Hồ Ly Thạch Anh Khói', '', '', '', ''),
+(60, 1, 'Dây Chuyền Đá Hồ Ly Thạch Anh Khói', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -3434,15 +3149,6 @@ CREATE TABLE `oc_product_discount` (
   `date_end` date NOT NULL DEFAULT '0000-00-00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `oc_product_discount`
---
-
-INSERT INTO `oc_product_discount` (`product_discount_id`, `product_id`, `customer_group_id`, `quantity`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(542, 42, 1, 30, 1, '66.0000', '0000-00-00', '0000-00-00'),
-(541, 42, 1, 20, 1, '77.0000', '0000-00-00', '0000-00-00'),
-(540, 42, 1, 10, 1, '88.0000', '0000-00-00', '0000-00-00');
-
 -- --------------------------------------------------------
 
 --
@@ -3453,43 +3159,6 @@ CREATE TABLE `oc_product_filter` (
   `product_id` int(11) NOT NULL,
   `filter_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `oc_product_filter`
---
-
-INSERT INTO `oc_product_filter` (`product_id`, `filter_id`) VALUES
-(28, 8),
-(29, 9),
-(30, 11),
-(31, 11),
-(31, 16),
-(33, 9),
-(33, 15),
-(33, 16),
-(34, 10),
-(34, 13),
-(35, 8),
-(36, 15),
-(40, 8),
-(41, 8),
-(42, 8),
-(43, 10),
-(43, 13),
-(43, 16),
-(44, 12),
-(44, 14),
-(45, 12),
-(45, 13),
-(45, 14),
-(46, 14),
-(46, 15),
-(47, 8),
-(47, 14),
-(48, 8),
-(48, 15),
-(48, 16),
-(49, 9);
 
 -- --------------------------------------------------------
 
@@ -3509,38 +3178,34 @@ CREATE TABLE `oc_product_image` (
 --
 
 INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
-(4033, 45, 'data/demo/12.jpg', 0),
-(4011, 33, 'data/demo/18a.jpg', 0),
-(4009, 30, 'data/demo/9a.jpg', 0),
-(4029, 28, 'data/demo/18b.jpg', 0),
-(4027, 51, 'data/demo/12.jpg', 0),
-(4019, 43, 'data/demo/6a.jpg', 0),
-(4010, 31, 'data/demo/16.jpg', 0),
-(4030, 29, 'data/demo/17c.jpg', 0),
-(4036, 49, 'data/demo/17c.jpg', 0),
-(4035, 49, 'data/demo/17.jpg', 0),
-(4043, 42, 'data/demo/2.jpg', 0),
-(4026, 51, 'data/demo/11a.jpg', 0),
-(4028, 52, 'data/demo/6a.jpg', 1),
-(4017, 43, 'data/demo/8c.jpg', 0),
-(4018, 43, 'data/demo/8d.jpg', 0),
-(4031, 44, 'data/demo/15b.jpg', 0),
-(4032, 44, 'data/demo/15.jpg', 0),
-(4020, 46, 'data/demo/10.jpg', 0),
-(4013, 36, 'data/demo/13b.jpg', 0),
-(4012, 36, 'data/demo/13.jpg', 0),
-(4021, 48, 'data/demo/8.jpg', 0),
-(4022, 48, 'data/demo/8c.jpg', 0),
-(4023, 48, 'data/demo/8a.jpg', 0),
-(4015, 41, 'data/demo/11a.jpg', 0),
-(4016, 41, 'data/demo/14b.jpg', 0),
-(4034, 47, 'data/demo/4b.jpg', 0),
-(4024, 51, 'data/demo/10.jpg', 0),
-(4025, 51, 'data/demo/10a.jpg', 0),
-(4041, 40, 'data/photo_2017-04-11_14-39-35.png', 0),
-(4040, 40, 'data/636077133278327697_G4.jpg', 0),
-(4053, 55, 'data/636077133278327697_G4.jpg', 0),
-(4052, 55, 'data/photo_2017-04-11_14-39-35.png', 0);
+(4129, 63, 'data/thoitrang/z643828138526_fb6e9b52ef07d5a9a492c2ae964d4091.jpg', 0),
+(4106, 56, 'data/IMG_4453.JPG', 0),
+(4107, 56, 'data/IMG_4454.JPG', 0),
+(4123, 62, 'data/dangoc/IMG_3418.JPG', 0),
+(4116, 61, 'data/IMG_2706.JPG', 0),
+(4117, 61, 'data/IMG_3220.JPG', 0),
+(4122, 62, 'data/dangoc/IMG_3419.JPG', 0),
+(4105, 57, 'data/IMG_3178.JPG', 0),
+(4104, 57, 'data/IMG_3173.JPG', 0),
+(4103, 57, 'data/IMG_3171.JPG', 0),
+(4100, 58, 'data/IMG_3151.JPG', 0),
+(4099, 58, 'data/IMG_3152.JPG', 0),
+(4098, 58, 'data/IMG_3152.JPG', 0),
+(4097, 60, 'data/IMG_2703.JPG', 0),
+(4096, 60, 'data/IMG_3414.JPG', 0),
+(4111, 59, 'data/IMG_2566.JPG', 0),
+(4110, 59, 'data/IMG_2546.JPG', 0),
+(4109, 59, 'data/IMG_2544.JPG', 0),
+(4108, 59, 'data/IMG_2545.JPG', 0),
+(4139, 67, 'data/thoitrang/z643828957192_8dec4124c85e2c6d983e3f9d3bc939b5.jpg', 0),
+(4137, 66, 'data/thoitrang/z643828953273_07f7cc745b496452a5490c10f1d9d8d0.jpg', 0),
+(4128, 63, 'data/thoitrang/z643828135768_b8240e45a7067bad61367ebac53adf8d.jpg', 0),
+(4134, 65, 'data/thoitrang/z643829077076_abb6ef8dea0453d4f48303345e4483e3.jpg', 0),
+(4145, 64, 'data/thoitrang/z643828726552_8773785f6aa80cd9b896fd660c92c3b8.jpg', 0),
+(4135, 65, 'data/thoitrang/z643828732901_89a7d9506155a5eb55340d60b0bf974d.jpg', 0),
+(4140, 67, '', 0),
+(4142, 68, 'data/thoitrang/z643828952652_187a49fbfa3462641eb484c31ed84671.jpg', 0),
+(4144, 69, 'data/thoitrang/z643829081552_7c708655e12aee58e7db0e82ab3f464b.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -3555,24 +3220,6 @@ CREATE TABLE `oc_product_option` (
   `option_value` text NOT NULL,
   `required` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `oc_product_option`
---
-
-INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`, `option_value`, `required`) VALUES
-(224, 35, 11, '', 1),
-(225, 47, 12, '2011-04-22', 1),
-(226, 30, 5, '', 1),
-(218, 42, 1, '', 1),
-(220, 42, 10, '2011-02-20 22:25', 1),
-(208, 42, 4, 'test', 1),
-(209, 42, 6, '', 1),
-(217, 42, 5, '', 1),
-(221, 42, 9, '22:25', 1),
-(219, 42, 8, '2011-02-20', 1),
-(222, 42, 7, '', 1),
-(223, 42, 2, '', 1);
 
 -- --------------------------------------------------------
 
@@ -3595,28 +3242,6 @@ CREATE TABLE `oc_product_option_value` (
   `weight` decimal(15,8) NOT NULL,
   `weight_prefix` varchar(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `oc_product_option_value`
---
-
-INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
-(15, 226, 30, 5, 39, 2, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(16, 226, 30, 5, 40, 5, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(10, 223, 42, 2, 44, 2696, 1, '30.0000', '+', 0, '+', '30.00000000', '+'),
-(9, 223, 42, 2, 24, 194, 1, '20.0000', '+', 0, '+', '20.00000000', '+'),
-(8, 223, 42, 2, 23, 48, 1, '10.0000', '+', 0, '+', '10.00000000', '+'),
-(11, 223, 42, 2, 45, 3998, 1, '40.0000', '+', 0, '+', '40.00000000', '+'),
-(5, 218, 42, 1, 32, 96, 1, '10.0000', '+', 1, '+', '10.00000000', '+'),
-(13, 224, 35, 11, 47, 10, 1, '10.0000', '+', 0, '+', '0.00000000', '+'),
-(6, 218, 42, 1, 31, 146, 1, '20.0000', '+', 2, '-', '20.00000000', '+'),
-(4, 217, 42, 5, 39, 92, 1, '4.0000', '+', 0, '+', '4.00000000', '+'),
-(7, 218, 42, 1, 43, 300, 1, '30.0000', '+', 3, '+', '30.00000000', '+'),
-(14, 224, 35, 11, 48, 15, 1, '15.0000', '+', 0, '+', '0.00000000', '+'),
-(12, 224, 35, 11, 46, 0, 1, '5.0000', '+', 0, '+', '0.00000000', '+'),
-(3, 217, 42, 5, 40, 300, 0, '3.0000', '+', 0, '+', '3.00000000', '+'),
-(2, 217, 42, 5, 42, 200, 1, '2.0000', '+', 0, '+', '2.00000000', '+'),
-(1, 217, 42, 5, 41, 100, 0, '1.0000', '+', 0, '+', '1.00000000', '+');
 
 -- --------------------------------------------------------
 
@@ -3657,65 +3282,60 @@ CREATE TABLE `oc_product_related` (
 --
 
 INSERT INTO `oc_product_related` (`product_id`, `related_id`) VALUES
-(28, 29),
-(28, 33),
-(28, 45),
-(28, 51),
-(29, 28),
-(29, 35),
-(29, 40),
-(31, 33),
-(31, 35),
-(31, 47),
-(31, 48),
-(33, 28),
-(33, 31),
-(33, 43),
-(33, 45),
-(33, 51),
-(33, 52),
-(34, 42),
-(34, 46),
-(34, 52),
-(35, 29),
-(35, 31),
-(35, 48),
-(40, 29),
-(42, 34),
-(42, 43),
-(42, 44),
-(42, 45),
-(42, 46),
-(43, 33),
-(43, 42),
-(43, 46),
-(44, 42),
-(44, 48),
-(44, 51),
-(45, 28),
-(45, 33),
-(45, 42),
-(46, 34),
-(46, 42),
-(46, 43),
-(46, 48),
-(47, 31),
-(47, 48),
-(47, 51),
-(48, 31),
-(48, 35),
-(48, 44),
-(48, 46),
-(48, 47),
-(51, 28),
-(51, 33),
-(51, 44),
-(51, 47),
-(51, 52),
-(52, 33),
-(52, 34),
-(52, 51),
-(52, 52);
+(56, 57),
+(56, 58),
+(56, 59),
+(56, 60),
+(56, 61),
+(56, 62),
+(57, 56),
+(57, 58),
+(57, 59),
+(57, 60),
+(57, 61),
+(57, 62),
+(58, 56),
+(58, 57),
+(58, 60),
+(58, 61),
+(58, 62),
+(59, 56),
+(59, 57),
+(59, 60),
+(59, 61),
+(59, 62),
+(60, 56),
+(60, 57),
+(60, 58),
+(60, 59),
+(60, 60),
+(60, 61),
+(60, 62),
+(61, 56),
+(61, 57),
+(61, 58),
+(61, 59),
+(61, 60),
+(61, 62),
+(62, 56),
+(62, 57),
+(62, 58),
+(62, 59),
+(62, 60),
+(62, 61),
+(63, 64),
+(64, 63),
+(64, 64),
+(64, 65),
+(64, 66),
+(64, 67),
+(64, 68),
+(64, 69),
+(65, 64),
+(66, 64),
+(67, 64),
+(68, 64),
+(69, 64);
 
 -- --------------------------------------------------------
 
@@ -3735,27 +3355,20 @@ CREATE TABLE `oc_product_reward` (
 --
 
 INSERT INTO `oc_product_reward` (`product_reward_id`, `product_id`, `customer_group_id`, `points`) VALUES
-(928, 42, 1, 100),
-(922, 47, 1, 300),
-(917, 28, 1, 400),
-(912, 43, 1, 600),
-(918, 29, 1, 0),
-(914, 48, 1, 0),
-(926, 40, 1, 0),
-(905, 30, 1, 200),
-(920, 44, 1, 700),
-(921, 45, 1, 800),
-(906, 31, 1, 0),
-(919, 35, 1, 0),
-(907, 33, 1, 0),
-(913, 46, 1, 0),
-(911, 41, 1, 0),
-(909, 36, 1, 0),
-(908, 34, 1, 0),
-(923, 49, 1, 1000),
-(915, 51, 1, 0),
-(916, 52, 1, 0),
-(935, 55, 1, 0);
+(955, 59, 1, 0),
+(964, 63, 1, 0),
+(972, 67, 1, 0),
+(961, 62, 1, 0),
+(968, 65, 1, 0),
+(950, 60, 1, 0),
+(954, 56, 1, 0),
+(951, 58, 1, 0),
+(958, 61, 1, 0),
+(974, 68, 1, 0),
+(977, 64, 1, 0),
+(976, 69, 1, 0),
+(953, 57, 1, 0),
+(970, 66, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -3773,25 +3386,6 @@ CREATE TABLE `oc_product_special` (
   `date_end` date NOT NULL DEFAULT '0000-00-00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `oc_product_special`
---
-
-INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(594, 30, 1, 2, '90.0000', '2014-01-12', '2016-01-12'),
-(593, 30, 1, 1, '80.0000', '2014-01-12', '2016-01-12'),
-(603, 47, 1, 1, '80.0000', '2014-01-12', '2016-01-12'),
-(602, 47, 1, 0, '90.0000', '2014-01-12', '2016-01-12'),
-(601, 28, 1, 2, '80.0000', '2014-01-12', '2016-01-12'),
-(600, 28, 1, 1, '90.0000', '2014-01-12', '2016-01-12'),
-(598, 41, 1, 2, '80.0000', '2014-01-12', '2016-01-12'),
-(597, 41, 1, 1, '90.0000', '2014-01-12', '2016-01-12'),
-(607, 40, 1, 1, '90.0000', '2014-01-12', '2016-01-12'),
-(599, 48, 1, 1, '90.0000', '2014-01-12', '2016-01-12'),
-(595, 36, 1, 1, '90.0000', '2014-01-12', '2016-01-12'),
-(609, 42, 1, 2, '20.0000', '2013-06-02', '2015-07-02'),
-(604, 49, 1, 1, '40.0000', '2013-06-02', '2015-01-15');
-
 -- --------------------------------------------------------
 
 --
@@ -3808,131 +3402,34 @@ CREATE TABLE `oc_product_to_category` (
 --
 
 INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
-(28, 60),
-(28, 64),
-(28, 65),
-(28, 66),
-(28, 67),
-(28, 69),
-(28, 70),
-(28, 74),
-(29, 27),
-(29, 60),
-(29, 64),
-(29, 65),
-(29, 66),
-(29, 67),
-(29, 68),
-(29, 69),
-(29, 70),
-(29, 72),
-(30, 20),
-(30, 26),
-(30, 27),
-(31, 20),
-(31, 26),
-(31, 27),
-(33, 20),
-(33, 26),
-(33, 27),
-(34, 28),
-(34, 31),
-(34, 32),
-(34, 43),
-(34, 63),
-(35, 59),
-(35, 60),
-(35, 64),
-(35, 65),
-(35, 66),
-(35, 67),
-(35, 68),
-(35, 69),
-(35, 73),
-(36, 25),
-(36, 28),
-(36, 29),
-(36, 31),
-(36, 32),
-(36, 47),
-(36, 49),
-(36, 63),
-(36, 69),
-(40, 25),
-(40, 28),
-(40, 29),
-(40, 31),
-(40, 32),
-(40, 35),
-(40, 36),
-(40, 63),
-(41, 25),
-(41, 31),
-(41, 32),
-(41, 35),
-(41, 36),
-(41, 63),
-(42, 20),
-(42, 26),
-(42, 65),
-(42, 76),
-(43, 28),
-(43, 34),
-(43, 43),
-(43, 44),
-(43, 47),
-(43, 48),
-(43, 49),
-(43, 50),
-(44, 59),
-(44, 68),
-(44, 71),
-(44, 72),
-(44, 73),
-(44, 74),
-(44, 75),
-(45, 59),
-(45, 71),
-(45, 72),
-(45, 73),
-(45, 75),
-(46, 28),
-(46, 43),
-(46, 44),
-(46, 47),
-(46, 48),
-(46, 49),
-(46, 50),
-(47, 59),
-(47, 71),
-(47, 73),
-(47, 74),
-(47, 75),
-(48, 34),
-(48, 43),
-(48, 44),
-(48, 48),
-(48, 49),
-(48, 50),
-(49, 59),
-(49, 71),
-(49, 72),
-(49, 73),
-(49, 74),
-(49, 75),
-(51, 29),
-(51, 34),
-(51, 44),
-(51, 48),
-(51, 50),
-(52, 60),
-(52, 64),
-(52, 65),
-(52, 66),
-(52, 67),
-(52, 68),
-(52, 70),
-(55, 76);
+(56, 80),
+(56, 85),
+(57, 80),
+(57, 85),
+(58, 80),
+(58, 85),
+(59, 80),
+(59, 85),
+(60, 80),
+(60, 85),
+(61, 80),
+(61, 85),
+(62, 80),
+(62, 85),
+(63, 76),
+(63, 85),
+(64, 76),
+(64, 85),
+(65, 76),
+(65, 85),
+(66, 76),
+(66, 85),
+(67, 76),
+(67, 85),
+(68, 76),
+(68, 85),
+(69, 76),
+(69, 85);
 
 -- --------------------------------------------------------
 
@@ -3973,27 +3470,20 @@ CREATE TABLE `oc_product_to_store` (
 --
 
 INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
-(28, 0),
-(29, 0),
-(30, 0),
-(31, 0),
-(33, 0),
-(34, 0),
-(35, 0),
-(36, 0),
-(40, 0),
-(41, 0),
-(42, 0),
-(43, 0),
-(44, 0),
-(45, 0),
-(46, 0),
-(47, 0),
-(48, 0),
-(49, 0),
-(51, 0),
-(52, 0),
-(55, 0);
+(56, 0),
+(57, 0),
+(58, 0),
+(59, 0),
+(60, 0),
+(61, 0),
+(62, 0),
+(63, 0),
+(64, 0),
+(65, 0),
+(66, 0),
+(67, 0),
+(68, 0),
+(69, 0);
 
 -- --------------------------------------------------------
 
@@ -4165,13 +3655,6 @@ CREATE TABLE `oc_review` (
   `date_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `oc_review`
---
-
-INSERT INTO `oc_review` (`review_id`, `product_id`, `customer_id`, `author`, `text`, `rating`, `status`, `date_added`, `date_modified`) VALUES
-(25, 55, 0, 'Tai', 'Hihihi Hihihi Hihihi Hihihi Hihihi Hihihi', 5, 1, '2017-04-25 20:07:37', '0000-00-00 00:00:00');
-
 -- --------------------------------------------------------
 
 --
@@ -4223,7 +3706,9 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `se
 (95, 0, 'voucher', 'voucher_status', '1', 0),
 (103, 0, 'free_checkout', 'free_checkout_status', '1', 0),
 (104, 0, 'free_checkout', 'free_checkout_order_status_id', '1', 0),
-(21138, 0, 'pavblog', 'pavblog', 'a:42:{s:14:\"general_lwidth\";s:3:\"868\";s:15:\"general_lheight\";s:3:\"400\";s:14:\"general_swidth\";s:3:\"868\";s:15:\"general_sheight\";s:3:\"400\";s:14:\"general_xwidth\";s:2:\"80\";s:15:\"general_xheight\";s:2:\"80\";s:14:\"rss_limit_item\";s:2:\"12\";s:26:\"keyword_listing_blogs_page\";s:5:\"blogs\";s:16:\"children_columns\";s:1:\"3\";s:14:\"general_cwidth\";s:3:\"261\";s:15:\"general_cheight\";s:3:\"153\";s:22:\"cat_limit_leading_blog\";s:1:\"1\";s:24:\"cat_limit_secondary_blog\";s:1:\"5\";s:22:\"cat_leading_image_type\";s:1:\"l\";s:24:\"cat_secondary_image_type\";s:1:\"s\";s:24:\"cat_columns_leading_blog\";s:1:\"1\";s:27:\"cat_columns_secondary_blogs\";s:1:\"1\";s:14:\"cat_show_title\";s:1:\"1\";s:20:\"cat_show_description\";s:1:\"1\";s:17:\"cat_show_readmore\";s:1:\"1\";s:14:\"cat_show_image\";s:1:\"1\";s:15:\"cat_show_author\";s:1:\"1\";s:17:\"cat_show_category\";s:1:\"1\";s:16:\"cat_show_created\";s:1:\"1\";s:13:\"cat_show_hits\";s:1:\"1\";s:24:\"cat_show_comment_counter\";s:1:\"1\";s:15:\"blog_image_type\";s:1:\"l\";s:15:\"blog_show_title\";s:1:\"1\";s:15:\"blog_show_image\";s:1:\"1\";s:16:\"blog_show_author\";s:1:\"1\";s:18:\"blog_show_category\";s:1:\"1\";s:17:\"blog_show_created\";s:1:\"1\";s:25:\"blog_show_comment_counter\";s:1:\"1\";s:14:\"blog_show_hits\";s:1:\"1\";s:22:\"blog_show_comment_form\";s:1:\"1\";s:14:\"comment_engine\";s:5:\"local\";s:14:\"diquis_account\";s:10:\"pavothemes\";s:14:\"facebook_appid\";s:12:\"100858303516\";s:13:\"comment_limit\";s:2:\"10\";s:14:\"facebook_width\";s:3:\"600\";s:20:\"auto_publish_comment\";s:1:\"0\";s:16:\"enable_recaptcha\";s:1:\"1\";}', 1),
+(23839, 0, 'featured', 'product', '', 0),
+(23840, 0, 'featured', 'featured_product', '58,61,69,63', 0),
+(23841, 0, 'featured', 'featured_module', 'a:1:{i:0;a:7:{s:5:\"limit\";s:1:\"5\";s:11:\"image_width\";s:3:\"270\";s:12:\"image_height\";s:3:\"342\";s:9:\"layout_id\";s:1:\"1\";s:8:\"position\";s:11:\"content_top\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";s:1:\"1\";}}', 1),
 (23592, 0, 'pavblog_frontmodules', 'pavblog_frontmodules', 'a:1:{s:7:\"modules\";a:3:{i:0;s:15:\"pavblogcategory\";i:1;s:14:\"pavblogcomment\";i:2;s:13:\"pavbloglatest\";}}', 1),
 (23593, 0, 'pavblogcategory', 'pavblogcategory_module', 'a:1:{i:1;a:5:{s:11:\"category_id\";s:1:\"1\";s:9:\"layout_id\";s:2:\"12\";s:8:\"position\";s:11:\"column_left\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";s:1:\"1\";}}', 1),
 (23594, 0, 'pavblogcomment', 'pavblogcomment_module', 'a:1:{i:1;a:5:{s:5:\"limit\";s:1:\"6\";s:9:\"layout_id\";s:2:\"12\";s:8:\"position\";s:11:\"column_left\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";s:1:\"3\";}}', 1),
@@ -4234,15 +3719,17 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `se
 (14154, 0, 'pavproductcarousel', 'pavproductcarousel_module', 'a:7:{i:1;a:14:{s:11:\"description\";a:2:{i:1;s:0:\"\";i:2;s:0:\"\";}s:6:\"prefix\";s:0:\"\";s:4:\"tabs\";a:1:{i:0;s:8:\"featured\";}s:5:\"width\";s:3:\"180\";s:6:\"height\";s:3:\"158\";s:12:\"itemsperpage\";s:1:\"2\";s:4:\"cols\";s:1:\"2\";s:5:\"limit\";s:1:\"4\";s:8:\"interval\";s:4:\"8000\";s:9:\"auto_play\";s:1:\"0\";s:9:\"layout_id\";s:1:\"3\";s:8:\"position\";s:16:\"call_by_category\";s:6:\"status\";s:1:\"0\";s:10:\"sort_order\";s:1:\"1\";}i:2;a:14:{s:11:\"description\";a:2:{i:1;s:0:\"\";i:2;s:0:\"\";}s:6:\"prefix\";s:15:\"highlight-color\";s:4:\"tabs\";a:1:{i:0;s:7:\"special\";}s:5:\"width\";s:3:\"180\";s:6:\"height\";s:3:\"158\";s:12:\"itemsperpage\";s:1:\"2\";s:4:\"cols\";s:1:\"2\";s:5:\"limit\";s:1:\"4\";s:8:\"interval\";s:4:\"8000\";s:9:\"auto_play\";s:1:\"0\";s:9:\"layout_id\";s:1:\"3\";s:8:\"position\";s:16:\"call_by_category\";s:6:\"status\";s:1:\"0\";s:10:\"sort_order\";s:1:\"2\";}i:3;a:14:{s:11:\"description\";a:2:{i:1;s:0:\"\";i:2;s:0:\"\";}s:6:\"prefix\";s:4:\"blue\";s:4:\"tabs\";a:1:{i:0;s:10:\"bestseller\";}s:5:\"width\";s:3:\"254\";s:6:\"height\";s:3:\"223\";s:12:\"itemsperpage\";s:1:\"2\";s:4:\"cols\";s:1:\"2\";s:5:\"limit\";s:1:\"4\";s:8:\"interval\";s:4:\"8000\";s:9:\"auto_play\";s:1:\"0\";s:9:\"layout_id\";s:1:\"2\";s:8:\"position\";s:9:\"promotion\";s:6:\"status\";s:1:\"0\";s:10:\"sort_order\";s:1:\"1\";}i:4;a:14:{s:11:\"description\";a:2:{i:1;s:0:\"\";i:2;s:0:\"\";}s:6:\"prefix\";s:9:\"light red\";s:4:\"tabs\";a:1:{i:0;s:6:\"latest\";}s:5:\"width\";s:3:\"254\";s:6:\"height\";s:3:\"223\";s:12:\"itemsperpage\";s:1:\"2\";s:4:\"cols\";s:1:\"2\";s:5:\"limit\";s:1:\"4\";s:8:\"interval\";s:4:\"8000\";s:9:\"auto_play\";s:1:\"0\";s:9:\"layout_id\";s:1:\"2\";s:8:\"position\";s:9:\"promotion\";s:6:\"status\";s:1:\"0\";s:10:\"sort_order\";s:1:\"2\";}i:5;a:14:{s:11:\"description\";a:2:{i:1;s:0:\"\";i:2;s:0:\"\";}s:6:\"prefix\";s:4:\"best\";s:4:\"tabs\";a:1:{i:0;s:10:\"bestseller\";}s:5:\"width\";s:3:\"239\";s:6:\"height\";s:3:\"209\";s:12:\"itemsperpage\";s:1:\"6\";s:4:\"cols\";s:1:\"3\";s:5:\"limit\";s:1:\"3\";s:8:\"interval\";s:4:\"8000\";s:9:\"auto_play\";s:1:\"0\";s:9:\"layout_id\";s:1:\"1\";s:8:\"position\";s:11:\"column_left\";s:6:\"status\";s:1:\"0\";s:10:\"sort_order\";s:1:\"6\";}i:6;a:14:{s:11:\"description\";a:2:{i:1;s:0:\"\";i:2;s:0:\"\";}s:6:\"prefix\";s:0:\"\";s:4:\"tabs\";a:1:{i:0;s:7:\"special\";}s:5:\"width\";s:3:\"270\";s:6:\"height\";s:3:\"203\";s:12:\"itemsperpage\";s:1:\"4\";s:4:\"cols\";s:1:\"4\";s:5:\"limit\";s:2:\"16\";s:8:\"interval\";s:4:\"8000\";s:9:\"auto_play\";s:1:\"0\";s:9:\"layout_id\";s:1:\"1\";s:8:\"position\";s:11:\"content_top\";s:6:\"status\";s:1:\"0\";s:10:\"sort_order\";i:11;}i:7;a:14:{s:11:\"description\";a:2:{i:1;s:0:\"\";i:2;s:0:\"\";}s:6:\"prefix\";s:0:\"\";s:4:\"tabs\";a:1:{i:0;s:6:\"latest\";}s:5:\"width\";s:2:\"80\";s:6:\"height\";s:2:\"60\";s:12:\"itemsperpage\";s:1:\"4\";s:4:\"cols\";s:1:\"4\";s:5:\"limit\";s:2:\"16\";s:8:\"interval\";s:4:\"8000\";s:9:\"auto_play\";s:1:\"0\";s:9:\"layout_id\";s:1:\"3\";s:8:\"position\";s:11:\"column_left\";s:6:\"status\";s:1:\"0\";s:10:\"sort_order\";s:1:\"2\";}}', 1),
 (16223, 0, 'pavverticalmenu_params', 'params', '[{\"submenu\":1,\"subwidth\":600,\"id\":44,\"cols\":1,\"group\":0,\"rows\":[{\"cols\":[{\"widgets\":\"wid-11\",\"colwidth\":5},{\"widgets\":\"wid-10\",\"colwidth\":7}]},{\"cols\":[{\"widgets\":\"wid-9\",\"colwidth\":5},{\"widgets\":\"wid-8\",\"colwidth\":7,\"colclass\":\"hide-title\"}]}]},{\"submenu\":1,\"subwidth\":600,\"cols\":1,\"group\":0,\"id\":7,\"rows\":[{\"cols\":[{\"widgets\":\"wid-12\",\"colwidth\":4},{\"widgets\":\"wid-13\",\"colwidth\":4},{\"widgets\":\"wid-14\",\"colwidth\":4}]}]},{\"submenu\":1,\"cols\":1,\"group\":0,\"id\":3,\"rows\":[{\"cols\":[{\"colwidth\":12,\"type\":\"menu\"}]}]},{\"submenu\":1,\"cols\":1,\"group\":0,\"id\":26,\"rows\":[{\"cols\":[{\"colwidth\":12,\"type\":\"menu\"}]}]},{\"submenu\":1,\"cols\":1,\"group\":0,\"id\":13,\"rows\":[{\"cols\":[{\"colwidth\":12,\"type\":\"menu\"}]}]},{\"submenu\":1,\"cols\":1,\"group\":0,\"id\":28,\"rows\":[{\"cols\":[{\"colwidth\":12,\"type\":\"menu\"}]}]}]', 0),
 (21141, 0, 'pavmegamenu_params', 'params', '[{\"align\":\"aligned-fullwidth\",\"submenu\":1,\"subwidth\":971,\"cols\":1,\"group\":0,\"id\":41,\"rows\":[{\"cols\":[{\"widgets\":\"wid-9\",\"colwidth\":3},{\"widgets\":\"wid-7\",\"colwidth\":3},{\"widgets\":\"wid-8\",\"colwidth\":3},{\"widgets\":\"wid-11\",\"colwidth\":3}]}]},{\"align\":\"aligned-fullwidth\",\"submenu\":1,\"subwidth\":1170,\"cols\":1,\"group\":0,\"id\":86,\"rows\":[{\"cols\":[{\"widgets\":\"wid-4\",\"colwidth\":3},{\"widgets\":\"wid-14|wid-12\",\"colclass\":\"sidebar\",\"colwidth\":6},{\"widgets\":\"wid-3\",\"colwidth\":3,\"colclass\":\"sidebar\"}]}]},{\"submenu\":1,\"id\":38,\"align\":\"aligned-fullwidth\",\"cols\":1,\"group\":0,\"rows\":[{\"cols\":[{\"widgets\":\"wid-18\",\"colwidth\":3},{\"widgets\":\"wid-16\",\"colwidth\":3},{\"widgets\":\"wid-15\",\"colwidth\":6,\"colclass\":\"\"}]}]},{\"align\":\"aligned-fullwidth\",\"submenu\":1,\"subwidth\":400,\"cols\":1,\"group\":0,\"id\":5,\"rows\":[{\"cols\":[{\"widgets\":\"wid-1\",\"colwidth\":6},{\"widgets\":\"wid-17\",\"colwidth\":6}]}]},{\"align\":\"aligned-left\",\"submenu\":1,\"cols\":1,\"group\":0,\"id\":3,\"rows\":[{\"cols\":[{\"colwidth\":12,\"type\":\"menu\"}]}]},{\"align\":\"aligned-left\",\"submenu\":1,\"cols\":1,\"group\":0,\"id\":32,\"rows\":[{\"cols\":[{\"colwidth\":12,\"type\":\"menu\"}]}]},{\"align\":\"aligned-left\",\"submenu\":1,\"cols\":1,\"group\":0,\"id\":25,\"rows\":[{\"cols\":[{\"colwidth\":12,\"type\":\"menu\"}]}]}]', 0),
-(23813, 0, 'config', 'config_password', '1', 0),
-(23814, 0, 'config', 'config_encryption', '594d8a1edd847ce19d545c4acd32a8b3', 0),
-(23815, 0, 'config', 'config_compression', '0', 0),
-(23816, 0, 'config', 'config_error_display', '1', 0),
-(23817, 0, 'config', 'config_error_log', '1', 0),
-(23818, 0, 'config', 'config_error_filename', 'error.txt', 0),
-(23819, 0, 'config', 'config_google_analytics', '', 0),
-(23599, 0, 'featured', 'product', '', 0),
-(23601, 0, 'featured', 'featured_product', '30,34,52,47', 0),
+(24037, 0, 'config', 'config_seo_url', '1', 0),
+(24038, 0, 'config', 'config_file_extension_allowed', 'txt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc\r\nrtf\r\nxls\r\nppt\r\nodt\r\nods', 0),
+(24039, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/jpeg\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/vnd.microsoft.icon\r\nimage/tiff\r\nimage/tiff\r\nimage/svg+xml\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-rar-compressed\r\napplication/x-msdownload\r\napplication/vnd.ms-cab-compressed\r\naudio/mpeg\r\nvideo/quicktime\r\nvideo/quicktime\r\napplication/pdf\r\nimage/vnd.adobe.photoshop\r\napplication/postscript\r\napplication/postscript\r\napplication/postscript\r\napplication/msword\r\napplication/rtf\r\napplication/vnd.ms-excel\r\napplication/vnd.ms-powerpoint\r\napplication/vnd.oasis.opendocument.text\r\napplication/vnd.oasis.opendocument.spreadsheet', 0),
+(24040, 0, 'config', 'config_maintenance', '0', 0),
+(24041, 0, 'config', 'config_password', '1', 0),
+(24042, 0, 'config', 'config_encryption', '594d8a1edd847ce19d545c4acd32a8b3', 0),
+(24043, 0, 'config', 'config_compression', '0', 0),
+(24047, 0, 'config', 'config_google_analytics', '', 0),
+(24046, 0, 'config', 'config_error_filename', 'error.txt', 0),
+(24045, 0, 'config', 'config_error_log', '1', 0),
+(24044, 0, 'config', 'config_error_display', '1', 0),
 (23606, 0, 'pavproducttabs', 'pavproducttabs_module', 'a:1:{i:1;a:12:{s:11:\"description\";a:2:{i:1;s:0:\"\";i:2;s:0:\"\";}s:12:\"module_class\";s:15:\"specital-asdasd\";s:4:\"tabs\";a:1:{i:0;s:7:\"special\";}s:5:\"width\";s:3:\"273\";s:6:\"height\";s:3:\"273\";s:12:\"itemsperpage\";s:1:\"8\";s:4:\"cols\";s:1:\"4\";s:5:\"limit\";s:2:\"16\";s:9:\"layout_id\";s:1:\"1\";s:8:\"position\";s:11:\"mass_center\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";i:1;}}', 1),
 (23612, 0, 'pavcustom', 'pavcustom_module', 'a:4:{i:1;a:8:{s:12:\"module_title\";a:2:{i:6;s:0:\"\";i:1;s:8:\"shipment\";}s:11:\"description\";a:2:{i:6;s:0:\"\";i:1;s:1092:\"&lt;ul class=&quot;media-list clearfix&quot;&gt;\r\n	&lt;li class=&quot;media&quot;&gt;&lt;span class=&quot;pull-left fa fa-truck&quot;&gt;&amp;nbsp;&lt;/span&gt;\r\n	&lt;div class=&quot;media-body&quot;&gt;\r\n	&lt;h5&gt;&lt;a href=&quot;#&quot;&gt;Miễn phí vận chuyển&lt;/a&gt;&lt;/h5&gt;\r\n	&lt;em&gt;Miễn phí giao hàng cho đơn hàng trên 2.000.000 VNĐ&lt;/em&gt;&lt;/div&gt;\r\n	&lt;/li&gt;\r\n	&lt;li class=&quot;media clearfix&quot;&gt;&lt;span class=&quot;pull-left fa fa-retweet&quot;&gt;&amp;nbsp;&lt;/span&gt;\r\n	&lt;div class=&quot;media-body&quot;&gt;\r\n	&lt;h5&gt;&lt;a href=&quot;#&quot;&gt;Hỗ trợ 24/7&lt;/a&gt;&amp;nbsp;&lt;/h5&gt;\r\n	&lt;em&gt;Liên hệ với chúng tôi để hiểu rõ về mua là có&lt;/em&gt;&lt;/div&gt;\r\n	&lt;/li&gt;\r\n	&lt;li class=&quot;media clearfix&quot;&gt;&lt;span class=&quot;pull-left fa fa-money&quot;&gt;&amp;nbsp;&lt;/span&gt;\r\n	&lt;div class=&quot;media-body&quot;&gt;\r\n	&lt;h5&gt;&lt;a href=&quot;#&quot;&gt;member discounts&lt;/a&gt;&lt;/h5&gt;\r\n	&lt;i&gt;Đăng ký miễn phí&lt;/i&gt;&lt;/div&gt;\r\n	&lt;/li&gt;\r\n&lt;/ul&gt;\r\n\";}s:10:\"show_title\";s:1:\"1\";s:9:\"layout_id\";s:5:\"99999\";s:8:\"position\";s:13:\"footer_center\";s:6:\"status\";s:1:\"1\";s:12:\"module_class\";s:0:\"\";s:10:\"sort_order\";s:1:\"3\";}i:2;a:8:{s:12:\"module_title\";a:2:{i:6;s:0:\"\";i:1;s:8:\"About Us\";}s:11:\"description\";a:2:{i:6;s:0:\"\";i:1;s:392:\"&lt;address&gt;\r\n&lt;p&gt;Địa chỉ:&lt;span&gt;&amp;nbsp; &lt;/span&gt;72 Nguyễn Huệ, P. Bến Thành, Q.1, HCM&lt;span&gt;. &lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;abbr title=&quot;Phone&quot;&gt;Điện thoại:&lt;/abbr&gt;&lt;span&gt;&amp;nbsp; &lt;/span&gt;0901 499 932&lt;/p&gt;\r\n\r\n&lt;p class=&quot;link-active&quot;&gt;Email: info@mualacongay.com&lt;/p&gt;\r\n&lt;/address&gt;\r\n\";}s:10:\"show_title\";s:1:\"1\";s:9:\"layout_id\";s:5:\"99999\";s:8:\"position\";s:13:\"footer_center\";s:6:\"status\";s:1:\"1\";s:12:\"module_class\";s:0:\"\";s:10:\"sort_order\";s:1:\"1\";}i:3;a:8:{s:12:\"module_title\";a:2:{i:6;s:0:\"\";i:1;s:6:\"Banner\";}s:11:\"description\";a:2:{i:6;s:0:\"\";i:1;s:1429:\"&lt;div class=&quot;row hidden-xs hidden-sm&quot;&gt;\r\n&lt;div class=&quot;col-lg-4 col-md-4 col-sm-4&quot;&gt;\r\n&lt;div class=&quot;banner-wrapper effect&quot;&gt;\r\n&lt;div class=&quot;banner-meta&quot;&gt;\r\n&lt;div class=&quot;banner-inner&quot;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;a class=&quot;banner-image&quot; href=&quot;#&quot;&gt;&lt;img alt=&quot;img&quot; src=&quot;image/data/banner/banner1.jpg&quot; /&gt; &lt;/a&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;col-lg-4 col-md-4 col-sm-4&quot;&gt;\r\n&lt;div class=&quot;banner-wrapper effect&quot;&gt;\r\n&lt;div class=&quot;banner-meta&quot;&gt;\r\n&lt;div class=&quot;banner-inner&quot;&gt;&lt;span&gt;weekly give away&lt;/span&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;a class=&quot;banner-image&quot; href=&quot;#&quot;&gt;&lt;img alt=&quot;img&quot; src=&quot;image/data/banner/banner2.jpg&quot; /&gt; &lt;/a&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;col-lg-4 col-md-4 col-sm-4&quot;&gt;\r\n&lt;div class=&quot;banner-wrapper effect&quot;&gt;\r\n&lt;div class=&quot;banner-meta&quot;&gt;\r\n&lt;div class=&quot;banner-inner&quot;&gt;&lt;span&gt;Save up &lt;strong&gt;30%&lt;/strong&gt; with Vourcher&lt;/span&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;a class=&quot;banner-image&quot; href=&quot;#&quot;&gt;&lt;img alt=&quot;img&quot; src=&quot;image/data/banner/banner3.jpg&quot; /&gt; &lt;/a&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\";}s:10:\"show_title\";s:1:\"1\";s:9:\"layout_id\";s:1:\"1\";s:8:\"position\";s:8:\"showcase\";s:6:\"status\";s:1:\"1\";s:12:\"module_class\";s:19:\"hidden-xs hidden-sm\";s:10:\"sort_order\";s:1:\"1\";}i:4;a:8:{s:12:\"module_title\";a:2:{i:6;s:0:\"\";i:1;s:7:\"Account\";}s:11:\"description\";a:2:{i:6;s:0:\"\";i:1;s:370:\"&lt;ul class=&quot;list-style&quot;&gt;\r\n	&lt;li&gt;&lt;a href=&quot;index.php?route=account/account&quot;&gt;Tài khoản của tôi&lt;/a&gt;&lt;/li&gt;\r\n	&lt;li&gt;&lt;a href=&quot;index.php?route=account/order&quot;&gt;Lịch sử mua hàng&lt;/a&gt;&lt;/li&gt;\r\n	&lt;li&gt;&lt;a href=&quot;?route=pavblog/blogs&quot;&gt;Tin tức&lt;/a&gt;&lt;/li&gt;\r\n&lt;/ul&gt;\r\n\";}s:10:\"show_title\";s:1:\"1\";s:9:\"layout_id\";s:5:\"99999\";s:8:\"position\";s:13:\"footer_center\";s:6:\"status\";s:1:\"1\";s:12:\"module_class\";s:0:\"\";s:10:\"sort_order\";i:4;}}', 1),
 (23607, 0, 'pavbloglatest', 'pavbloglatest_module', 'a:1:{i:1;a:11:{s:11:\"description\";a:2:{i:6;s:0:\"\";i:1;s:45:\"&lt;p&gt;Bài viết mới nhất&lt;/p&gt;\r\n\";}s:11:\"prefixclass\";s:0:\"\";s:4:\"tabs\";s:6:\"latest\";s:5:\"width\";s:3:\"371\";s:6:\"height\";s:3:\"200\";s:4:\"cols\";s:1:\"3\";s:5:\"limit\";s:1:\"3\";s:9:\"layout_id\";s:1:\"1\";s:8:\"position\";s:11:\"mass_bottom\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";i:1;}}', 1),
@@ -4250,110 +3737,105 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `se
 (17944, 0, 'pavsocialsidebar', 'pavsocialsidebar_module', 'a:1:{i:1;a:32:{s:9:\"layout_id\";s:1:\"1\";s:8:\"position\";s:11:\"content_top\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";s:1:\"1\";s:5:\"theme\";s:11:\"transparent\";s:19:\"responsive_maxwidth\";s:3:\"979\";s:19:\"responsive_minwidth\";s:1:\"0\";s:6:\"domain\";s:10:\"mysite.com\";s:9:\"idAddthis\";s:0:\"\";s:15:\"mobile_position\";s:6:\"bottom\";s:12:\"mobile_theme\";s:11:\"transparent\";s:13:\"mobile_status\";s:1:\"0\";s:14:\"share_position\";s:5:\"right\";s:13:\"share_service\";a:5:{i:0;s:8:\"facebook\";i:1;s:7:\"twitter\";i:2;s:9:\"yahoomail\";i:3;s:9:\"pinterest\";i:4;s:5:\"gmail\";}s:11:\"share_title\";s:19:\"Thanks for sharing!\";s:9:\"share_mgs\";s:9:\"Follow us\";s:11:\"share_theme\";s:11:\"transparent\";s:13:\"share_desktop\";s:1:\"1\";s:12:\"share_mobile\";s:1:\"1\";s:12:\"follow_title\";s:6:\"Follow\";s:12:\"follow_thank\";s:21:\"Thanks for following!\";s:14:\"follow_desktop\";s:1:\"1\";s:13:\"follow_mobile\";s:1:\"1\";s:24:\"follow_services_facebook\";s:0:\"\";s:23:\"follow_services_twitter\";s:0:\"\";s:29:\"follow_services_google_follow\";s:0:\"\";s:23:\"follow_services_youtube\";s:0:\"\";s:22:\"follow_services_flickr\";s:0:\"\";s:21:\"follow_services_vimeo\";s:0:\"\";s:25:\"follow_services_pinterest\";s:0:\"\";s:25:\"follow_services_instagram\";s:0:\"\";s:24:\"follow_services_linkedin\";s:0:\"\";}}', 1),
 (12065, 0, 'pavsocial', 'pavsocial_module', 'a:1:{i:1;a:27:{s:9:\"layout_id\";s:5:\"99999\";s:8:\"position\";s:13:\"outsite_right\";s:6:\"status\";s:1:\"0\";s:10:\"sort_order\";s:1:\"1\";s:8:\"facebook\";s:35:\"https://www.facebook.com/Pavothemes\";s:14:\"application_id\";s:0:\"\";s:12:\"border_color\";s:6:\"FFFFFF\";s:11:\"colorscheme\";s:5:\"light\";s:10:\"face_width\";s:3:\"270\";s:11:\"face_height\";s:3:\"355\";s:5:\"tream\";s:1:\"0\";s:10:\"show_faces\";s:1:\"1\";s:6:\"header\";s:1:\"0\";s:9:\"widget_id\";s:18:\"366766896986591232\";s:5:\"count\";s:1:\"2\";s:8:\"username\";s:10:\"PavoThemes\";s:5:\"theme\";s:5:\"light\";s:14:\"nickname_color\";s:6:\"FFFFFF\";s:10:\"name_color\";s:6:\"2465FF\";s:11:\"title_color\";s:6:\"386DFF\";s:10:\"link_color\";s:6:\"2660FF\";s:5:\"width\";s:3:\"270\";s:6:\"height\";s:3:\"355\";s:12:\"show_replies\";s:1:\"0\";s:17:\"youtube_video_ids\";s:11:\"fNEepYl3LAk\";s:11:\"video_width\";s:3:\"270\";s:12:\"video_height\";s:3:\"137\";}}', 1),
 (21428, 0, 'account', 'account_module', 'a:2:{i:0;a:4:{s:9:\"layout_id\";s:1:\"6\";s:8:\"position\";s:11:\"column_left\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";s:1:\"1\";}i:1;a:4:{s:9:\"layout_id\";s:2:\"11\";s:8:\"position\";s:11:\"column_left\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";s:1:\"1\";}}', 1),
-(23812, 0, 'config', 'config_maintenance', '0', 0),
-(23811, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/jpeg\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/vnd.microsoft.icon\r\nimage/tiff\r\nimage/tiff\r\nimage/svg+xml\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-rar-compressed\r\napplication/x-msdownload\r\napplication/vnd.ms-cab-compressed\r\naudio/mpeg\r\nvideo/quicktime\r\nvideo/quicktime\r\napplication/pdf\r\nimage/vnd.adobe.photoshop\r\napplication/postscript\r\napplication/postscript\r\napplication/postscript\r\napplication/msword\r\napplication/rtf\r\napplication/vnd.ms-excel\r\napplication/vnd.ms-powerpoint\r\napplication/vnd.oasis.opendocument.text\r\napplication/vnd.oasis.opendocument.spreadsheet', 0),
-(23806, 0, 'config', 'config_secure', '0', 0),
-(23807, 0, 'config', 'config_shared', '0', 0),
-(23808, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
-(23809, 0, 'config', 'config_seo_url', '1', 0),
-(23810, 0, 'config', 'config_file_extension_allowed', 'txt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc\r\nrtf\r\nxls\r\nppt\r\nodt\r\nods', 0),
+(24035, 0, 'config', 'config_shared', '0', 0),
+(24036, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
 (23603, 0, 'latest', 'latest_module', 'a:2:{i:0;a:7:{s:5:\"limit\";s:1:\"8\";s:11:\"image_width\";s:3:\"270\";s:12:\"image_height\";s:3:\"342\";s:9:\"layout_id\";s:1:\"1\";s:8:\"position\";s:11:\"content_top\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";i:3;}i:1;a:7:{s:5:\"limit\";s:1:\"5\";s:11:\"image_width\";s:2:\"80\";s:12:\"image_height\";s:2:\"80\";s:9:\"layout_id\";s:1:\"3\";s:8:\"position\";s:11:\"column_left\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";s:1:\"9\";}}', 1),
-(23805, 0, 'config', 'config_fraud_status_id', '7', 0),
-(23804, 0, 'config', 'config_fraud_score', '', 0),
-(23803, 0, 'config', 'config_fraud_key', '', 0),
-(23802, 0, 'config', 'config_fraud_detection', '0', 0),
-(23801, 0, 'config', 'config_alert_emails', '', 0),
-(23800, 0, 'config', 'config_account_mail', '0', 0),
-(23799, 0, 'config', 'config_alert_mail', '0', 0),
-(23798, 0, 'config', 'config_smtp_timeout', '5', 0),
-(23796, 0, 'config', 'config_smtp_password', '', 0),
-(23797, 0, 'config', 'config_smtp_port', '25', 0),
-(23795, 0, 'config', 'config_smtp_username', '', 0),
-(23794, 0, 'config', 'config_smtp_host', '', 0),
-(23793, 0, 'config', 'config_mail_parameter', '', 0),
-(23792, 0, 'config', 'config_mail_protocol', 'mail', 0),
-(23791, 0, 'config', 'config_ftp_status', '0', 0),
-(23790, 0, 'config', 'config_ftp_root', '', 0),
-(23789, 0, 'config', 'config_ftp_password', '', 0),
-(23788, 0, 'config', 'config_ftp_username', '', 0),
-(23786, 0, 'config', 'config_ftp_host', 'localhost', 0),
-(23787, 0, 'config', 'config_ftp_port', '21', 0),
-(23785, 0, 'config', 'config_image_cart_height', '71', 0),
-(23784, 0, 'config', 'config_image_cart_width', '70', 0),
-(23783, 0, 'config', 'config_image_wishlist_height', '71', 0),
-(23782, 0, 'config', 'config_image_wishlist_width', '70', 0),
-(23781, 0, 'config', 'config_image_compare_height', '91', 0),
-(23780, 0, 'config', 'config_image_compare_width', '90', 0),
-(23779, 0, 'config', 'config_image_related_height', '342', 0),
-(23778, 0, 'config', 'config_image_related_width', '273', 0),
-(23777, 0, 'config', 'config_image_additional_height', '100', 0),
-(23776, 0, 'config', 'config_image_additional_width', '80', 0),
-(23775, 0, 'config', 'config_image_product_height', '342', 0),
-(23774, 0, 'config', 'config_image_product_width', '273', 0),
-(23773, 0, 'config', 'config_image_popup_height', '630', 0),
-(23772, 0, 'config', 'config_image_popup_width', '500', 0),
-(23771, 0, 'config', 'config_image_thumb_height', '466', 0),
-(23770, 0, 'config', 'config_image_thumb_width', '371', 0),
-(23769, 0, 'config', 'config_image_category_height', '284', 0),
-(23768, 0, 'config', 'config_image_category_width', '873', 0),
-(23767, 0, 'config', 'config_icon', 'data/cart.png', 0),
-(23766, 0, 'config', 'config_logo', '', 0),
-(23765, 0, 'config', 'config_return_status_id', '2', 0),
-(23763, 0, 'config', 'config_commission', '5', 0),
-(23764, 0, 'config', 'config_return_id', '0', 0),
-(23602, 0, 'pavcategorybanner', 'pavcategorybanner_module', 'a:1:{i:1;a:9:{s:5:\"width\";s:3:\"270\";s:6:\"height\";s:3:\"145\";s:9:\"layout_id\";s:1:\"1\";s:8:\"position\";s:11:\"content_top\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";i:2;s:13:\"category_tabs\";a:8:{i:0;s:2:\"34\";i:1;s:2:\"59\";i:2;s:2:\"29\";i:3;s:2:\"50\";i:4;s:2:\"44\";i:5;s:2:\"75\";i:6;s:2:\"48\";i:7;s:2:\"32\";}s:5:\"image\";a:8:{i:0;s:22:\"data/banner/makeup.jpg\";i:1;s:20:\"data/banner/nail.jpg\";i:2;s:25:\"data/banner/skin-care.jpg\";i:3;s:25:\"data/banner/hair-care.jpg\";i:4;s:27:\"data/banner/Accessories.jpg\";i:5;s:23:\"data/banner/perfume.jpg\";i:6;s:19:\"data/banner/Spa.jpg\";i:7;s:22:\"data/banner/others.jpg\";}s:5:\"class\";a:8:{i:0;s:6:\"banner\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";i:4;s:0:\"\";i:5;s:0:\"\";i:6;s:0:\"\";i:7;s:0:\"\";}}}', 1),
-(23762, 0, 'config', 'config_affiliate_id', '4', 0),
-(23761, 0, 'config', 'config_stock_status_id', '5', 0),
-(23760, 0, 'config', 'config_stock_checkout', '0', 0),
-(23759, 0, 'config', 'config_stock_warning', '0', 0),
-(23758, 0, 'config', 'config_stock_display', '0', 0),
-(23757, 0, 'config', 'config_complete_status_id', '5', 0),
-(23756, 0, 'config', 'config_order_status_id', '1', 0),
-(23755, 0, 'config', 'config_invoice_prefix', 'INV-2013-00', 0),
-(23749, 0, 'config', 'config_customer_price', '0', 0),
-(23750, 0, 'config', 'config_account_id', '3', 0),
-(23751, 0, 'config', 'config_cart_weight', '1', 0),
-(23752, 0, 'config', 'config_guest_checkout', '1', 0),
+(24034, 0, 'config', 'config_secure', '0', 0),
+(24033, 0, 'config', 'config_fraud_status_id', '7', 0),
+(24032, 0, 'config', 'config_fraud_score', '', 0),
+(24031, 0, 'config', 'config_fraud_key', '', 0),
+(24030, 0, 'config', 'config_fraud_detection', '0', 0),
+(24029, 0, 'config', 'config_alert_emails', '', 0),
+(24028, 0, 'config', 'config_account_mail', '0', 0),
+(24027, 0, 'config', 'config_alert_mail', '0', 0),
+(24025, 0, 'config', 'config_smtp_port', '25', 0),
+(24026, 0, 'config', 'config_smtp_timeout', '5', 0),
+(24024, 0, 'config', 'config_smtp_password', '', 0),
+(24023, 0, 'config', 'config_smtp_username', '', 0),
+(24022, 0, 'config', 'config_smtp_host', '', 0),
+(24021, 0, 'config', 'config_mail_parameter', '', 0),
+(24020, 0, 'config', 'config_mail_protocol', 'mail', 0),
+(24019, 0, 'config', 'config_ftp_status', '0', 0),
+(24018, 0, 'config', 'config_ftp_root', '', 0),
+(24017, 0, 'config', 'config_ftp_password', '', 0),
+(24015, 0, 'config', 'config_ftp_port', '21', 0),
+(24016, 0, 'config', 'config_ftp_username', '', 0),
+(24014, 0, 'config', 'config_ftp_host', 'localhost', 0),
+(24013, 0, 'config', 'config_image_cart_height', '71', 0),
+(24012, 0, 'config', 'config_image_cart_width', '70', 0),
+(24011, 0, 'config', 'config_image_wishlist_height', '71', 0),
+(24010, 0, 'config', 'config_image_wishlist_width', '70', 0),
+(24009, 0, 'config', 'config_image_compare_height', '91', 0),
+(24008, 0, 'config', 'config_image_compare_width', '90', 0),
+(24007, 0, 'config', 'config_image_related_height', '342', 0),
+(24006, 0, 'config', 'config_image_related_width', '273', 0),
+(24005, 0, 'config', 'config_image_additional_height', '100', 0),
+(24004, 0, 'config', 'config_image_additional_width', '80', 0),
+(24003, 0, 'config', 'config_image_product_height', '342', 0),
+(24002, 0, 'config', 'config_image_product_width', '273', 0),
+(24001, 0, 'config', 'config_image_popup_height', '630', 0),
+(24000, 0, 'config', 'config_image_popup_width', '500', 0),
+(23999, 0, 'config', 'config_image_thumb_height', '466', 0),
+(23997, 0, 'config', 'config_image_category_height', '284', 0),
+(23998, 0, 'config', 'config_image_thumb_width', '371', 0),
+(23996, 0, 'config', 'config_image_category_width', '873', 0),
+(23995, 0, 'config', 'config_icon', 'data/cart.png', 0),
+(23994, 0, 'config', 'config_logo', '', 0),
+(23993, 0, 'config', 'config_return_status_id', '2', 0),
+(23992, 0, 'config', 'config_return_id', '0', 0),
+(23826, 0, 'pavcategorybanner', 'pavcategorybanner_module', 'a:1:{i:1;a:12:{s:5:\"width\";s:3:\"270\";s:6:\"height\";s:3:\"145\";s:12:\"itemsperpage\";s:1:\"6\";s:4:\"cols\";s:1:\"3\";s:5:\"limit\";s:2:\"12\";s:9:\"layout_id\";s:1:\"1\";s:8:\"position\";s:11:\"content_top\";s:6:\"status\";s:1:\"0\";s:10:\"sort_order\";s:1:\"2\";s:13:\"category_tabs\";a:8:{i:0;s:2:\"76\";i:1;s:2:\"79\";i:2;s:2:\"82\";i:3;s:2:\"81\";i:4;s:2:\"77\";i:5;s:2:\"78\";i:6;s:2:\"83\";i:7;s:2:\"80\";}s:5:\"image\";a:8:{i:0;s:15:\"data/baner1.jpg\";i:1;s:16:\"data/banner3.jpg\";i:2;s:16:\"data/banner4.jpg\";i:3;s:15:\"data/baner1.jpg\";i:4;s:15:\"data/baner2.jpg\";i:5;s:16:\"data/banner4.jpg\";i:6;s:15:\"data/baner2.jpg\";i:7;s:15:\"data/baner1.jpg\";}s:5:\"class\";a:8:{i:0;s:6:\"banner\";i:1;s:0:\"\";i:2;s:0:\"\";i:3;s:0:\"\";i:4;s:0:\"\";i:5;s:0:\"\";i:6;s:0:\"\";i:7;s:0:\"\";}}}', 1),
+(23991, 0, 'config', 'config_commission', '5', 0),
+(23990, 0, 'config', 'config_affiliate_id', '4', 0),
+(23989, 0, 'config', 'config_stock_status_id', '5', 0),
+(23988, 0, 'config', 'config_stock_checkout', '0', 0),
+(23987, 0, 'config', 'config_stock_warning', '0', 0),
+(23986, 0, 'config', 'config_stock_display', '0', 0),
+(23985, 0, 'config', 'config_complete_status_id', '5', 0),
+(23979, 0, 'config', 'config_cart_weight', '1', 0),
+(23980, 0, 'config', 'config_guest_checkout', '1', 0),
+(23981, 0, 'config', 'config_checkout_id', '5', 0),
+(23982, 0, 'config', 'config_order_edit', '100', 0),
+(23983, 0, 'config', 'config_invoice_prefix', 'INV-2013-00', 0),
 (23608, 0, 'pavnewsletter', 'pavnewsletter_module', 'a:1:{i:1;a:6:{s:9:\"layout_id\";s:5:\"99999\";s:8:\"position\";s:10:\"footer_top\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";i:1;s:11:\"description\";a:2:{i:1;s:72:\"&lt;p&gt;&lt;strong&gt;Sign up &lt;/strong&gt;for newsletter&lt;/p&gt;\r\n\";i:2;s:221:\"&lt;p&gt;&lt;span class=&quot;short_text&quot; id=&quot;result_box&quot; lang=&quot;ar&quot;&gt;&lt;span class=&quot;hps&quot;&gt;الاشتراك في النشرة الإخبارية&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\";}s:6:\"social\";a:2:{i:1;s:760:\"&lt;div class=&quot;social&quot;&gt;\r\n&lt;ul class=&quot;clearfix&quot;&gt;\r\n	&lt;li&gt;&lt;a class=&quot;fa fa-facebook&quot; href=&quot;#&quot; title=&quot;facebook&quot;&gt;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;\r\n	&lt;li&gt;&lt;a class=&quot;fa fa-twitter&quot; href=&quot;#&quot; title=&quot;twitter&quot;&gt;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;\r\n	&lt;li&gt;&lt;a class=&quot;fa fa-google-plus&quot; href=&quot;#&quot; title=&quot;google-plus&quot;&gt;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;\r\n	&lt;li&gt;&lt;a class=&quot;fa fa-pinterest&quot; href=&quot;#&quot; title=&quot;pinterest&quot;&gt;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;\r\n	&lt;li&gt;&lt;a class=&quot;fa fa-rss&quot; href=&quot;#&quot; title=&quot;rss&quot;&gt;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/div&gt;\r\n\";i:2;s:627:\"&lt;div class=&quot;social&quot;&gt;\r\n&lt;ul class=&quot;clearfix&quot;&gt;\r\n	&lt;li&gt;&lt;a class=&quot;fa fa-facebook&quot; href=&quot;#&quot;&gt;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;\r\n	&lt;li&gt;&lt;a class=&quot;fa fa-twitter&quot; href=&quot;#&quot;&gt;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;\r\n	&lt;li&gt;&lt;a class=&quot;fa fa-google-plus&quot; href=&quot;#&quot;&gt;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;\r\n	&lt;li&gt;&lt;a class=&quot;fa fa-pinterest&quot; href=&quot;#&quot;&gt;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;\r\n	&lt;li&gt;&lt;a class=&quot;fa fa-rss&quot; href=&quot;#&quot;&gt;&amp;nbsp;&lt;/a&gt;&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/div&gt;\r\n\";}}}', 1);
 INSERT INTO `oc_setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `serialized`) VALUES
 (23613, 0, 'themecontrol', 'themecontrol', 'a:72:{s:13:\"default_theme\";s:15:\"pav_queenbeauty\";s:9:\"layout_id\";s:1:\"1\";s:8:\"position\";s:1:\"1\";s:21:\"cateogry_display_mode\";s:4:\"grid\";s:24:\"listing_products_columns\";s:1:\"3\";s:30:\"listing_products_columns_small\";s:1:\"2\";s:34:\"listing_products_columns_minismall\";s:1:\"1\";s:14:\"category_pzoom\";s:1:\"1\";s:18:\"product_enablezoom\";s:1:\"1\";s:19:\"product_zoomgallery\";s:6:\"slider\";s:16:\"product_zoommode\";s:5:\"basic\";s:20:\"product_zoomlenssize\";s:3:\"150\";s:18:\"product_zoomeasing\";s:1:\"1\";s:21:\"product_zoomlensshape\";s:5:\"basic\";s:22:\"product_related_column\";s:1:\"0\";s:24:\"enable_product_customtab\";s:1:\"0\";s:22:\"product_customtab_name\";a:2:{i:6;s:0:\"\";i:1;s:0:\"\";}s:25:\"product_customtab_content\";a:2:{i:6;s:0:\"\";i:1;s:0:\"\";}s:16:\"location_address\";s:45:\"72 Nguyễn Huệ, P. Bến Thành, Q.1, HCM.\";s:17:\"location_latitude\";s:9:\"40.705423\";s:18:\"location_longitude\";s:10:\"-74.008616\";s:18:\"contact_customhtml\";a:2:{i:6;s:508:\"&lt;p style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;&lt;small&gt;Mua Là Có Ngay.&lt;/small&gt;&lt;/b&gt;&lt;br /&gt;\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non dui at sapien tempor gravida ut vel arcu. Nullam ac eros eros, et ullamcorper leo.&lt;/p&gt;\r\n\r\n&lt;p style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;&lt;small&gt;Customer Service:&lt;/small&gt;&lt;/b&gt;&lt;br /&gt;\r\n&lt;a href=&quot;mailto:info@mualacongay.com&quot;&gt;info@mualacongay.com&lt;/a&gt;&lt;/p&gt;\r\n\";i:1;s:555:\"&lt;div class=&quot;contact-customhtml&quot;&gt;\r\n&lt;div class=&quot;content&quot;&gt;\r\n&lt;p&gt;&lt;b&gt;&lt;small&gt;Mua Là Có Ngay.&lt;/small&gt;&lt;/b&gt;&lt;br /&gt;\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non dui at sapien tempor gravida ut vel arcu. Nullam ac eros eros, et ullamcorper leo.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;b&gt;&lt;small&gt;Customer Service:&lt;/small&gt;&lt;/b&gt;&lt;br /&gt;\r\n&lt;a href=&quot;mailto:info@mualacongay.com&quot;&gt;info@mualacongay.com&lt;/a&gt;&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\";}s:4:\"skin\";s:0:\"\";s:11:\"theme_width\";s:4:\"auto\";s:23:\"enable_custom_copyright\";s:1:\"0\";s:9:\"copyright\";s:30:\"Copyright 2017 mualacongay.com\";s:18:\"enable_offsidebars\";s:1:\"1\";s:20:\"enable_footer_center\";s:1:\"1\";s:16:\"enable_paneltool\";s:1:\"1\";s:12:\"catalog_mode\";s:1:\"0\";s:15:\"template_layout\";s:9:\"fullwidth\";s:13:\"header_layout\";s:11:\"hasmainmenu\";s:9:\"quickview\";s:1:\"1\";s:9:\"logo_type\";s:10:\"logo-theme\";s:14:\"product_layout\";s:7:\"default\";s:21:\"product_detail_layout\";s:7:\"default\";s:13:\"widget_banner\";a:2:{i:6;s:80:\"&lt;p&gt;&lt;img src=&quot;image/data/banner/banner1.png&quot; /&gt;&lt;/p&gt;\r\n\";i:1;s:0:\"\";}s:13:\"widget_paypal\";a:2:{i:6;s:72:\"&lt;p&gt;&lt;img src=&quot;image/data/paypal.png&quot; /&gt;&lt;/p&gt;\r\n\";i:1;s:72:\"&lt;p&gt;&lt;img src=&quot;image/data/paypal.png&quot; /&gt;&lt;/p&gt;\r\n\";}s:17:\"enable_customfont\";s:1:\"0\";s:11:\"type_fonts1\";s:8:\"standard\";s:13:\"normal_fonts1\";s:7:\"inherit\";s:11:\"google_url1\";s:0:\"\";s:14:\"google_family1\";s:0:\"\";s:9:\"fontsize1\";s:7:\"inherit\";s:14:\"body_selector1\";s:4:\"body\";s:11:\"type_fonts2\";s:8:\"standard\";s:13:\"normal_fonts2\";s:7:\"inherit\";s:11:\"google_url2\";s:0:\"\";s:14:\"google_family2\";s:0:\"\";s:9:\"fontsize2\";s:7:\"inherit\";s:14:\"body_selector2\";s:15:\"h1, #content h1\";s:11:\"type_fonts3\";s:8:\"standard\";s:13:\"normal_fonts3\";s:7:\"inherit\";s:11:\"google_url3\";s:0:\"\";s:14:\"google_family3\";s:0:\"\";s:9:\"fontsize3\";s:7:\"inherit\";s:14:\"body_selector3\";s:44:\"h2,h3,h4,h5, .box-heading, .box-heading span\";s:11:\"type_fonts4\";s:8:\"standard\";s:13:\"normal_fonts4\";s:27:\"Verdana, Geneva, sans-serif\";s:11:\"google_url4\";s:0:\"\";s:14:\"google_family4\";s:0:\"\";s:14:\"body_selector4\";s:0:\"\";s:14:\"block_showcase\";s:0:\"\";s:15:\"block_promotion\";s:0:\"\";s:16:\"block_footer_top\";s:0:\"\";s:19:\"block_footer_center\";s:0:\"\";s:19:\"block_footer_bottom\";s:0:\"\";s:19:\"enable_compress_css\";s:0:\"\";s:17:\"exclude_css_files\";s:13:\"bootstrap.css\";s:15:\"customize_theme\";s:0:\"\";s:10:\"custom_css\";s:0:\"\";s:17:\"custom_javascript\";s:0:\"\";}', 1),
-(23754, 0, 'config', 'config_order_edit', '100', 0),
+(23978, 0, 'config', 'config_account_id', '3', 0),
 (23597, 0, 'pavnivoslidershow', 'pavnivoslidershow_module', 'a:1:{i:0;a:7:{s:9:\"banner_id\";s:2:\"21\";s:5:\"width\";s:4:\"1920\";s:6:\"height\";s:3:\"650\";s:9:\"layout_id\";s:1:\"1\";s:8:\"position\";s:9:\"slideshow\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";i:1;}}', 1),
 (23596, 0, 'pavmegamenubase', 'pavmegamenubase_module', 'a:1:{i:0;a:4:{s:9:\"layout_id\";s:5:\"99999\";s:8:\"position\";s:8:\"mainmenu\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";i:1;}}', 1),
-(23753, 0, 'config', 'config_checkout_id', '5', 0),
-(23748, 0, 'config', 'config_customer_group_display', 'a:1:{i:0;s:1:\"1\";}', 1),
-(23747, 0, 'config', 'config_customer_group_id', '1', 0),
-(23746, 0, 'config', 'config_customer_online', '0', 0),
-(23745, 0, 'config', 'config_tax_customer', 'shipping', 0),
-(23744, 0, 'config', 'config_tax_default', 'shipping', 0),
-(23743, 0, 'config', 'config_vat', '0', 0),
-(23742, 0, 'config', 'config_tax', '1', 0),
-(23741, 0, 'config', 'config_voucher_max', '1000', 0),
-(23740, 0, 'config', 'config_voucher_min', '1', 0),
-(23739, 0, 'config', 'config_download', '1', 0),
-(23738, 0, 'config', 'config_review_status', '1', 0),
-(23737, 0, 'config', 'config_product_count', '1', 0),
-(23736, 0, 'config', 'config_admin_limit', '20', 0),
-(23735, 0, 'config', 'config_catalog_limit', '9', 0),
-(23734, 0, 'config', 'config_weight_class_id', '1', 0),
-(23733, 0, 'config', 'config_length_class_id', '1', 0),
-(23732, 0, 'config', 'config_currency_auto', '1', 0),
-(23731, 0, 'config', 'config_currency', 'VND', 0),
-(23730, 0, 'config', 'config_admin_language', 'vi', 0),
-(23729, 0, 'config', 'config_language', 'en', 0),
-(23728, 0, 'config', 'config_zone_id', '', 0),
-(23727, 0, 'config', 'config_country_id', '222', 0),
-(23726, 0, 'config', 'config_layout_id', '4', 0),
-(23725, 0, 'config', 'config_template', 'pav_queenbeauty', 0),
-(23724, 0, 'config', 'config_meta_description', 'Sumi Shop', 0),
-(23723, 0, 'config', 'config_title', 'Sumi Shop', 0),
-(23722, 0, 'config', 'config_fax', '', 0),
-(23721, 0, 'config', 'config_telephone', '0901499932', 0),
-(23720, 0, 'config', 'config_email', 'info@mualacongay.com', 0),
-(23719, 0, 'config', 'config_address', '72 Nguyễn Huệ, P. Bến Thành, Q.1, HCM.', 0),
-(23717, 0, 'config', 'config_name', 'Sumi Shop', 0),
-(23718, 0, 'config', 'config_owner', 'Sumi Shop', 0),
-(23600, 0, 'featured', 'featured_module', 'a:1:{i:0;a:7:{s:5:\"limit\";s:1:\"5\";s:11:\"image_width\";s:3:\"270\";s:12:\"image_height\";s:3:\"342\";s:9:\"layout_id\";s:1:\"1\";s:8:\"position\";s:11:\"content_top\";s:6:\"status\";s:1:\"1\";s:10:\"sort_order\";i:1;}}', 1);
+(23984, 0, 'config', 'config_order_status_id', '1', 0),
+(23976, 0, 'config', 'config_customer_group_display', 'a:1:{i:0;s:1:\"1\";}', 1),
+(23977, 0, 'config', 'config_customer_price', '0', 0),
+(23975, 0, 'config', 'config_customer_group_id', '1', 0),
+(23974, 0, 'config', 'config_customer_online', '0', 0),
+(23973, 0, 'config', 'config_tax_customer', 'shipping', 0),
+(23972, 0, 'config', 'config_tax_default', 'shipping', 0),
+(23971, 0, 'config', 'config_vat', '0', 0),
+(23970, 0, 'config', 'config_tax', '1', 0),
+(23969, 0, 'config', 'config_voucher_max', '1000', 0),
+(23968, 0, 'config', 'config_voucher_min', '1', 0),
+(23967, 0, 'config', 'config_download', '1', 0),
+(23966, 0, 'config', 'config_review_status', '1', 0),
+(23965, 0, 'config', 'config_product_count', '1', 0),
+(23964, 0, 'config', 'config_admin_limit', '20', 0),
+(23963, 0, 'config', 'config_catalog_limit', '9', 0),
+(23962, 0, 'config', 'config_weight_class_id', '1', 0),
+(23961, 0, 'config', 'config_length_class_id', '1', 0),
+(23960, 0, 'config', 'config_currency_auto', '1', 0),
+(23959, 0, 'config', 'config_currency', 'VND', 0),
+(23958, 0, 'config', 'config_admin_language', 'vi', 0),
+(23957, 0, 'config', 'config_language', 'en', 0),
+(23956, 0, 'config', 'config_zone_id', '', 0),
+(23955, 0, 'config', 'config_country_id', '222', 0),
+(23954, 0, 'config', 'config_layout_id', '4', 0),
+(23953, 0, 'config', 'config_template', 'pav_queenbeauty', 0),
+(23950, 0, 'config', 'config_fax', '', 0),
+(23951, 0, 'config', 'config_title', 'Sumi Shop', 0),
+(23952, 0, 'config', 'config_meta_description', 'Sumi Shop', 0),
+(23949, 0, 'config', 'config_telephone', '0901499932', 0),
+(23947, 0, 'config', 'config_address', '72 Nguyễn Huệ, P. Bến Thành, Q.1, HCM.', 0),
+(23948, 0, 'config', 'config_email', 'info@mualacongay.com', 0),
+(23946, 0, 'config', 'config_owner', 'Sumi Shop', 0),
+(23945, 0, 'config', 'config_name', 'Sumi Shop', 0);
 
 -- --------------------------------------------------------
 
@@ -4500,15 +3982,13 @@ CREATE TABLE `oc_url_alias` (
 --
 
 INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
-(958, 'product_id=48', 'ipod_classic'),
-(954, 'category_id=20', 'Fashion'),
-(956, 'category_id=26', 'pc'),
-(957, 'category_id=27', 'mac'),
+(976, 'category_id=80', 'phu-kien'),
+(972, 'category_id=76', 'thoi-trang'),
+(974, 'category_id=78', 'thoi-trang-nu'),
 (730, 'manufacturer_id=8', 'apple'),
 (949, 'information_id=4', 'about_us'),
-(965, 'product_id=42', 'test'),
-(953, 'category_id=34', 'make up'),
-(955, 'category_id=36', 'Normal'),
+(977, 'category_id=81', 'trang-suc'),
+(971, 'category_id=77', 'thoi-trang-nam'),
 (876, 'pavblog/blog=10', ''),
 (878, 'pavblog/blog=11', ''),
 (874, 'pavblog/blog=9', ''),
@@ -4527,9 +4007,12 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (943, 'pavblog/blog=17', ''),
 (931, 'pavblog/blog=18', ''),
 (942, 'pavblog/blog=19', ''),
-(959, 'category_id=25', 'hair-care'),
-(962, 'product_id=40', 'quismod'),
-(969, 'product_id=55', 'vong-hat-nga-voi');
+(975, 'category_id=79', 'suc-khoe'),
+(978, 'category_id=82', 'hang-doc'),
+(979, 'category_id=83', 'gao-nhap'),
+(980, 'category_id=84', 'san-pham-dac-biet'),
+(986, 'product_id=59', 'da-ho-ly-thach-anh-khoi'),
+(991, 'category_id=85', 'san-pham');
 
 -- --------------------------------------------------------
 
@@ -4577,7 +4060,7 @@ CREATE TABLE `oc_user_group` (
 --
 
 INSERT INTO `oc_user_group` (`user_group_id`, `name`, `permission`) VALUES
-(1, 'Top Administrator', 'a:2:{s:6:\"access\";a:246:{i:0;s:14:\"amazon/listing\";i:1;s:14:\"amazon/product\";i:2;s:16:\"amazonus/listing\";i:3;s:16:\"amazonus/product\";i:4;s:17:\"catalog/attribute\";i:5;s:23:\"catalog/attribute_group\";i:6;s:16:\"catalog/category\";i:7;s:16:\"catalog/download\";i:8;s:14:\"catalog/filter\";i:9;s:19:\"catalog/information\";i:10;s:20:\"catalog/manufacturer\";i:11;s:14:\"catalog/option\";i:12;s:15:\"catalog/product\";i:13;s:15:\"catalog/profile\";i:14;s:14:\"catalog/review\";i:15;s:18:\"common/filemanager\";i:16;s:13:\"design/banner\";i:17;s:19:\"design/custom_field\";i:18;s:13:\"design/layout\";i:19;s:12:\"ebay/profile\";i:20;s:13:\"ebay/template\";i:21;s:14:\"extension/feed\";i:22;s:17:\"extension/manager\";i:23;s:16:\"extension/module\";i:24;s:17:\"extension/openbay\";i:25;s:17:\"extension/payment\";i:26;s:18:\"extension/shipping\";i:27;s:15:\"extension/total\";i:28;s:16:\"feed/google_base\";i:29;s:19:\"feed/google_sitemap\";i:30;s:20:\"localisation/country\";i:31;s:21:\"localisation/currency\";i:32;s:21:\"localisation/geo_zone\";i:33;s:21:\"localisation/language\";i:34;s:25:\"localisation/length_class\";i:35;s:25:\"localisation/order_status\";i:36;s:26:\"localisation/return_action\";i:37;s:26:\"localisation/return_reason\";i:38;s:26:\"localisation/return_status\";i:39;s:25:\"localisation/stock_status\";i:40;s:22:\"localisation/tax_class\";i:41;s:21:\"localisation/tax_rate\";i:42;s:25:\"localisation/weight_class\";i:43;s:17:\"localisation/zone\";i:44;s:14:\"module/account\";i:45;s:16:\"module/affiliate\";i:46;s:29:\"module/amazon_checkout_layout\";i:47;s:13:\"module/banner\";i:48;s:17:\"module/bestseller\";i:49;s:15:\"module/carousel\";i:50;s:15:\"module/category\";i:51;s:18:\"module/ebaydisplay\";i:52;s:15:\"module/featured\";i:53;s:13:\"module/filter\";i:54;s:18:\"module/google_talk\";i:55;s:18:\"module/information\";i:56;s:13:\"module/latest\";i:57;s:16:\"module/pp_layout\";i:58;s:16:\"module/slideshow\";i:59;s:14:\"module/special\";i:60;s:12:\"module/store\";i:61;s:14:\"module/welcome\";i:62;s:14:\"openbay/amazon\";i:63;s:16:\"openbay/amazonus\";i:64;s:15:\"openbay/openbay\";i:65;s:12:\"openbay/play\";i:66;s:23:\"payment/amazon_checkout\";i:67;s:24:\"payment/authorizenet_aim\";i:68;s:21:\"payment/bank_transfer\";i:69;s:14:\"payment/cheque\";i:70;s:11:\"payment/cod\";i:71;s:21:\"payment/free_checkout\";i:72;s:22:\"payment/klarna_account\";i:73;s:22:\"payment/klarna_invoice\";i:74;s:14:\"payment/liqpay\";i:75;s:20:\"payment/moneybookers\";i:76;s:14:\"payment/nochex\";i:77;s:15:\"payment/paymate\";i:78;s:16:\"payment/paypoint\";i:79;s:13:\"payment/payza\";i:80;s:26:\"payment/perpetual_payments\";i:81;s:18:\"payment/pp_express\";i:82;s:25:\"payment/pp_payflow_iframe\";i:83;s:14:\"payment/pp_pro\";i:84;s:21:\"payment/pp_pro_iframe\";i:85;s:17:\"payment/pp_pro_pf\";i:86;s:17:\"payment/pp_pro_uk\";i:87;s:19:\"payment/pp_standard\";i:88;s:15:\"payment/sagepay\";i:89;s:22:\"payment/sagepay_direct\";i:90;s:18:\"payment/sagepay_us\";i:91;s:19:\"payment/twocheckout\";i:92;s:28:\"payment/web_payment_software\";i:93;s:16:\"payment/worldpay\";i:94;s:10:\"play/order\";i:95;s:12:\"play/product\";i:96;s:27:\"report/affiliate_commission\";i:97;s:22:\"report/customer_credit\";i:98;s:22:\"report/customer_online\";i:99;s:21:\"report/customer_order\";i:100;s:22:\"report/customer_reward\";i:101;s:24:\"report/product_purchased\";i:102;s:21:\"report/product_viewed\";i:103;s:18:\"report/sale_coupon\";i:104;s:17:\"report/sale_order\";i:105;s:18:\"report/sale_return\";i:106;s:20:\"report/sale_shipping\";i:107;s:15:\"report/sale_tax\";i:108;s:14:\"sale/affiliate\";i:109;s:12:\"sale/contact\";i:110;s:11:\"sale/coupon\";i:111;s:13:\"sale/customer\";i:112;s:20:\"sale/customer_ban_ip\";i:113;s:19:\"sale/customer_group\";i:114;s:10:\"sale/order\";i:115;s:14:\"sale/recurring\";i:116;s:11:\"sale/return\";i:117;s:12:\"sale/voucher\";i:118;s:18:\"sale/voucher_theme\";i:119;s:15:\"setting/setting\";i:120;s:13:\"setting/store\";i:121;s:16:\"shipping/auspost\";i:122;s:17:\"shipping/citylink\";i:123;s:14:\"shipping/fedex\";i:124;s:13:\"shipping/flat\";i:125;s:13:\"shipping/free\";i:126;s:13:\"shipping/item\";i:127;s:23:\"shipping/parcelforce_48\";i:128;s:15:\"shipping/pickup\";i:129;s:19:\"shipping/royal_mail\";i:130;s:12:\"shipping/ups\";i:131;s:13:\"shipping/usps\";i:132;s:15:\"shipping/weight\";i:133;s:11:\"tool/backup\";i:134;s:14:\"tool/error_log\";i:135;s:12:\"total/coupon\";i:136;s:12:\"total/credit\";i:137;s:14:\"total/handling\";i:138;s:16:\"total/klarna_fee\";i:139;s:19:\"total/low_order_fee\";i:140;s:12:\"total/reward\";i:141;s:14:\"total/shipping\";i:142;s:15:\"total/sub_total\";i:143;s:9:\"total/tax\";i:144;s:11:\"total/total\";i:145;s:13:\"total/voucher\";i:146;s:9:\"user/user\";i:147;s:20:\"user/user_permission\";i:148;s:22:\"module/pavverticalmenu\";i:149;s:19:\"module/themecontrol\";i:150;s:15:\"module/pavdeals\";i:151;s:25:\"module/pavproductcarousel\";i:152;s:13:\"module/filter\";i:153;s:13:\"module/pavmap\";i:154;s:14:\"module/pavblog\";i:155;s:22:\"module/pavblogcategory\";i:156;s:21:\"module/pavblogcomment\";i:157;s:20:\"module/pavbloglatest\";i:158;s:16:\"module/pavcustom\";i:159;s:18:\"module/pavcarousel\";i:160;s:17:\"module/pavtwitter\";i:161;s:21:\"module/pavsliderlayer\";i:162;s:18:\"module/pavmegamenu\";i:163;s:16:\"module/pavsocial\";i:164;s:20:\"module/pavnewsletter\";i:165;s:18:\"module/pavproducts\";i:166;s:13:\"module/latest\";i:167;s:14:\"module/special\";i:168;s:25:\"module/pavproductcarousel\";i:169;s:12:\"module/store\";i:170;s:12:\"module/store\";i:171;s:16:\"module/pavsocial\";i:172;s:17:\"module/pavtwitter\";i:173;s:16:\"module/pavcustom\";i:174;s:21:\"module/pavproducttabs\";i:175;s:25:\"module/pavproductfeatured\";i:176;s:21:\"module/pavreassurance\";i:177;s:21:\"module/pavreassurance\";i:178;s:13:\"module/pavads\";i:179;s:14:\"module/special\";i:180;s:17:\"module/bestseller\";i:181;s:20:\"module/pavautosearch\";i:182;s:20:\"module/pavautosearch\";i:183;s:13:\"module/banner\";i:184;s:18:\"module/information\";i:185;s:15:\"module/pavdeals\";i:186;s:22:\"module/pavcategorytabs\";i:187;s:17:\"module/bestseller\";i:188;s:15:\"module/category\";i:189;s:21:\"module/pavproducttabs\";i:190;s:17:\"module/pavgallery\";i:191;s:13:\"module/pavmap\";i:192;s:22:\"module/pavshoplocation\";i:193;s:15:\"module/category\";i:194;s:23:\"module/pavsocialsidebar\";i:195;s:18:\"module/pavcarousel\";i:196;s:18:\"module/pavfacebook\";i:197;s:21:\"module/pavreassurance\";i:198;s:21:\"module/pavtestimonial\";i:199;s:14:\"module/special\";i:200;s:19:\"module/themecontrol\";i:201;s:21:\"module/pavreassurance\";i:202;s:15:\"module/category\";i:203;s:13:\"module/filter\";i:204;s:15:\"module/carousel\";i:205;s:18:\"module/information\";i:206;s:18:\"module/information\";i:207;s:15:\"module/featured\";i:208;s:25:\"module/pavproductfeatured\";i:209;s:18:\"module/pavfeatured\";i:210;s:21:\"module/pavtestimonial\";i:211;s:21:\"module/pavreassurance\";i:212;s:21:\"module/pavtestimonial\";i:213;s:33:\"module/pavtestimonialutilcarousel\";i:214;s:21:\"module/pavtestimonial\";i:215;s:22:\"module/pavcategorytabs\";i:216;s:18:\"module/information\";i:217;s:21:\"module/pavproducttabs\";i:218;s:18:\"module/pavproducts\";i:219;s:25:\"module/pavproductfeatured\";i:220;s:16:\"module/pp_layout\";i:221;s:17:\"module/pavtwitter\";i:222;s:21:\"module/pavaccessories\";i:223;s:22:\"module/pavutilcategory\";i:224;s:33:\"module/pavtestimonialutilcarousel\";i:225;s:24:\"module/pavcategorybanner\";i:226;s:21:\"module/pavaccessories\";i:227;s:17:\"module/openbaypro\";i:228;s:21:\"module/pavaccessories\";i:229;s:22:\"module/pavverticalmenu\";i:230;s:16:\"module/slideshow\";i:231;s:22:\"module/pavutilcategory\";i:232;s:18:\"module/pavfeatured\";i:233;s:14:\"module/account\";i:234;s:13:\"module/banner\";i:235;s:17:\"module/bestseller\";i:236;s:19:\"module/themecontrol\";i:237;s:19:\"module/themecontrol\";i:238;s:16:\"module/slideshow\";i:239;s:24:\"module/pavnivoslidershow\";i:240;s:22:\"module/pavmegamenubase\";i:241;s:16:\"module/affiliate\";i:242;s:29:\"module/amazon_checkout_layout\";i:243;s:13:\"module/banner\";i:244;s:13:\"module/banner\";i:245;s:15:\"module/carousel\";}s:6:\"modify\";a:246:{i:0;s:14:\"amazon/listing\";i:1;s:14:\"amazon/product\";i:2;s:16:\"amazonus/listing\";i:3;s:16:\"amazonus/product\";i:4;s:17:\"catalog/attribute\";i:5;s:23:\"catalog/attribute_group\";i:6;s:16:\"catalog/category\";i:7;s:16:\"catalog/download\";i:8;s:14:\"catalog/filter\";i:9;s:19:\"catalog/information\";i:10;s:20:\"catalog/manufacturer\";i:11;s:14:\"catalog/option\";i:12;s:15:\"catalog/product\";i:13;s:15:\"catalog/profile\";i:14;s:14:\"catalog/review\";i:15;s:18:\"common/filemanager\";i:16;s:13:\"design/banner\";i:17;s:19:\"design/custom_field\";i:18;s:13:\"design/layout\";i:19;s:12:\"ebay/profile\";i:20;s:13:\"ebay/template\";i:21;s:14:\"extension/feed\";i:22;s:17:\"extension/manager\";i:23;s:16:\"extension/module\";i:24;s:17:\"extension/openbay\";i:25;s:17:\"extension/payment\";i:26;s:18:\"extension/shipping\";i:27;s:15:\"extension/total\";i:28;s:16:\"feed/google_base\";i:29;s:19:\"feed/google_sitemap\";i:30;s:20:\"localisation/country\";i:31;s:21:\"localisation/currency\";i:32;s:21:\"localisation/geo_zone\";i:33;s:21:\"localisation/language\";i:34;s:25:\"localisation/length_class\";i:35;s:25:\"localisation/order_status\";i:36;s:26:\"localisation/return_action\";i:37;s:26:\"localisation/return_reason\";i:38;s:26:\"localisation/return_status\";i:39;s:25:\"localisation/stock_status\";i:40;s:22:\"localisation/tax_class\";i:41;s:21:\"localisation/tax_rate\";i:42;s:25:\"localisation/weight_class\";i:43;s:17:\"localisation/zone\";i:44;s:14:\"module/account\";i:45;s:16:\"module/affiliate\";i:46;s:29:\"module/amazon_checkout_layout\";i:47;s:13:\"module/banner\";i:48;s:17:\"module/bestseller\";i:49;s:15:\"module/carousel\";i:50;s:15:\"module/category\";i:51;s:18:\"module/ebaydisplay\";i:52;s:15:\"module/featured\";i:53;s:13:\"module/filter\";i:54;s:18:\"module/google_talk\";i:55;s:18:\"module/information\";i:56;s:13:\"module/latest\";i:57;s:16:\"module/pp_layout\";i:58;s:16:\"module/slideshow\";i:59;s:14:\"module/special\";i:60;s:12:\"module/store\";i:61;s:14:\"module/welcome\";i:62;s:14:\"openbay/amazon\";i:63;s:16:\"openbay/amazonus\";i:64;s:15:\"openbay/openbay\";i:65;s:12:\"openbay/play\";i:66;s:23:\"payment/amazon_checkout\";i:67;s:24:\"payment/authorizenet_aim\";i:68;s:21:\"payment/bank_transfer\";i:69;s:14:\"payment/cheque\";i:70;s:11:\"payment/cod\";i:71;s:21:\"payment/free_checkout\";i:72;s:22:\"payment/klarna_account\";i:73;s:22:\"payment/klarna_invoice\";i:74;s:14:\"payment/liqpay\";i:75;s:20:\"payment/moneybookers\";i:76;s:14:\"payment/nochex\";i:77;s:15:\"payment/paymate\";i:78;s:16:\"payment/paypoint\";i:79;s:13:\"payment/payza\";i:80;s:26:\"payment/perpetual_payments\";i:81;s:18:\"payment/pp_express\";i:82;s:25:\"payment/pp_payflow_iframe\";i:83;s:14:\"payment/pp_pro\";i:84;s:21:\"payment/pp_pro_iframe\";i:85;s:17:\"payment/pp_pro_pf\";i:86;s:17:\"payment/pp_pro_uk\";i:87;s:19:\"payment/pp_standard\";i:88;s:15:\"payment/sagepay\";i:89;s:22:\"payment/sagepay_direct\";i:90;s:18:\"payment/sagepay_us\";i:91;s:19:\"payment/twocheckout\";i:92;s:28:\"payment/web_payment_software\";i:93;s:16:\"payment/worldpay\";i:94;s:10:\"play/order\";i:95;s:12:\"play/product\";i:96;s:27:\"report/affiliate_commission\";i:97;s:22:\"report/customer_credit\";i:98;s:22:\"report/customer_online\";i:99;s:21:\"report/customer_order\";i:100;s:22:\"report/customer_reward\";i:101;s:24:\"report/product_purchased\";i:102;s:21:\"report/product_viewed\";i:103;s:18:\"report/sale_coupon\";i:104;s:17:\"report/sale_order\";i:105;s:18:\"report/sale_return\";i:106;s:20:\"report/sale_shipping\";i:107;s:15:\"report/sale_tax\";i:108;s:14:\"sale/affiliate\";i:109;s:12:\"sale/contact\";i:110;s:11:\"sale/coupon\";i:111;s:13:\"sale/customer\";i:112;s:20:\"sale/customer_ban_ip\";i:113;s:19:\"sale/customer_group\";i:114;s:10:\"sale/order\";i:115;s:14:\"sale/recurring\";i:116;s:11:\"sale/return\";i:117;s:12:\"sale/voucher\";i:118;s:18:\"sale/voucher_theme\";i:119;s:15:\"setting/setting\";i:120;s:13:\"setting/store\";i:121;s:16:\"shipping/auspost\";i:122;s:17:\"shipping/citylink\";i:123;s:14:\"shipping/fedex\";i:124;s:13:\"shipping/flat\";i:125;s:13:\"shipping/free\";i:126;s:13:\"shipping/item\";i:127;s:23:\"shipping/parcelforce_48\";i:128;s:15:\"shipping/pickup\";i:129;s:19:\"shipping/royal_mail\";i:130;s:12:\"shipping/ups\";i:131;s:13:\"shipping/usps\";i:132;s:15:\"shipping/weight\";i:133;s:11:\"tool/backup\";i:134;s:14:\"tool/error_log\";i:135;s:12:\"total/coupon\";i:136;s:12:\"total/credit\";i:137;s:14:\"total/handling\";i:138;s:16:\"total/klarna_fee\";i:139;s:19:\"total/low_order_fee\";i:140;s:12:\"total/reward\";i:141;s:14:\"total/shipping\";i:142;s:15:\"total/sub_total\";i:143;s:9:\"total/tax\";i:144;s:11:\"total/total\";i:145;s:13:\"total/voucher\";i:146;s:9:\"user/user\";i:147;s:20:\"user/user_permission\";i:148;s:22:\"module/pavverticalmenu\";i:149;s:19:\"module/themecontrol\";i:150;s:15:\"module/pavdeals\";i:151;s:25:\"module/pavproductcarousel\";i:152;s:13:\"module/filter\";i:153;s:13:\"module/pavmap\";i:154;s:14:\"module/pavblog\";i:155;s:22:\"module/pavblogcategory\";i:156;s:21:\"module/pavblogcomment\";i:157;s:20:\"module/pavbloglatest\";i:158;s:16:\"module/pavcustom\";i:159;s:18:\"module/pavcarousel\";i:160;s:17:\"module/pavtwitter\";i:161;s:21:\"module/pavsliderlayer\";i:162;s:18:\"module/pavmegamenu\";i:163;s:16:\"module/pavsocial\";i:164;s:20:\"module/pavnewsletter\";i:165;s:18:\"module/pavproducts\";i:166;s:13:\"module/latest\";i:167;s:14:\"module/special\";i:168;s:25:\"module/pavproductcarousel\";i:169;s:12:\"module/store\";i:170;s:12:\"module/store\";i:171;s:16:\"module/pavsocial\";i:172;s:17:\"module/pavtwitter\";i:173;s:16:\"module/pavcustom\";i:174;s:21:\"module/pavproducttabs\";i:175;s:25:\"module/pavproductfeatured\";i:176;s:21:\"module/pavreassurance\";i:177;s:21:\"module/pavreassurance\";i:178;s:13:\"module/pavads\";i:179;s:14:\"module/special\";i:180;s:17:\"module/bestseller\";i:181;s:20:\"module/pavautosearch\";i:182;s:20:\"module/pavautosearch\";i:183;s:13:\"module/banner\";i:184;s:18:\"module/information\";i:185;s:15:\"module/pavdeals\";i:186;s:22:\"module/pavcategorytabs\";i:187;s:17:\"module/bestseller\";i:188;s:15:\"module/category\";i:189;s:21:\"module/pavproducttabs\";i:190;s:17:\"module/pavgallery\";i:191;s:13:\"module/pavmap\";i:192;s:22:\"module/pavshoplocation\";i:193;s:15:\"module/category\";i:194;s:23:\"module/pavsocialsidebar\";i:195;s:18:\"module/pavcarousel\";i:196;s:18:\"module/pavfacebook\";i:197;s:21:\"module/pavreassurance\";i:198;s:21:\"module/pavtestimonial\";i:199;s:14:\"module/special\";i:200;s:19:\"module/themecontrol\";i:201;s:21:\"module/pavreassurance\";i:202;s:15:\"module/category\";i:203;s:13:\"module/filter\";i:204;s:15:\"module/carousel\";i:205;s:18:\"module/information\";i:206;s:18:\"module/information\";i:207;s:15:\"module/featured\";i:208;s:25:\"module/pavproductfeatured\";i:209;s:18:\"module/pavfeatured\";i:210;s:21:\"module/pavtestimonial\";i:211;s:21:\"module/pavreassurance\";i:212;s:21:\"module/pavtestimonial\";i:213;s:33:\"module/pavtestimonialutilcarousel\";i:214;s:21:\"module/pavtestimonial\";i:215;s:22:\"module/pavcategorytabs\";i:216;s:18:\"module/information\";i:217;s:21:\"module/pavproducttabs\";i:218;s:18:\"module/pavproducts\";i:219;s:25:\"module/pavproductfeatured\";i:220;s:16:\"module/pp_layout\";i:221;s:17:\"module/pavtwitter\";i:222;s:21:\"module/pavaccessories\";i:223;s:22:\"module/pavutilcategory\";i:224;s:33:\"module/pavtestimonialutilcarousel\";i:225;s:24:\"module/pavcategorybanner\";i:226;s:21:\"module/pavaccessories\";i:227;s:17:\"module/openbaypro\";i:228;s:21:\"module/pavaccessories\";i:229;s:22:\"module/pavverticalmenu\";i:230;s:16:\"module/slideshow\";i:231;s:22:\"module/pavutilcategory\";i:232;s:18:\"module/pavfeatured\";i:233;s:14:\"module/account\";i:234;s:13:\"module/banner\";i:235;s:17:\"module/bestseller\";i:236;s:19:\"module/themecontrol\";i:237;s:19:\"module/themecontrol\";i:238;s:16:\"module/slideshow\";i:239;s:24:\"module/pavnivoslidershow\";i:240;s:22:\"module/pavmegamenubase\";i:241;s:16:\"module/affiliate\";i:242;s:29:\"module/amazon_checkout_layout\";i:243;s:13:\"module/banner\";i:244;s:13:\"module/banner\";i:245;s:15:\"module/carousel\";}}'),
+(1, 'Top Administrator', 'a:2:{s:6:\"access\";a:248:{i:0;s:14:\"amazon/listing\";i:1;s:14:\"amazon/product\";i:2;s:16:\"amazonus/listing\";i:3;s:16:\"amazonus/product\";i:4;s:17:\"catalog/attribute\";i:5;s:23:\"catalog/attribute_group\";i:6;s:16:\"catalog/category\";i:7;s:16:\"catalog/download\";i:8;s:14:\"catalog/filter\";i:9;s:19:\"catalog/information\";i:10;s:20:\"catalog/manufacturer\";i:11;s:14:\"catalog/option\";i:12;s:15:\"catalog/product\";i:13;s:15:\"catalog/profile\";i:14;s:14:\"catalog/review\";i:15;s:18:\"common/filemanager\";i:16;s:13:\"design/banner\";i:17;s:19:\"design/custom_field\";i:18;s:13:\"design/layout\";i:19;s:12:\"ebay/profile\";i:20;s:13:\"ebay/template\";i:21;s:14:\"extension/feed\";i:22;s:17:\"extension/manager\";i:23;s:16:\"extension/module\";i:24;s:17:\"extension/openbay\";i:25;s:17:\"extension/payment\";i:26;s:18:\"extension/shipping\";i:27;s:15:\"extension/total\";i:28;s:16:\"feed/google_base\";i:29;s:19:\"feed/google_sitemap\";i:30;s:20:\"localisation/country\";i:31;s:21:\"localisation/currency\";i:32;s:21:\"localisation/geo_zone\";i:33;s:21:\"localisation/language\";i:34;s:25:\"localisation/length_class\";i:35;s:25:\"localisation/order_status\";i:36;s:26:\"localisation/return_action\";i:37;s:26:\"localisation/return_reason\";i:38;s:26:\"localisation/return_status\";i:39;s:25:\"localisation/stock_status\";i:40;s:22:\"localisation/tax_class\";i:41;s:21:\"localisation/tax_rate\";i:42;s:25:\"localisation/weight_class\";i:43;s:17:\"localisation/zone\";i:44;s:14:\"module/account\";i:45;s:16:\"module/affiliate\";i:46;s:29:\"module/amazon_checkout_layout\";i:47;s:13:\"module/banner\";i:48;s:17:\"module/bestseller\";i:49;s:15:\"module/carousel\";i:50;s:15:\"module/category\";i:51;s:18:\"module/ebaydisplay\";i:52;s:15:\"module/featured\";i:53;s:13:\"module/filter\";i:54;s:18:\"module/google_talk\";i:55;s:18:\"module/information\";i:56;s:13:\"module/latest\";i:57;s:16:\"module/pp_layout\";i:58;s:16:\"module/slideshow\";i:59;s:14:\"module/special\";i:60;s:12:\"module/store\";i:61;s:14:\"module/welcome\";i:62;s:14:\"openbay/amazon\";i:63;s:16:\"openbay/amazonus\";i:64;s:15:\"openbay/openbay\";i:65;s:12:\"openbay/play\";i:66;s:23:\"payment/amazon_checkout\";i:67;s:24:\"payment/authorizenet_aim\";i:68;s:21:\"payment/bank_transfer\";i:69;s:14:\"payment/cheque\";i:70;s:11:\"payment/cod\";i:71;s:21:\"payment/free_checkout\";i:72;s:22:\"payment/klarna_account\";i:73;s:22:\"payment/klarna_invoice\";i:74;s:14:\"payment/liqpay\";i:75;s:20:\"payment/moneybookers\";i:76;s:14:\"payment/nochex\";i:77;s:15:\"payment/paymate\";i:78;s:16:\"payment/paypoint\";i:79;s:13:\"payment/payza\";i:80;s:26:\"payment/perpetual_payments\";i:81;s:18:\"payment/pp_express\";i:82;s:25:\"payment/pp_payflow_iframe\";i:83;s:14:\"payment/pp_pro\";i:84;s:21:\"payment/pp_pro_iframe\";i:85;s:17:\"payment/pp_pro_pf\";i:86;s:17:\"payment/pp_pro_uk\";i:87;s:19:\"payment/pp_standard\";i:88;s:15:\"payment/sagepay\";i:89;s:22:\"payment/sagepay_direct\";i:90;s:18:\"payment/sagepay_us\";i:91;s:19:\"payment/twocheckout\";i:92;s:28:\"payment/web_payment_software\";i:93;s:16:\"payment/worldpay\";i:94;s:10:\"play/order\";i:95;s:12:\"play/product\";i:96;s:27:\"report/affiliate_commission\";i:97;s:22:\"report/customer_credit\";i:98;s:22:\"report/customer_online\";i:99;s:21:\"report/customer_order\";i:100;s:22:\"report/customer_reward\";i:101;s:24:\"report/product_purchased\";i:102;s:21:\"report/product_viewed\";i:103;s:18:\"report/sale_coupon\";i:104;s:17:\"report/sale_order\";i:105;s:18:\"report/sale_return\";i:106;s:20:\"report/sale_shipping\";i:107;s:15:\"report/sale_tax\";i:108;s:14:\"sale/affiliate\";i:109;s:12:\"sale/contact\";i:110;s:11:\"sale/coupon\";i:111;s:13:\"sale/customer\";i:112;s:20:\"sale/customer_ban_ip\";i:113;s:19:\"sale/customer_group\";i:114;s:10:\"sale/order\";i:115;s:14:\"sale/recurring\";i:116;s:11:\"sale/return\";i:117;s:12:\"sale/voucher\";i:118;s:18:\"sale/voucher_theme\";i:119;s:15:\"setting/setting\";i:120;s:13:\"setting/store\";i:121;s:16:\"shipping/auspost\";i:122;s:17:\"shipping/citylink\";i:123;s:14:\"shipping/fedex\";i:124;s:13:\"shipping/flat\";i:125;s:13:\"shipping/free\";i:126;s:13:\"shipping/item\";i:127;s:23:\"shipping/parcelforce_48\";i:128;s:15:\"shipping/pickup\";i:129;s:19:\"shipping/royal_mail\";i:130;s:12:\"shipping/ups\";i:131;s:13:\"shipping/usps\";i:132;s:15:\"shipping/weight\";i:133;s:11:\"tool/backup\";i:134;s:14:\"tool/error_log\";i:135;s:12:\"total/coupon\";i:136;s:12:\"total/credit\";i:137;s:14:\"total/handling\";i:138;s:16:\"total/klarna_fee\";i:139;s:19:\"total/low_order_fee\";i:140;s:12:\"total/reward\";i:141;s:14:\"total/shipping\";i:142;s:15:\"total/sub_total\";i:143;s:9:\"total/tax\";i:144;s:11:\"total/total\";i:145;s:13:\"total/voucher\";i:146;s:9:\"user/user\";i:147;s:20:\"user/user_permission\";i:148;s:22:\"module/pavverticalmenu\";i:149;s:19:\"module/themecontrol\";i:150;s:15:\"module/pavdeals\";i:151;s:25:\"module/pavproductcarousel\";i:152;s:13:\"module/filter\";i:153;s:13:\"module/pavmap\";i:154;s:14:\"module/pavblog\";i:155;s:22:\"module/pavblogcategory\";i:156;s:21:\"module/pavblogcomment\";i:157;s:20:\"module/pavbloglatest\";i:158;s:16:\"module/pavcustom\";i:159;s:18:\"module/pavcarousel\";i:160;s:17:\"module/pavtwitter\";i:161;s:21:\"module/pavsliderlayer\";i:162;s:18:\"module/pavmegamenu\";i:163;s:16:\"module/pavsocial\";i:164;s:20:\"module/pavnewsletter\";i:165;s:18:\"module/pavproducts\";i:166;s:13:\"module/latest\";i:167;s:14:\"module/special\";i:168;s:25:\"module/pavproductcarousel\";i:169;s:12:\"module/store\";i:170;s:12:\"module/store\";i:171;s:16:\"module/pavsocial\";i:172;s:17:\"module/pavtwitter\";i:173;s:16:\"module/pavcustom\";i:174;s:21:\"module/pavproducttabs\";i:175;s:25:\"module/pavproductfeatured\";i:176;s:21:\"module/pavreassurance\";i:177;s:21:\"module/pavreassurance\";i:178;s:13:\"module/pavads\";i:179;s:14:\"module/special\";i:180;s:17:\"module/bestseller\";i:181;s:20:\"module/pavautosearch\";i:182;s:20:\"module/pavautosearch\";i:183;s:13:\"module/banner\";i:184;s:18:\"module/information\";i:185;s:15:\"module/pavdeals\";i:186;s:22:\"module/pavcategorytabs\";i:187;s:17:\"module/bestseller\";i:188;s:15:\"module/category\";i:189;s:21:\"module/pavproducttabs\";i:190;s:17:\"module/pavgallery\";i:191;s:13:\"module/pavmap\";i:192;s:22:\"module/pavshoplocation\";i:193;s:15:\"module/category\";i:194;s:23:\"module/pavsocialsidebar\";i:195;s:18:\"module/pavcarousel\";i:196;s:18:\"module/pavfacebook\";i:197;s:21:\"module/pavreassurance\";i:198;s:21:\"module/pavtestimonial\";i:199;s:14:\"module/special\";i:200;s:19:\"module/themecontrol\";i:201;s:21:\"module/pavreassurance\";i:202;s:15:\"module/category\";i:203;s:13:\"module/filter\";i:204;s:15:\"module/carousel\";i:205;s:18:\"module/information\";i:206;s:18:\"module/information\";i:207;s:15:\"module/featured\";i:208;s:25:\"module/pavproductfeatured\";i:209;s:18:\"module/pavfeatured\";i:210;s:21:\"module/pavtestimonial\";i:211;s:21:\"module/pavreassurance\";i:212;s:21:\"module/pavtestimonial\";i:213;s:33:\"module/pavtestimonialutilcarousel\";i:214;s:21:\"module/pavtestimonial\";i:215;s:22:\"module/pavcategorytabs\";i:216;s:18:\"module/information\";i:217;s:21:\"module/pavproducttabs\";i:218;s:18:\"module/pavproducts\";i:219;s:25:\"module/pavproductfeatured\";i:220;s:16:\"module/pp_layout\";i:221;s:17:\"module/pavtwitter\";i:222;s:21:\"module/pavaccessories\";i:223;s:22:\"module/pavutilcategory\";i:224;s:33:\"module/pavtestimonialutilcarousel\";i:225;s:24:\"module/pavcategorybanner\";i:226;s:21:\"module/pavaccessories\";i:227;s:17:\"module/openbaypro\";i:228;s:21:\"module/pavaccessories\";i:229;s:22:\"module/pavverticalmenu\";i:230;s:16:\"module/slideshow\";i:231;s:22:\"module/pavutilcategory\";i:232;s:18:\"module/pavfeatured\";i:233;s:14:\"module/account\";i:234;s:13:\"module/banner\";i:235;s:17:\"module/bestseller\";i:236;s:19:\"module/themecontrol\";i:237;s:19:\"module/themecontrol\";i:238;s:16:\"module/slideshow\";i:239;s:24:\"module/pavnivoslidershow\";i:240;s:22:\"module/pavmegamenubase\";i:241;s:16:\"module/affiliate\";i:242;s:29:\"module/amazon_checkout_layout\";i:243;s:13:\"module/banner\";i:244;s:13:\"module/banner\";i:245;s:15:\"module/carousel\";i:246;s:13:\"module/banner\";i:247;s:14:\"module/pavblog\";}s:6:\"modify\";a:248:{i:0;s:14:\"amazon/listing\";i:1;s:14:\"amazon/product\";i:2;s:16:\"amazonus/listing\";i:3;s:16:\"amazonus/product\";i:4;s:17:\"catalog/attribute\";i:5;s:23:\"catalog/attribute_group\";i:6;s:16:\"catalog/category\";i:7;s:16:\"catalog/download\";i:8;s:14:\"catalog/filter\";i:9;s:19:\"catalog/information\";i:10;s:20:\"catalog/manufacturer\";i:11;s:14:\"catalog/option\";i:12;s:15:\"catalog/product\";i:13;s:15:\"catalog/profile\";i:14;s:14:\"catalog/review\";i:15;s:18:\"common/filemanager\";i:16;s:13:\"design/banner\";i:17;s:19:\"design/custom_field\";i:18;s:13:\"design/layout\";i:19;s:12:\"ebay/profile\";i:20;s:13:\"ebay/template\";i:21;s:14:\"extension/feed\";i:22;s:17:\"extension/manager\";i:23;s:16:\"extension/module\";i:24;s:17:\"extension/openbay\";i:25;s:17:\"extension/payment\";i:26;s:18:\"extension/shipping\";i:27;s:15:\"extension/total\";i:28;s:16:\"feed/google_base\";i:29;s:19:\"feed/google_sitemap\";i:30;s:20:\"localisation/country\";i:31;s:21:\"localisation/currency\";i:32;s:21:\"localisation/geo_zone\";i:33;s:21:\"localisation/language\";i:34;s:25:\"localisation/length_class\";i:35;s:25:\"localisation/order_status\";i:36;s:26:\"localisation/return_action\";i:37;s:26:\"localisation/return_reason\";i:38;s:26:\"localisation/return_status\";i:39;s:25:\"localisation/stock_status\";i:40;s:22:\"localisation/tax_class\";i:41;s:21:\"localisation/tax_rate\";i:42;s:25:\"localisation/weight_class\";i:43;s:17:\"localisation/zone\";i:44;s:14:\"module/account\";i:45;s:16:\"module/affiliate\";i:46;s:29:\"module/amazon_checkout_layout\";i:47;s:13:\"module/banner\";i:48;s:17:\"module/bestseller\";i:49;s:15:\"module/carousel\";i:50;s:15:\"module/category\";i:51;s:18:\"module/ebaydisplay\";i:52;s:15:\"module/featured\";i:53;s:13:\"module/filter\";i:54;s:18:\"module/google_talk\";i:55;s:18:\"module/information\";i:56;s:13:\"module/latest\";i:57;s:16:\"module/pp_layout\";i:58;s:16:\"module/slideshow\";i:59;s:14:\"module/special\";i:60;s:12:\"module/store\";i:61;s:14:\"module/welcome\";i:62;s:14:\"openbay/amazon\";i:63;s:16:\"openbay/amazonus\";i:64;s:15:\"openbay/openbay\";i:65;s:12:\"openbay/play\";i:66;s:23:\"payment/amazon_checkout\";i:67;s:24:\"payment/authorizenet_aim\";i:68;s:21:\"payment/bank_transfer\";i:69;s:14:\"payment/cheque\";i:70;s:11:\"payment/cod\";i:71;s:21:\"payment/free_checkout\";i:72;s:22:\"payment/klarna_account\";i:73;s:22:\"payment/klarna_invoice\";i:74;s:14:\"payment/liqpay\";i:75;s:20:\"payment/moneybookers\";i:76;s:14:\"payment/nochex\";i:77;s:15:\"payment/paymate\";i:78;s:16:\"payment/paypoint\";i:79;s:13:\"payment/payza\";i:80;s:26:\"payment/perpetual_payments\";i:81;s:18:\"payment/pp_express\";i:82;s:25:\"payment/pp_payflow_iframe\";i:83;s:14:\"payment/pp_pro\";i:84;s:21:\"payment/pp_pro_iframe\";i:85;s:17:\"payment/pp_pro_pf\";i:86;s:17:\"payment/pp_pro_uk\";i:87;s:19:\"payment/pp_standard\";i:88;s:15:\"payment/sagepay\";i:89;s:22:\"payment/sagepay_direct\";i:90;s:18:\"payment/sagepay_us\";i:91;s:19:\"payment/twocheckout\";i:92;s:28:\"payment/web_payment_software\";i:93;s:16:\"payment/worldpay\";i:94;s:10:\"play/order\";i:95;s:12:\"play/product\";i:96;s:27:\"report/affiliate_commission\";i:97;s:22:\"report/customer_credit\";i:98;s:22:\"report/customer_online\";i:99;s:21:\"report/customer_order\";i:100;s:22:\"report/customer_reward\";i:101;s:24:\"report/product_purchased\";i:102;s:21:\"report/product_viewed\";i:103;s:18:\"report/sale_coupon\";i:104;s:17:\"report/sale_order\";i:105;s:18:\"report/sale_return\";i:106;s:20:\"report/sale_shipping\";i:107;s:15:\"report/sale_tax\";i:108;s:14:\"sale/affiliate\";i:109;s:12:\"sale/contact\";i:110;s:11:\"sale/coupon\";i:111;s:13:\"sale/customer\";i:112;s:20:\"sale/customer_ban_ip\";i:113;s:19:\"sale/customer_group\";i:114;s:10:\"sale/order\";i:115;s:14:\"sale/recurring\";i:116;s:11:\"sale/return\";i:117;s:12:\"sale/voucher\";i:118;s:18:\"sale/voucher_theme\";i:119;s:15:\"setting/setting\";i:120;s:13:\"setting/store\";i:121;s:16:\"shipping/auspost\";i:122;s:17:\"shipping/citylink\";i:123;s:14:\"shipping/fedex\";i:124;s:13:\"shipping/flat\";i:125;s:13:\"shipping/free\";i:126;s:13:\"shipping/item\";i:127;s:23:\"shipping/parcelforce_48\";i:128;s:15:\"shipping/pickup\";i:129;s:19:\"shipping/royal_mail\";i:130;s:12:\"shipping/ups\";i:131;s:13:\"shipping/usps\";i:132;s:15:\"shipping/weight\";i:133;s:11:\"tool/backup\";i:134;s:14:\"tool/error_log\";i:135;s:12:\"total/coupon\";i:136;s:12:\"total/credit\";i:137;s:14:\"total/handling\";i:138;s:16:\"total/klarna_fee\";i:139;s:19:\"total/low_order_fee\";i:140;s:12:\"total/reward\";i:141;s:14:\"total/shipping\";i:142;s:15:\"total/sub_total\";i:143;s:9:\"total/tax\";i:144;s:11:\"total/total\";i:145;s:13:\"total/voucher\";i:146;s:9:\"user/user\";i:147;s:20:\"user/user_permission\";i:148;s:22:\"module/pavverticalmenu\";i:149;s:19:\"module/themecontrol\";i:150;s:15:\"module/pavdeals\";i:151;s:25:\"module/pavproductcarousel\";i:152;s:13:\"module/filter\";i:153;s:13:\"module/pavmap\";i:154;s:14:\"module/pavblog\";i:155;s:22:\"module/pavblogcategory\";i:156;s:21:\"module/pavblogcomment\";i:157;s:20:\"module/pavbloglatest\";i:158;s:16:\"module/pavcustom\";i:159;s:18:\"module/pavcarousel\";i:160;s:17:\"module/pavtwitter\";i:161;s:21:\"module/pavsliderlayer\";i:162;s:18:\"module/pavmegamenu\";i:163;s:16:\"module/pavsocial\";i:164;s:20:\"module/pavnewsletter\";i:165;s:18:\"module/pavproducts\";i:166;s:13:\"module/latest\";i:167;s:14:\"module/special\";i:168;s:25:\"module/pavproductcarousel\";i:169;s:12:\"module/store\";i:170;s:12:\"module/store\";i:171;s:16:\"module/pavsocial\";i:172;s:17:\"module/pavtwitter\";i:173;s:16:\"module/pavcustom\";i:174;s:21:\"module/pavproducttabs\";i:175;s:25:\"module/pavproductfeatured\";i:176;s:21:\"module/pavreassurance\";i:177;s:21:\"module/pavreassurance\";i:178;s:13:\"module/pavads\";i:179;s:14:\"module/special\";i:180;s:17:\"module/bestseller\";i:181;s:20:\"module/pavautosearch\";i:182;s:20:\"module/pavautosearch\";i:183;s:13:\"module/banner\";i:184;s:18:\"module/information\";i:185;s:15:\"module/pavdeals\";i:186;s:22:\"module/pavcategorytabs\";i:187;s:17:\"module/bestseller\";i:188;s:15:\"module/category\";i:189;s:21:\"module/pavproducttabs\";i:190;s:17:\"module/pavgallery\";i:191;s:13:\"module/pavmap\";i:192;s:22:\"module/pavshoplocation\";i:193;s:15:\"module/category\";i:194;s:23:\"module/pavsocialsidebar\";i:195;s:18:\"module/pavcarousel\";i:196;s:18:\"module/pavfacebook\";i:197;s:21:\"module/pavreassurance\";i:198;s:21:\"module/pavtestimonial\";i:199;s:14:\"module/special\";i:200;s:19:\"module/themecontrol\";i:201;s:21:\"module/pavreassurance\";i:202;s:15:\"module/category\";i:203;s:13:\"module/filter\";i:204;s:15:\"module/carousel\";i:205;s:18:\"module/information\";i:206;s:18:\"module/information\";i:207;s:15:\"module/featured\";i:208;s:25:\"module/pavproductfeatured\";i:209;s:18:\"module/pavfeatured\";i:210;s:21:\"module/pavtestimonial\";i:211;s:21:\"module/pavreassurance\";i:212;s:21:\"module/pavtestimonial\";i:213;s:33:\"module/pavtestimonialutilcarousel\";i:214;s:21:\"module/pavtestimonial\";i:215;s:22:\"module/pavcategorytabs\";i:216;s:18:\"module/information\";i:217;s:21:\"module/pavproducttabs\";i:218;s:18:\"module/pavproducts\";i:219;s:25:\"module/pavproductfeatured\";i:220;s:16:\"module/pp_layout\";i:221;s:17:\"module/pavtwitter\";i:222;s:21:\"module/pavaccessories\";i:223;s:22:\"module/pavutilcategory\";i:224;s:33:\"module/pavtestimonialutilcarousel\";i:225;s:24:\"module/pavcategorybanner\";i:226;s:21:\"module/pavaccessories\";i:227;s:17:\"module/openbaypro\";i:228;s:21:\"module/pavaccessories\";i:229;s:22:\"module/pavverticalmenu\";i:230;s:16:\"module/slideshow\";i:231;s:22:\"module/pavutilcategory\";i:232;s:18:\"module/pavfeatured\";i:233;s:14:\"module/account\";i:234;s:13:\"module/banner\";i:235;s:17:\"module/bestseller\";i:236;s:19:\"module/themecontrol\";i:237;s:19:\"module/themecontrol\";i:238;s:16:\"module/slideshow\";i:239;s:24:\"module/pavnivoslidershow\";i:240;s:22:\"module/pavmegamenubase\";i:241;s:16:\"module/affiliate\";i:242;s:29:\"module/amazon_checkout_layout\";i:243;s:13:\"module/banner\";i:244;s:13:\"module/banner\";i:245;s:15:\"module/carousel\";i:246;s:13:\"module/banner\";i:247;s:14:\"module/pavblog\";}}'),
 (10, 'Demonstration', 'a:1:{s:6:\"access\";a:161:{i:0;s:17:\"catalog/attribute\";i:1;s:23:\"catalog/attribute_group\";i:2;s:16:\"catalog/category\";i:3;s:16:\"catalog/download\";i:4;s:14:\"catalog/filter\";i:5;s:19:\"catalog/information\";i:6;s:20:\"catalog/manufacturer\";i:7;s:14:\"catalog/option\";i:8;s:15:\"catalog/product\";i:9;s:15:\"catalog/profile\";i:10;s:14:\"catalog/review\";i:11;s:18:\"common/filemanager\";i:12;s:13:\"design/banner\";i:13;s:19:\"design/custom_field\";i:14;s:13:\"design/layout\";i:15;s:14:\"extension/feed\";i:16;s:17:\"extension/manager\";i:17;s:16:\"extension/module\";i:18;s:17:\"extension/openbay\";i:19;s:17:\"extension/payment\";i:20;s:18:\"extension/shipping\";i:21;s:15:\"extension/total\";i:22;s:16:\"feed/google_base\";i:23;s:19:\"feed/google_sitemap\";i:24;s:20:\"localisation/country\";i:25;s:21:\"localisation/currency\";i:26;s:21:\"localisation/geo_zone\";i:27;s:21:\"localisation/language\";i:28;s:25:\"localisation/length_class\";i:29;s:25:\"localisation/order_status\";i:30;s:26:\"localisation/return_action\";i:31;s:26:\"localisation/return_reason\";i:32;s:26:\"localisation/return_status\";i:33;s:25:\"localisation/stock_status\";i:34;s:22:\"localisation/tax_class\";i:35;s:21:\"localisation/tax_rate\";i:36;s:25:\"localisation/weight_class\";i:37;s:17:\"localisation/zone\";i:38;s:14:\"module/account\";i:39;s:16:\"module/affiliate\";i:40;s:29:\"module/amazon_checkout_layout\";i:41;s:13:\"module/banner\";i:42;s:17:\"module/bestseller\";i:43;s:15:\"module/carousel\";i:44;s:15:\"module/category\";i:45;s:18:\"module/ebaydisplay\";i:46;s:15:\"module/featured\";i:47;s:13:\"module/filter\";i:48;s:18:\"module/google_talk\";i:49;s:18:\"module/information\";i:50;s:13:\"module/latest\";i:51;s:17:\"module/openbaypro\";i:52;s:14:\"module/pavblog\";i:53;s:22:\"module/pavblogcategory\";i:54;s:21:\"module/pavblogcomment\";i:55;s:20:\"module/pavbloglatest\";i:56;s:24:\"module/pavcategorybanner\";i:57;s:16:\"module/pavcustom\";i:58;s:15:\"module/pavdeals\";i:59;s:18:\"module/pavmegamenu\";i:60;s:20:\"module/pavnewsletter\";i:61;s:21:\"module/pavproducttabs\";i:62;s:21:\"module/pavreassurance\";i:63;s:21:\"module/pavsliderlayer\";i:64;s:21:\"module/pavtestimonial\";i:65;s:17:\"module/pavtwitter\";i:66;s:16:\"module/pp_layout\";i:67;s:16:\"module/slideshow\";i:68;s:14:\"module/special\";i:69;s:12:\"module/store\";i:70;s:19:\"module/themecontrol\";i:71;s:14:\"module/welcome\";i:72;s:14:\"openbay/amazon\";i:73;s:22:\"openbay/amazon_listing\";i:74;s:22:\"openbay/amazon_product\";i:75;s:16:\"openbay/amazonus\";i:76;s:24:\"openbay/amazonus_listing\";i:77;s:24:\"openbay/amazonus_product\";i:78;s:20:\"openbay/ebay_profile\";i:79;s:21:\"openbay/ebay_template\";i:80;s:15:\"openbay/openbay\";i:81;s:23:\"payment/amazon_checkout\";i:82;s:24:\"payment/authorizenet_aim\";i:83;s:21:\"payment/bank_transfer\";i:84;s:14:\"payment/cheque\";i:85;s:11:\"payment/cod\";i:86;s:21:\"payment/free_checkout\";i:87;s:22:\"payment/klarna_account\";i:88;s:22:\"payment/klarna_invoice\";i:89;s:14:\"payment/liqpay\";i:90;s:20:\"payment/moneybookers\";i:91;s:14:\"payment/nochex\";i:92;s:15:\"payment/paymate\";i:93;s:16:\"payment/paypoint\";i:94;s:13:\"payment/payza\";i:95;s:26:\"payment/perpetual_payments\";i:96;s:18:\"payment/pp_express\";i:97;s:25:\"payment/pp_payflow_iframe\";i:98;s:14:\"payment/pp_pro\";i:99;s:21:\"payment/pp_pro_iframe\";i:100;s:17:\"payment/pp_pro_pf\";i:101;s:17:\"payment/pp_pro_uk\";i:102;s:19:\"payment/pp_standard\";i:103;s:15:\"payment/sagepay\";i:104;s:22:\"payment/sagepay_direct\";i:105;s:18:\"payment/sagepay_us\";i:106;s:19:\"payment/twocheckout\";i:107;s:28:\"payment/web_payment_software\";i:108;s:16:\"payment/worldpay\";i:109;s:27:\"report/affiliate_commission\";i:110;s:22:\"report/customer_credit\";i:111;s:22:\"report/customer_online\";i:112;s:21:\"report/customer_order\";i:113;s:22:\"report/customer_reward\";i:114;s:24:\"report/product_purchased\";i:115;s:21:\"report/product_viewed\";i:116;s:18:\"report/sale_coupon\";i:117;s:17:\"report/sale_order\";i:118;s:18:\"report/sale_return\";i:119;s:20:\"report/sale_shipping\";i:120;s:15:\"report/sale_tax\";i:121;s:14:\"sale/affiliate\";i:122;s:12:\"sale/contact\";i:123;s:11:\"sale/coupon\";i:124;s:13:\"sale/customer\";i:125;s:20:\"sale/customer_ban_ip\";i:126;s:19:\"sale/customer_group\";i:127;s:10:\"sale/order\";i:128;s:14:\"sale/recurring\";i:129;s:11:\"sale/return\";i:130;s:12:\"sale/voucher\";i:131;s:18:\"sale/voucher_theme\";i:132;s:15:\"setting/setting\";i:133;s:13:\"setting/store\";i:134;s:16:\"shipping/auspost\";i:135;s:17:\"shipping/citylink\";i:136;s:14:\"shipping/fedex\";i:137;s:13:\"shipping/flat\";i:138;s:13:\"shipping/free\";i:139;s:13:\"shipping/item\";i:140;s:23:\"shipping/parcelforce_48\";i:141;s:15:\"shipping/pickup\";i:142;s:19:\"shipping/royal_mail\";i:143;s:12:\"shipping/ups\";i:144;s:13:\"shipping/usps\";i:145;s:15:\"shipping/weight\";i:146;s:11:\"tool/backup\";i:147;s:14:\"tool/error_log\";i:148;s:12:\"total/coupon\";i:149;s:12:\"total/credit\";i:150;s:14:\"total/handling\";i:151;s:16:\"total/klarna_fee\";i:152;s:19:\"total/low_order_fee\";i:153;s:12:\"total/reward\";i:154;s:14:\"total/shipping\";i:155;s:15:\"total/sub_total\";i:156;s:9:\"total/tax\";i:157;s:11:\"total/total\";i:158;s:13:\"total/voucher\";i:159;s:9:\"user/user\";i:160;s:20:\"user/user_permission\";}}');
 
 -- --------------------------------------------------------
@@ -9851,12 +9334,12 @@ ALTER TABLE `oc_banner`
 -- AUTO_INCREMENT cho bảng `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
-  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=190;
+  MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=192;
 --
 -- AUTO_INCREMENT cho bảng `oc_category`
 --
 ALTER TABLE `oc_category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 --
 -- AUTO_INCREMENT cho bảng `oc_country`
 --
@@ -9936,7 +9419,7 @@ ALTER TABLE `oc_download`
 -- AUTO_INCREMENT cho bảng `oc_extension`
 --
 ALTER TABLE `oc_extension`
-  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=526;
+  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=528;
 --
 -- AUTO_INCREMENT cho bảng `oc_filter`
 --
@@ -10066,12 +9549,12 @@ ALTER TABLE `oc_pavads_banner`
 -- AUTO_INCREMENT cho bảng `oc_pavblog_blog`
 --
 ALTER TABLE `oc_pavblog_blog`
-  MODIFY `blog_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `blog_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `oc_pavblog_category`
 --
 ALTER TABLE `oc_pavblog_category`
-  MODIFY `category_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `category_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `oc_pavblog_comment`
 --
@@ -10136,7 +9619,7 @@ ALTER TABLE `oc_pavtestimonialutilcarousel`
 -- AUTO_INCREMENT cho bảng `oc_product`
 --
 ALTER TABLE `oc_product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 --
 -- AUTO_INCREMENT cho bảng `oc_product_discount`
 --
@@ -10146,7 +9629,7 @@ ALTER TABLE `oc_product_discount`
 -- AUTO_INCREMENT cho bảng `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
-  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4054;
+  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4146;
 --
 -- AUTO_INCREMENT cho bảng `oc_product_option`
 --
@@ -10161,7 +9644,7 @@ ALTER TABLE `oc_product_option_value`
 -- AUTO_INCREMENT cho bảng `oc_product_reward`
 --
 ALTER TABLE `oc_product_reward`
-  MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=936;
+  MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=978;
 --
 -- AUTO_INCREMENT cho bảng `oc_product_special`
 --
@@ -10206,7 +9689,7 @@ ALTER TABLE `oc_review`
 -- AUTO_INCREMENT cho bảng `oc_setting`
 --
 ALTER TABLE `oc_setting`
-  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23820;
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24048;
 --
 -- AUTO_INCREMENT cho bảng `oc_stock_status`
 --
@@ -10236,7 +9719,7 @@ ALTER TABLE `oc_tax_rule`
 -- AUTO_INCREMENT cho bảng `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=970;
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=992;
 --
 -- AUTO_INCREMENT cho bảng `oc_user`
 --
