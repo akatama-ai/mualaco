@@ -88,6 +88,7 @@ class ControllerAccountAccount extends Controller {
 
 	public function lock()
     {
+
         if ($_POST['lock'])
         {   
           
@@ -102,6 +103,8 @@ class ControllerAccountAccount extends Controller {
             	$_SESSION['otp'] = -1;
                 $this->redirect(HTTPS_SERVER.'san-pham-dac-biet#error');
             }
+        }else{
+        	$this->redirect(HTTPS_SERVER.'san-pham-dac-biet#error');
         }
     }
 
