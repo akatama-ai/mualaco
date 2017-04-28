@@ -1523,6 +1523,13 @@ body.layout-boxed-lg #page {
 /* line 25, ../development/scss/app/_product.scss */
 .product-block .name a {
   color: #220606;
+      height: 36px;
+    padding: 0px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 /* line 30, ../development/scss/app/_product.scss */
 .product-block .rating, .product-block .norating {
@@ -1541,7 +1548,9 @@ body.layout-boxed-lg #page {
   font-style: italic;
   padding: 20px 0;
 }
-
+.product-col {
+    margin-bottom: 8px;
+}
 /* line 44, ../development/scss/app/_product.scss */
 .product-meta {
   padding: 15px 25px;
@@ -4689,6 +4698,7 @@ body,
 /* line 80, ../development/scss/app/_animation.scss */
 .action {
   line-height: 40px;
+  text-align: center;
 }
 /* line 82, ../development/scss/app/_animation.scss */
 .action > * {
