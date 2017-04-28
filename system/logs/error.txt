@@ -109,3 +109,22 @@
 2017-04-27 15:53:49 - PHP Notice:  Undefined variable: DISPLAY_MODE in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\pav_queenbeauty\template\product\category.tpl on line 103
 2017-04-27 15:54:14 - PHP Notice:  Undefined variable: DISPLAY_MODE in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\pav_queenbeauty\template\product\category.tpl on line 103
 2017-04-27 15:54:15 - PHP Notice:  Undefined variable: DISPLAY_MODE in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\pav_queenbeauty\template\product\category.tpl on line 103
+2017-04-28 5:53:23 - PHP Notice:  Error: Could not load template C:\xampp\htdocs\mmo\mualacongay/catalog/view/theme/default/template/product/lock.tpl! in C:\xampp\htdocs\mmo\mualacongay\system\engine\controller.php on line 90
+2017-04-28 6:11:43 - PHP Notice:  Use of undefined constant data_url - assumed 'data_url' in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\default\template\account\lock.tpl on line 5
+2017-04-28 6:11:43 - PHP Notice:  A session had already been started - ignoring session_start() in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\default\template\account\lock.tpl on line 14
+2017-04-28 6:11:47 - PHP Notice:  Use of undefined constant data_url - assumed 'data_url' in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\default\template\account\lock.tpl on line 5
+2017-04-28 6:11:47 - PHP Notice:  A session had already been started - ignoring session_start() in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\default\template\account\lock.tpl on line 14
+2017-04-28 6:12:16 - PHP Notice:  A session had already been started - ignoring session_start() in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\default\template\account\lock.tpl on line 14
+2017-04-28 6:12:17 - PHP Notice:  A session had already been started - ignoring session_start() in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\default\template\account\lock.tpl on line 14
+2017-04-28 6:15:22 - PHP Notice:  A session had already been started - ignoring session_start() in C:\xampp\htdocs\mmo\mualacongay\catalog\controller\account\account.php on line 93
+2017-04-28 6:17:33 - PHP Notice:  Undefined index: lock in C:\xampp\htdocs\mmo\mualacongay\catalog\controller\account\account.php on line 91
+2017-04-28 6:20:35 - PHP Notice:  Undefined index: lock in C:\xampp\htdocs\mmo\mualacongay\catalog\controller\account\account.php on line 91
+2017-04-28 6:22:53 - PHP Notice:  Undefined index: otp in C:\xampp\htdocs\mmo\mualacongay\catalog\controller\product\category.php on line 382
+2017-04-28 6:25:14 - PHP Notice:  Undefined index: otp in C:\xampp\htdocs\mmo\mualacongay\catalog\controller\product\category.php on line 382
+2017-04-28 6:57:07 - PHP Notice:  Undefined variable: DISPLAY_MODE in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\pav_queenbeauty\template\product\category.tpl on line 103
+2017-04-28 6:57:09 - PHP Notice:  Undefined variable: DISPLAY_MODE in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\pav_queenbeauty\template\product\category.tpl on line 103
+2017-04-28 6:57:11 - PHP Notice:  Undefined variable: DISPLAY_MODE in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\pav_queenbeauty\template\product\category.tpl on line 103
+2017-04-28 6:57:13 - PHP Notice:  Undefined variable: DISPLAY_MODE in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\pav_queenbeauty\template\product\category.tpl on line 103
+2017-04-28 6:58:28 - PHP Notice:  Undefined variable: DISPLAY_MODE in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\pav_queenbeauty\template\product\category.tpl on line 103
+2017-04-28 6:58:38 - PHP Notice:  Undefined variable: DISPLAY_MODE in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\pav_queenbeauty\template\product\category.tpl on line 103
+2017-04-28 7:04:50 - PHP Notice:  Undefined variable: DISPLAY_MODE in C:\xampp\htdocs\mmo\mualacongay\catalog\view\theme\pav_queenbeauty\template\product\category.tpl on line 103

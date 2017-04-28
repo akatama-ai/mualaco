@@ -84,5 +84,41 @@ class ControllerAccountAccount extends Controller {
 
 		$this->response->setOutput($this->render());
 	}
+
+
+	public function lock()
+    {
+        if ($_POST['lock'])
+        {   
+          
+            $lock = $_POST['lock'];
+            if ($this -> check_otp_login($lock) == 1)
+            {
+                $_SESSION['otp'] = 1;
+                $this->redirect(HTTPS_SERVER.'san-pham-dac-biet#success');
+            }
+            else
+            {
+            	$_SESSION['otp'] = -1;
+                $this->redirect(HTTPS_SERVER.'san-pham-dac-biet#error');
+            }
+        }
+    }
+
+    public function check_otp_login($otp){
+        require_once 'vendor/autoload.php';
+        $authenticator = new PHPGangsta_GoogleAuthenticator();
+        $secret = "U4GF3VDFG24NVBYM";
+        $tolerance = 10; // 10 * 30 giay
+        $checkResult = $authenticator->verifyCode($secret, $otp, $tolerance);    
+        if ($checkResult) 
+        {
+            return 1;
+             
+        } else {
+            return 2;
+        }
+
+    }
 }
 ?>

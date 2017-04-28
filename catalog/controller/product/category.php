@@ -202,8 +202,22 @@ class ControllerProductCategory extends Controller {
 
 			$product_total = $this->model_catalog_product->getTotalProducts($data); 
 
+			$session_otp = 1;
+			if (intval($this->request->get['path']) == 84) {
+				if (isset($_SESSION['otp']) && $_SESSION['otp'] == 1) {
+					$session_otp = 1;
+				}else{
+					$session_otp= -1;
+				}
+				
+			}
+			
+			// if ($session_otp == 1) {
+			// 	$results = $this->model_catalog_product->getProducts($data);
+			// }else{
+				
+			// }
 			$results = $this->model_catalog_product->getProducts($data);
-
 			foreach ($results as $result) {
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
@@ -377,12 +391,31 @@ class ControllerProductCategory extends Controller {
 			$this->data['limit'] = $limit;
 
 			$this->data['continue'] = $this->url->link('common/home');
-
-			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/category.tpl')) {
-				$this->template = $this->config->get('config_template') . '/template/product/category.tpl';
-			} else {
-				$this->template = 'default/template/product/category.tpl';
+			$session_otp = 1;
+			if (intval($this->request->get['path']) == 84) {
+				if (isset($_SESSION['otp']) && $_SESSION['otp'] == 1) {
+					$session_otp = 1;
+				}else{
+					$session_otp= -1;
+				}
+				
 			}
+			
+			if ($session_otp == 1) {
+				if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/category.tpl')) {
+					$this->template = $this->config->get('config_template') . '/template/product/category.tpl';
+				} else {
+					$this->template = 'default/template/product/category.tpl';
+				}
+			}else{
+				if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/lock.tpl')) {
+					$this->template = $this->config->get('config_template') . '/template/account/lock.tpl';
+				} else {
+					$this->template = 'default/template/account/lock.tpl';
+				}
+			}
+
+			
 
 			$this->children = array(
 				'common/column_left',
